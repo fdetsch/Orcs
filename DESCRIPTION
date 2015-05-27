@@ -1,9 +1,10 @@
 Package: Orcs
 Type: Package
-Title: What the package does (short line)
+Title: Omnidirectional R Code Snippets
 Version: 1.0
 Date: 2015-05-26
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Florian Detsch
+Maintainer: Florian Detsch <florian.detsch@staff.uni-marburg.de>
+Description: The 'Orcs' package yields a collection of various R functions meant to simplify everyday-life coding without being devoted to a particular scope of application. Check out the 'vignettes' subfolder for recent updates and sample snippets.
+License: GNU GPL (>=3)
+Suggests: knitr
