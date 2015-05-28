@@ -2,3 +2,4 @@
 
 export(knit2md)
 export(par7zip)
+export(setwdOS)
