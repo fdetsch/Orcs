@@ -13,6 +13,9 @@ current working directory.}
 \item{pttrn}{Character. A regular expression as taken by
 \code{\link{list.files}}; defaults to \code{".png$"}.}
 }
+\value{
+A character vector containing the names of the processed images.
+}
 \description{
 This is a wrapper function around \code{convert -trim} to automatically
 remove any whitespace from locally saved images. Note that 'ImageMagick' must

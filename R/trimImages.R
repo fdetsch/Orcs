@@ -10,6 +10,9 @@
 #' @param pttrn Character. A regular expression as taken by 
 #' \code{\link{list.files}}; defaults to \code{".png$"}.
 #' 
+#' @return
+#' A character vector containing the names of the processed images.
+#' 
 #' @author 
 #' Florian Detsch
 #' 
