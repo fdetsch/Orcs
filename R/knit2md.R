@@ -38,7 +38,7 @@ knit2md <- function(path_in = getwd(), path_out = NULL, pttrn = "*.Rmd$", ...) {
   
   ## *.rmd to *.md
   for (i in 1:length(ch_fls_in))
-    knit(ch_fls_in[i], ch_fls_out[i], ...)
+    knitr::knit(ch_fls_in[i], ch_fls_out[i], ...)
   
   ## return output filenames
   return(ch_fls_out)
