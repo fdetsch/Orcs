@@ -7,7 +7,7 @@ output: html_document
 
 
 
-Merging multiple data frames in R is anything but straightforward and usually involves confusing loop structures. `mergeList` elegantly avoids such bewildering code chunks by envoking `Reduce` along with a set of auxiliary parameters passed on to `merge`. Note that the code is mainly taken from a related [blog post in StackOverflow](https://stackoverflow.com/questions/8091303/merge-multiple-data-frames-in-a-list-simultaneously). 
+Merging multiple data frames in R is anything but straightforward and usually involves confusing loop structures. `mergeList` elegantly avoids such bewildering code chunks by envoking `Reduce` along with a set of auxiliary parameters passed on to `merge`. Note that the code is mainly taken from a related [blog post on StackOverflow](https://stackoverflow.com/questions/8091303/merge-multiple-data-frames-in-a-list-simultaneously). 
 
 
 ```r
