@@ -7,15 +7,16 @@
 trimImages(path = ".", pttrn = ".png$")
 }
 \arguments{
-\item{path}{Character. Absolute file path to image files.}
+\item{path}{Character. File path leading to image files; defaults to the
+current working directory.}
 
 \item{pttrn}{Character. A regular expression as taken by
 \code{\link{list.files}}; defaults to \code{".png$"}.}
 }
 \description{
 This is a wrapper function around \code{convert -trim} to automatically
-remove any whitespace from locally saved images. Note that ImageMagick is
-required.
+remove any whitespace from locally saved images. Note that 'ImageMagick' must
+be installed on your local system.
 }
 \examples{
 ## trim images in current working directory
