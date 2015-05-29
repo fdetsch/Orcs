@@ -2,7 +2,7 @@
 #' 
 #' @description
 #' By calling \code{\link{Reduce}} upon a list of data frames, this function 
-#' is a convenient wrapper around \code{\link{merge}} to merge multiple data
+#' is a convenient wrapper around \code{\link{merge}} to assemble multiple data
 #' frames in one go. Code originally taken from 
 #' \url{https://stackoverflow.com/questions/8091303/merge-multiple-data-frames-in-a-list-simultaneously}.
 #' 
@@ -25,10 +25,10 @@
 #'               data.frame(a = sample(20, 10), d = runif(10)))
 #' 
 #' ## merge data frames in one go
-#' mergeList(ls_df, by = "a", all = TRUE)
+#' multiMerge(ls_df, by = "a", all = TRUE)
 #' 
-#' @export mergeList
-mergeList <- function(x, by, all = TRUE) {
+#' @export multiMerge
+multiMerge <- function(x, by, all = TRUE) {
   
   ## merge list of data frames
   f <- function(...) merge(..., by = by, all = all)

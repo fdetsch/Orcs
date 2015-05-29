@@ -1,5 +1,5 @@
 ---
-title: "Merge multiple data frames with `mergeList`"
+title: "Merge multiple data frames with `multiMerge`"
 author: "Florian Detsch"
 date: "28.05.2015"
 output: html_document
@@ -7,7 +7,7 @@ output: html_document
 
 
 
-Merging multiple data frames in R is anything but straightforward and usually involves confusing loop structures. `mergeList` elegantly avoids such bewildering code chunks by envoking `Reduce` along with a set of auxiliary parameters passed on to `merge`. Note that the code is mainly taken from a related [blog post on StackOverflow](https://stackoverflow.com/questions/8091303/merge-multiple-data-frames-in-a-list-simultaneously). 
+Merging multiple data frames in R is anything but straightforward and usually involves confusing loop structures. `multiMerge` elegantly avoids such bewildering code chunks by envoking `Reduce` upon a list of data frames. The function also features a set of auxiliary parameters that are passed on to `merge`. Note that the code is mainly taken from a related [blog post in StackOverflow](https://stackoverflow.com/questions/8091303/merge-multiple-data-frames-in-a-list-simultaneously). 
 
 
 ```r
@@ -18,7 +18,7 @@ ls_df <- list(data.frame(a = 1:10, b = 1:10),
               data.frame(a = sample(20, 10), d = runif(10)))
 
 ## merge data frames in one go
-mergeList(ls_df, by = "a", all = TRUE)
+multiMerge(ls_df, by = "a", all = TRUE)
 ```
 
 ```
