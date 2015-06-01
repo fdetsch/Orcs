@@ -3,5 +3,6 @@
 export(multiKnit)
 export(multiMerge)
 export(par7zip)
+export(rmDuplCols)
 export(setwdOS)
 export(trimImages)
