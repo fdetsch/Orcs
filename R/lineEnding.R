@@ -2,17 +2,24 @@
 #' 
 #' @description
 #' This function converts between DOS and UNIX style line endings by envoking 
-#' \code{unix2dos} (or \code{dos2unix}) upon a text file. See also 
-#' \code{system("unix2dos --help")}.
+#' \code{unix2dos} (or \code{dos2unix}) upon a text file (see also 
+#' \code{system("unix2dos --help")}). Note that this function requires the 
+#' installation of external software in order to work!
 #' 
-#' @param infile Input filename. 
+#' @param infile Input filename(s). 
+#' @param pattern See \code{\link{list.files}}. This will be ignored if 'infile' 
+#' is specified.
 #' @param outfile Output filename. If not supplied, 'infile' will be 
 #' overwritten.
 #' @param to Either 'dos' or 'unix'.
-#' @param ... Further arguments passed on to \code{\link{system}}.
+#' @param ... Further arguments passed on to \code{\link{list.files}}, e.g. 
+#' 'path', 'full.names'.
 #' 
 #' @author 
 #' Florian Detsch
+#' 
+#' @seealso 
+#' \code{\link{list.files}}, \code{\link{system}}
 #' 
 #' @examples
 #' ## input file
@@ -22,10 +29,15 @@
 #' lineEnding(infile, outfile = "~/Desktop/DESCRIPTION4wd", to = "dos")
 #' 
 #' @export lineEnding
-lineEnding <- function(infile, outfile = NULL, to = c("dos", "unix"), ...) {
+lineEnding <- function(infile, pattern = NULL, outfile = NULL, 
+                       to = c("dos", "unix"), ...) {
 
   ## if not specified, convert to dos format
   to <- to[1]
+  
+  ## if not supplied, only files matching a given pattern are processed
+  if (missing(infile))
+    infile <- list.files(pattern = pattern, ...)
   
   ## overwrite infile or...
   if (is.null(outfile)) {
@@ -46,6 +58,8 @@ lineEnding <- function(infile, outfile = NULL, to = c("dos", "unix"), ...) {
   }
   
   ## execute conversion
-  system(ch_sys, ...)
+  for (i in ch_sys)
+    system(i)
+
   return(invisible())
 }

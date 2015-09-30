@@ -4,22 +4,28 @@
 \alias{lineEnding}
 \title{Convert between DOS and UNIX line endings}
 \usage{
-lineEnding(infile, outfile = NULL, to = c("dos", "unix"), ...)
+lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos", "unix"),
+  ...)
 }
 \arguments{
-\item{infile}{Input filename.}
+\item{infile}{Input filename(s).}
+
+\item{pattern}{See \code{\link{list.files}}. This will be ignored if 'infile'
+is specified.}
 
 \item{outfile}{Output filename. If not supplied, 'infile' will be
 overwritten.}
 
 \item{to}{Either 'dos' or 'unix'.}
 
-\item{...}{Further arguments passed on to \code{\link{system}}.}
+\item{...}{Further arguments passed on to \code{\link{list.files}}, e.g.
+'path', 'full.names'.}
 }
 \description{
 This function converts between DOS and UNIX style line endings by envoking
-\code{unix2dos} (or \code{dos2unix}) upon a text file. See also
-\code{system("unix2dos --help")}.
+\code{unix2dos} (or \code{dos2unix}) upon a text file (see also
+\code{system("unix2dos --help")}). Note that this function requires the
+installation of external software in order to work!
 }
 \examples{
 ## input file
@@ -30,5 +36,8 @@ lineEnding(infile, outfile = "~/Desktop/DESCRIPTION4wd", to = "dos")
 }
 \author{
 Florian Detsch
+}
+\seealso{
+\code{\link{list.files}}, \code{\link{system}}
 }
 
