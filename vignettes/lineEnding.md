@@ -5,9 +5,7 @@ date: "30.09.2015"
 output: html_document
 ---
 
-```{r pkg, echo=FALSE}
-library(Orcs)
-```
+
 
 Complementing the utility of `setwdOS`, another tool I came to develop in the 
 context of OS-dependent programming and, more specifically, line endings is 
@@ -35,7 +33,8 @@ versa (`to = "unix"`).
 Note that the code relies on the `dos2unix` external software tool which can 
 easily be installed on Linux via 
 
-```{r install, engine = 'bash', eval = FALSE}
+
+```bash
 sudo apt-get install dos2unix
 ```
 
@@ -44,7 +43,8 @@ for any other OS. Once everything is set up, try the following brief example to
 clarify what I was trying to explain and demonstrate the usefulness of 
 `lineEnding`:
 
-```{r lineEnding}
+
+```r
 ## input file
 infile <- paste(system.file(package = "Orcs"), "DESCRIPTION", sep = "/")
 
