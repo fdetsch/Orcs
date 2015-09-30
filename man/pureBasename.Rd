@@ -4,10 +4,13 @@
 \alias{pureBasename}
 \title{Return filename without extension}
 \usage{
-pureBasename(path)
+pureBasename(path, slash = FALSE)
 }
 \arguments{
 \item{path}{Filename; see \code{\link{basename}}.}
+
+\item{slash}{If \code{TRUE}, a leading slash ("/") is added to the returned
+filename.}
 }
 \description{
 As opposed to \code{\link{basename}}, this function returns the pure basename
@@ -16,6 +19,7 @@ of a file path, i.e. without extension.
 \examples{
 ch_file <- "path/to/file.with.extension"
 pureBasename(ch_file)
+pureBasename(ch_file, slash = TRUE)
 }
 \author{
 Florian Detsch
