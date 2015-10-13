@@ -57,7 +57,7 @@ setMethod("meanDifference",
     cat("Warning: elements 'x' and 'y' are of unequal length.\n")
   
   ## merge values
-  num_xy <- cbind(num_x, num_y)
+  num_xy <- cbind(x, y)
   num_xy <- num_xy[complete.cases(num_xy), ]
   
   ## calculate mean difference
