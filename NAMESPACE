@@ -2,6 +2,7 @@
 
 export(lineEnding)
 export(loadFromGit)
+export(meanDifference)
 export(multiKnit)
 export(multiMerge)
 export(par7zip)
@@ -11,3 +12,5 @@ export(setwdOS)
 export(trimImages)
 export(unlistStrsplit)
 export(unsortedFactor)
+import(methods)
+import(raster)

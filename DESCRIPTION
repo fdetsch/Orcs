@@ -7,4 +7,7 @@ Author: Florian Detsch
 Maintainer: Florian Detsch <florian.detsch@staff.uni-marburg.de>
 Description: The 'Orcs' package yields a collection of various R functions meant to simplify everyday-life coding without being devoted to a particular scope of application. Check out the 'vignettes' subfolder for recent updates and sample snippets.
 License: GNU GPL (>=3)
-Suggests: knitr
+Depends:
+    raster
+Suggests: 
+    knitr
