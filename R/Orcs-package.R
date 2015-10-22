@@ -11,7 +11,8 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
 #'
-#' @import methods raster
+#' @import methods raster Rcpp
+#' @useDynLib Orcs
 #' 
 #' @keywords package
 #'
