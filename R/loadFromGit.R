@@ -15,13 +15,15 @@
 #' \code{\link{install_github}}
 #' 
 #' @examples
+#' \dontrun{
+#' ## install 'Rsenal' package directly from GitHub
 #' loadFromGit()
+#' }
 #' 
 #' @export loadFromGit
 loadFromGit <- function(repo = "environmentalinformatics-marburg/Rsenal", ...) {
-  ## load 'devtools' and install desired package
-  library(devtools)
-  install_github(repo, ...)
+  ## install desired package
+  devtools::install_github(repo, ...)
   
   ## load package
   ls_pkg <- strsplit(repo, "/")

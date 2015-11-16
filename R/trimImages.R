@@ -20,10 +20,13 @@
 #' \code{\link{list.files}}, \code{\link{system}}
 #' 
 #' @examples
+#' \dontrun{
 #' ## trim images in current working directory
 #' trimImages()
+#' }
 #' 
 #' @export trimImages
+#' @name trimImages
 trimImages <- function(path = ".", pttrn = ".png$") {
   
   ## list files matching specified pattern

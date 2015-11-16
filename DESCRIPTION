@@ -1,16 +1,26 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.0
-Date: 2015-05-26
+Version: 1.0.1
+Date: 2015-11-16
 Author: Florian Detsch
 Maintainer: Florian Detsch <florian.detsch@staff.uni-marburg.de>
-Description: The 'Orcs' package yields a collection of various R functions meant to simplify everyday-life coding without being devoted to a particular scope of application. Check out the 'vignettes' subfolder for recent updates and sample snippets.
-License: GNU GPL (>=3)
+Description: 
+    I tend to repeat the same code chunks over and over again. At first, this 
+    was fine for me and I paid little attention to such redundancies. A little 
+    later, when I got tired of manually replacing Linux filepaths with the 
+    referring Windows versions, and vice versa, I started to stuff some very 
+    frequently used work-steps into functions and, even later, into a proper R 
+    package. And that's what this package is - a hodgepodge of various R 
+    functions meant to simplify (my) everyday-life coding work without, at the 
+    same time, being devoted to a particular scope of application. 
+License: GPL (>= 3) | file LICENSE
 Depends:
-    raster, 
+    methods,
+    raster,
     Rcpp
-Suggests: 
+Imports:
+    devtools, 
     knitr
-LinkingTo: 
-    Rcpp
+LinkingTo: Rcpp
+RoxygenNote: 5.0.1
