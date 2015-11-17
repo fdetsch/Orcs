@@ -4,14 +4,14 @@
 \alias{trimImages}
 \title{Remove whitespace from images}
 \usage{
-trimImages(path = ".", pttrn = ".png$")
+trimImages(path = getwd(), pattern = c(".png$", ".tiff$"))
 }
 \arguments{
 \item{path}{Character. File path leading to image files; defaults to the 
 current working directory.}
 
-\item{pttrn}{Character. A regular expression as taken by 
-\code{\link{list.files}}; defaults to \code{".png$"}.}
+\item{pattern}{Character. A regular expression as taken by 
+\code{\link{list.files}}; defaults to \code{c(".png$", ".tiff$")}.}
 }
 \value{
 A character vector containing the names of the processed images.

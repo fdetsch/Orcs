@@ -7,8 +7,8 @@
 #' 
 #' @param path Character. File path leading to image files; defaults to the 
 #' current working directory.
-#' @param pttrn Character. A regular expression as taken by 
-#' \code{\link{list.files}}; defaults to \code{".png$"}.
+#' @param pattern Character. A regular expression as taken by 
+#' \code{\link{list.files}}; defaults to \code{c(".png$", ".tiff$")}.
 #' 
 #' @return
 #' A character vector containing the names of the processed images.
@@ -27,19 +27,23 @@
 #' 
 #' @export trimImages
 #' @name trimImages
-trimImages <- function(path = ".", pttrn = ".png$") {
+trimImages <- function(path = getwd(), pattern = c(".png$", ".tiff$")) {
   
   ## list files matching specified pattern
-  ch_fls <- list.files(path, pattern = pttrn, full.names = TRUE)
-  if (length(ch_fls) == 0)
+  lst_fls <- lapply(pattern, function(i) {
+    list.files(path = path, pattern = i, full.names = TRUE)
+  })
+  chr_fls <- unlist(lst_fls)
+  
+  if (length(chr_fls) == 0)
     stop("No files found in ", path, " matching specified pattern.")
     
   ## trim images
-  for (i in ch_fls) {
+  for (i in chr_fls) {
     ch_sysstring <- paste("convert -trim", i, i)
     system(ch_sysstring)
   }
   
   ## return list of processed files
-  return(ch_fls)
+  return(chr_fls)
 }
