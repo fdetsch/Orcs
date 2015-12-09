@@ -1,8 +1,8 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.0.2
-Date: 2015-11-17
+Version: 1.0.3
+Date: 2015-12-09
 Author: Florian Detsch
 Maintainer: Florian Detsch <florian.detsch@staff.uni-marburg.de>
 Description: 
