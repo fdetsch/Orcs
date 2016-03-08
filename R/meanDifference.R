@@ -2,7 +2,6 @@ if ( !isGeneric("meanDifference") ) {
   setGeneric("meanDifference", function(x, ...)
     standardGeneric("meanDifference"))
 }
-#' @title 
 #' Calculate mean difference between two datasets
 #'
 #' @description
@@ -22,10 +21,9 @@ if ( !isGeneric("meanDifference") ) {
 #'
 #' @export meanDifference
 #' @name meanDifference
-NULL
 
-# Function using 'RasterLayer' objects -----------------------------------------
-#' 
+################################################################################
+### function using 'RasterLayer' objects ---------------------------------------
 #' @aliases meanDifference,RasterLayer-method
 #' @rdname meanDifference
 setMethod("meanDifference",
@@ -46,9 +44,8 @@ setMethod("meanDifference",
   mean(num_xy[, 1] - num_xy[, 2])
 })
 
-
-# Function using 'numeric' vectors ---------------------------------------------
-#' 
+################################################################################
+### function using 'numeric' vectors -------------------------------------------
 #' @aliases meanDifference,numeric-method
 #' @rdname meanDifference
 setMethod("meanDifference",
