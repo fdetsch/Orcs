@@ -2,6 +2,7 @@
 
 export(dimC)
 export(lineEnding)
+export(list2df)
 export(loadFromGit)
 export(loadPkgs)
 export(meanDifference)
