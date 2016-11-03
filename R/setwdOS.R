@@ -25,8 +25,8 @@
 #' setwdOS(path_ext = "kilimanjaro/nubiscope")
 #' 
 #' @export setwdOS
-setwdOS <- function(path_lin = "/media/permanent/", 
-                    path_win = "C:/Permanent/", 
+setwdOS <- function(path_lin = "/media/fdetsch/Permanent/", 
+                    path_win = "D:/", 
                     path_ext = NULL) {
   
   ## determine os

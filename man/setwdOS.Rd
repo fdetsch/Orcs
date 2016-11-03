@@ -4,7 +4,7 @@
 \alias{setwdOS}
 \title{Set working directory dependent on current OS}
 \usage{
-setwdOS(path_lin = "/media/permanent/", path_win = "C:/Permanent/",
+setwdOS(path_lin = "/media/fdetsch/Permanent/", path_win = "D:/",
   path_ext = NULL)
 }
 \arguments{
