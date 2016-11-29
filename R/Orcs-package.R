@@ -13,6 +13,7 @@
 #'
 #' @import methods raster devtools knitr
 #' @importFrom Rcpp sourceCpp
+#' @importFrom stats coef complete.cases
 #' @useDynLib Orcs
 #' 
 #' @keywords package

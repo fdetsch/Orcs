@@ -18,13 +18,16 @@
 #' \code{\link{setwd}}, \code{\link{switch}}
 #' 
 #' @examples
+#' \dontrun{
 #' # desired partition
 #' setwdOS()
 #' 
 #' # including file path extension
 #' setwdOS(path_ext = "kilimanjaro/nubiscope")
+#' }
 #' 
 #' @export setwdOS
+#' @name setwdOS
 setwdOS <- function(path_lin = "/media/fdetsch/Permanent/", 
                     path_win = "D:/", 
                     path_ext = NULL) {

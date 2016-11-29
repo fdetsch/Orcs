@@ -22,11 +22,13 @@ however, both an OS-sensitive path to the desired hard disk partition and,
 optionally, an extension of this file path are required.
 }
 \examples{
+\dontrun{
 # desired partition
 setwdOS()
 
 # including file path extension
 setwdOS(path_ext = "kilimanjaro/nubiscope")
+}
 
 }
 \author{
