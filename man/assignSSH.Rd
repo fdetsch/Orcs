@@ -33,4 +33,3 @@ assignSSH(user = "fdetsch", repo = "Orcs")
 \seealso{
 \url{https://help.github.com/articles/generating-an-ssh-key/}
 }
-

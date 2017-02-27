@@ -33,10 +33,9 @@ rmDuplCols(df, keep_first = FALSE)
 
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{duplicated}}
 }
-
+\author{
+Florian Detsch
+}

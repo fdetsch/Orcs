@@ -2,9 +2,9 @@
 % Please edit documentation in R/RcppExports.R
 \name{OrcsCppFun}
 \alias{OrcsCppFun}
-\alias{dimC}
-\alias{ncolC}
 \alias{nrowC}
+\alias{ncolC}
+\alias{dimC}
 \title{Dimensions of a \code{data.frame}}
 \usage{
 nrowC(x)
@@ -34,6 +34,7 @@ rows and columns of a \code{data.frame}.
 
 \item \code{dimC}: 
 }}
+
 \examples{
 dat <- data.frame(a = 1:4, b = 2:5, c = 3:6)
 
@@ -42,10 +43,9 @@ nrowC(dat)
 
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{nrow}}, \code{\link{ncol}}, \code{\link{dim}}.
 }
-
+\author{
+Florian Detsch
+}

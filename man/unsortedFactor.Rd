@@ -32,10 +32,9 @@ fc_mnth2 <- unsortedFactor(mnth)
 levels(fc_mnth2)
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{factor}}
 }
-
+\author{
+Florian Detsch
+}

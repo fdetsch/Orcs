@@ -17,10 +17,9 @@ load and attach multiple packages at once.
 loadPkgs(c("raster", "rgdal"))
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{library}}.
 }
-
+\author{
+Florian Detsch
+}

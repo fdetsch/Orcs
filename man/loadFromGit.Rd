@@ -23,10 +23,9 @@ loadFromGit()
 }
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{install_github}}
 }
-
+\author{
+Florian Detsch
+}

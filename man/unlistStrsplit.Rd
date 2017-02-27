@@ -29,10 +29,9 @@ x2 <- "This is a 2nd test."
 unlistStrsplit(c(x, x2))
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{strsplit}}
 }
-
+\author{
+Florian Detsch
+}

@@ -28,10 +28,9 @@ trimImages()
 }
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{list.files}}, \code{\link{system}}
 }
-
+\author{
+Florian Detsch
+}

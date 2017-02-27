@@ -18,4 +18,3 @@ Florian Detsch \cr
 \emph{Maintainer:} Florian Detsch \email{florian.detsch@staff.uni-marburg.de}
 }
 \keyword{package}
-

@@ -31,10 +31,9 @@ setwdOS(path_ext = "kilimanjaro/nubiscope")
 }
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{setwd}}, \code{\link{switch}}
 }
-
+\author{
+Florian Detsch
+}

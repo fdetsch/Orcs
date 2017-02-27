@@ -33,4 +33,3 @@ pvalue(lm.D9)
 \seealso{
 \code{\link{lm}}.
 }
-

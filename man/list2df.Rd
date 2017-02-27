@@ -28,4 +28,3 @@ list2df(lst)          # results in data.frame
 \seealso{
 \code{\link{data.frame}}, \code{\link{rbind}}, \code{\link{do.call}}.
 }
-

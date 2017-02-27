@@ -31,10 +31,9 @@ ls_df <- list(data.frame(a = 1:10, b = 1:10),
 multiMerge(ls_df, by = "a", all = TRUE)
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{merge}}, \code{\link{Reduce}}
 }
-
+\author{
+Florian Detsch
+}

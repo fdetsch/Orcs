@@ -27,10 +27,9 @@ it automatically converts multiple R Markdown files (*.Rmd) located in
 a specified folder (and, optionally, matching a particular pattern)
 to standard Markdown (*.md).
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{list.files}}, \code{\link{knit}}
 }
-
+\author{
+Florian Detsch
+}

@@ -28,4 +28,3 @@ y <- 2:11
 meanDifference(x, y)
 
 }
-

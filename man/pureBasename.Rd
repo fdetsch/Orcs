@@ -22,10 +22,9 @@ pureBasename(ch_file)
 pureBasename(ch_file, slash = TRUE)
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{basename}}
 }
-
+\author{
+Florian Detsch
+}

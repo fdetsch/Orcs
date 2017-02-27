@@ -23,10 +23,9 @@ By calling the Terminal (UNIX-based OS) or Command Prompt (Windows OS) from
 within R, this function performs parallelized 7zip-based compression of 
 selected files based on the built-in \strong{parallel} package.
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{list.files}}, \code{\link{system}}
 }
-
+\author{
+Florian Detsch
+}

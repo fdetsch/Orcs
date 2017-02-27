@@ -35,10 +35,9 @@ infile <- paste(system.file(package = "Orcs"), "DESCRIPTION", sep = "/")
 lineEnding(infile, outfile = "~/Desktop/DESCRIPTION4wd", to = "dos")
 
 }
-\author{
-Florian Detsch
-}
 \seealso{
 \code{\link{list.files}}, \code{\link{system}}
 }
-
+\author{
+Florian Detsch
+}
