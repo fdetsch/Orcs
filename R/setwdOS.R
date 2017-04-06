@@ -6,10 +6,10 @@
 #' however, both an OS-sensitive path to the desired hard disk partition and, 
 #' optionally, an extension of this file path are required.  
 #' 
-#' @param path_lin Character. Absolute file path to the Linux partition.
-#' @param path_win Character. Absolute file path to the Windows partition.
-#' @param path_ext Character. Optional file path extension that will be added to
-#' either \code{path_lin} or \code{path_win} after OS determination.
+#' @param lin Character. Absolute file path to the Linux partition.
+#' @param win Character. Absolute file path to the Windows partition.
+#' @param ext Character. Optional file path extension that will be added to
+#' either \code{lin} or \code{win} after OS determination.
 #' 
 #' @author 
 #' Florian Detsch
@@ -23,25 +23,25 @@
 #' setwdOS()
 #' 
 #' # including file path extension
-#' setwdOS(path_ext = "kilimanjaro/nubiscope")
+#' setwdOS(ext = "kilimanjaro/nubiscope")
 #' }
 #' 
 #' @export setwdOS
 #' @name setwdOS
-setwdOS <- function(path_lin = "/media/fdetsch/Permanent/", 
-                    path_win = "D:/", 
-                    path_ext = NULL) {
+setwdOS <- function(lin = "/media/permanent/", 
+                    win = "D:/", 
+                    ext = NULL) {
   
   ## determine os
   ch_dir_os <- switch(Sys.info()[["sysname"]], 
-                      "Linux" = path_lin, 
-                      "Windows" = path_win)
+                      "Linux" = lin, 
+                      "Windows" = win)
   
   ## setwd
-  if (is.null(path_ext))
+  if (is.null(ext))
     setwd(ch_dir_os)
   else 
-    setwd(paste(ch_dir_os, path_ext, sep = "/"))
+    setwd(paste(ch_dir_os, ext, sep = "/"))
   
   return(invisible())
 }

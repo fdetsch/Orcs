@@ -4,16 +4,15 @@
 \alias{setwdOS}
 \title{Set working directory dependent on current OS}
 \usage{
-setwdOS(path_lin = "/media/fdetsch/Permanent/", path_win = "D:/",
-  path_ext = NULL)
+setwdOS(lin = "/media/permanent/", win = "D:/", ext = NULL)
 }
 \arguments{
-\item{path_lin}{Character. Absolute file path to the Linux partition.}
+\item{lin}{Character. Absolute file path to the Linux partition.}
 
-\item{path_win}{Character. Absolute file path to the Windows partition.}
+\item{win}{Character. Absolute file path to the Windows partition.}
 
-\item{path_ext}{Character. Optional file path extension that will be added to
-either \code{path_lin} or \code{path_win} after OS determination.}
+\item{ext}{Character. Optional file path extension that will be added to
+either \code{lin} or \code{win} after OS determination.}
 }
 \description{
 Similar to \code{\link{setwd}}, this function sets the working directory to a
@@ -27,7 +26,7 @@ optionally, an extension of this file path are required.
 setwdOS()
 
 # including file path extension
-setwdOS(path_ext = "kilimanjaro/nubiscope")
+setwdOS(ext = "kilimanjaro/nubiscope")
 }
 
 }
