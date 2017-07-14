@@ -38,3 +38,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+
+static const R_CallMethodDef CallEntries[] = {
+    {"Orcs_nrowC", (DL_FUNC) &Orcs_nrowC, 1},
+    {"Orcs_ncolC", (DL_FUNC) &Orcs_ncolC, 1},
+    {"Orcs_dimC", (DL_FUNC) &Orcs_dimC, 1},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_Orcs(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
+}
