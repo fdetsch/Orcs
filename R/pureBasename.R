@@ -1,25 +1,29 @@
-#' Return filename without extension
+#' Return file name without extension
 #' 
 #' @description
 #' As opposed to \code{\link{basename}}, this function returns the pure basename 
 #' of a file path, i.e. without extension.
 #' 
-#' @param path Filename; see \code{\link{basename}}. 
-#' @param slash If \code{TRUE}, a leading slash ("/") is added to the returned 
-#' filename.
+#' @param path A file name as \code{character}. 
+#' @param slash A \code{logical} determining whether to add a leading slash 
+#' ("/") to the returned file name.
+#' 
+#' @return 
+#' A file name without extension as \code{character}.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{basename}}
+#' \code{\link{basename}}, \code{\link{file_path_sans_ext}}.
 #' 
 #' @examples 
-#' ch_file <- "path/to/file.with.extension"
-#' pureBasename(ch_file)
-#' pureBasename(ch_file, slash = TRUE)
+#' fls <- system.file("external/rlogo.grd", package = "raster")
+#' pureBasename(fls)
+#' pureBasename(fls, slash = TRUE)
 #' 
 #' @export pureBasename
+#' @name pureBasename  
 pureBasename <- function(path, slash = FALSE) {
   
   ## extract basename, split and remove extension
@@ -30,7 +34,7 @@ pureBasename <- function(path, slash = FALSE) {
   
   ## optionally, add leading slash
   if (slash)
-    ch_purebasename <- paste0("/", ch_purebasename)
+    ch_purebasename <- file.path("", ch_purebasename)
   
   return(ch_purebasename)
 }

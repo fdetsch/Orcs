@@ -2,28 +2,31 @@
 % Please edit documentation in R/pureBasename.R
 \name{pureBasename}
 \alias{pureBasename}
-\title{Return filename without extension}
+\title{Return file name without extension}
 \usage{
 pureBasename(path, slash = FALSE)
 }
 \arguments{
-\item{path}{Filename; see \code{\link{basename}}.}
+\item{path}{A file name as \code{character}.}
 
-\item{slash}{If \code{TRUE}, a leading slash ("/") is added to the returned 
-filename.}
+\item{slash}{A \code{logical} determining whether to add a leading slash 
+("/") to the returned file name.}
+}
+\value{
+A file name without extension as \code{character}.
 }
 \description{
 As opposed to \code{\link{basename}}, this function returns the pure basename 
 of a file path, i.e. without extension.
 }
 \examples{
-ch_file <- "path/to/file.with.extension"
-pureBasename(ch_file)
-pureBasename(ch_file, slash = TRUE)
+fls <- system.file("external/rlogo.grd", package = "raster")
+pureBasename(fls)
+pureBasename(fls, slash = TRUE)
 
 }
 \seealso{
-\code{\link{basename}}
+\code{\link{basename}}, \code{\link{file_path_sans_ext}}.
 }
 \author{
 Florian Detsch
