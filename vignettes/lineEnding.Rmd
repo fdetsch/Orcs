@@ -1,11 +1,15 @@
 ---
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
-date: "30.09.2015"
-output: html_document
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
-```{r pkg, echo=FALSE}
+```{r pkg, echo=FALSE, message=FALSE}
 library(Orcs)
 ```
 
@@ -44,9 +48,9 @@ for any other OS. Once everything is set up, try the following brief example to
 clarify what I was trying to explain and demonstrate the usefulness of 
 `lineEnding`:
 
-```{r lineEnding}
+```{r lineEnding, eval=FALSE}
 ## input file
-infile <- paste(system.file(package = "Orcs"), "DESCRIPTION", sep = "/")
+infile <- file.path(system.file(package = "Orcs"), "DESCRIPTION")
 
 system(paste("file", infile))
 # > /home/fdetsch/R/x86_64-pc-linux-gnu-library/3.2/Orcs/DESCRIPTION: ASCII text
