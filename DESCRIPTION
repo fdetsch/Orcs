@@ -5,24 +5,27 @@ Version: 1.0.4
 Date: 2017-07-14
 Author: Florian Detsch
 Maintainer: Florian Detsch <fdetsch@web.de>
-Description: 
-    I tend to repeat the same code chunks over and over again. At first, this 
-    was fine for me and I paid little attention to such redundancies. A little 
-    later, when I got tired of manually replacing Linux filepaths with the 
-    referring Windows versions, and vice versa, I started to stuff some very 
-    frequently used work-steps into functions and, even later, into a proper R 
-    package. And that's what this package is - a hodgepodge of various R 
-    functions meant to simplify (my) everyday-life coding work without, at the 
-    same time, being devoted to a particular scope of application. 
+Description: I tend to repeat the same code chunks over and over again. At
+    first, this was fine for me and I paid little attention to such redundancies.
+    A little later, when I got tired of manually replacing Linux filepaths with
+    the referring Windows versions, and vice versa, I started to stuff some very
+    frequently used work-steps into functions and, even later, into a proper R
+    package. And that's what this package is - a hodgepodge of various R functions
+    meant to simplify (my) everyday-life coding work without, at the same time,
+    being devoted to a particular scope of application.
 License: GPL (>= 3) | file LICENSE
 Depends:
     methods,
     raster
 Imports:
-    devtools, 
-    knitr, 
-    Rcpp (>= 0.11.3), 
+    devtools,
+    knitr,
+    lattice, 
+    latticeExtra,
+    Rcpp (>= 0.11.3),
     stats
+VignetteBuilder:
+    knitr
 LinkingTo: Rcpp
 RoxygenNote: 6.0.1
 SystemRequirements: GNU make

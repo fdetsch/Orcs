@@ -11,7 +11,7 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
 #'
-#' @import methods raster devtools knitr
+#' @import methods raster devtools knitr lattice latticeExtra
 #' @importFrom Rcpp sourceCpp
 #' @importFrom stats coef complete.cases
 #' @useDynLib Orcs
