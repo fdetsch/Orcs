@@ -25,13 +25,13 @@
 #' #load data
 #' #Use a probability map assuming high potential for city expansion is just 
 #' #resulting from proximity to current urban area:
-#' pred <- raster(system.file("probability.rst", package = "Rsenal"))
+#' pred <- raster(system.file("extdata/probability.rst", package = "Orcs"))
 #' 
 #' #observed city growth between 1990 and 2006
-#' obs <- raster(system.file("citygrowth.tif", package = "Rsenal"))
+#' obs <- raster(system.file("extdata/citygrowth.tif", package = "Orcs"))
 #' 
 #' #masking current urban area since these pixels have no potential for change
-#' mask <- raster(system.file("citymask.tif", package = "Rsenal"))
+#' mask <- raster(system.file("extdata/citymask.tif", package = "Orcs"))
 #' 
 #' #create data list
 #' dat <- list(pred, obs, mask)
