@@ -24,25 +24,21 @@
 #'
 #' @export bumpVersion
 #' @name bumpVersion
-bumpVersion <- function(element = "patch", pkg.repo= ".", 
+bumpVersion <- function(element = "patch", pkg.repo = ".", 
                         news = file.path(pkg.repo, "NEWS.md"),
                         plain_news = TRUE) {
 
-  ### DESCRIPTION file
+  ### DESCRIPTION file =========================================================
   desc <- readLines(paste(pkg.repo, "DESCRIPTION", sep = "/"))
-  
+
   old.ver <- substr(desc[grep("Version*", desc)], 10,
                     nchar(desc[grep("Version*", desc)]))
-
   old <- as.numeric(unlist(strsplit(old.ver, "\\.")))
-
   new.v <- switch(element,
                   major = c(old[1] + 1, 0, 0),
                   minor = c(old[1], old[2] + 1, 0),
                   patch = c(old[1], old[2], old[3] + 1))
-
   new.ver <- paste(new.v[1], new.v[2], new.v[3], sep = ".")
-
   new.v <- new.v[1] * 100 + new.v[2] * 10 + new.v[3]
   old <- old[1] * 100 + old[2] * 10 + old[3]
 
@@ -51,24 +47,25 @@ bumpVersion <- function(element = "patch", pkg.repo= ".",
 
   writeLines(desc, paste(pkg.repo, "DESCRIPTION", sep = "/"))
 
-  ### pkg.name-package.Rd file - if present
+  ### pkg.name-package.Rd file - if present ====================================
   pkg.name <- substr(desc[grep("^Package:", desc)], 10,
                      nchar(desc[grep("^Package:", desc)]))
+  pkg_fl = paste(pkg.repo, "man",
+                 paste(pkg.name, "-package.Rd", sep = ""),
+                 sep = "/")
+  
+  if (file.exists(pkg_fl)) {
+    pkg.doc <- readLines(pkg_fl)
+    pkg.doc[grep("^Version", pkg.doc)] <- paste("Version: \\tab ",
+                                                new.ver, "\\cr", sep = "")
+    pkg.doc[grep("^Date", pkg.doc)] <- paste("Date: \\tab ",
+                                             Sys.Date(), "\\cr", sep = "")
+    writeLines(pkg.doc, paste(pkg.repo, "man",
+                              paste(pkg.name, "-package.Rd", sep = ""),
+                              sep = "/"))
+  }
 
-  pkg.doc <- readLines(paste(pkg.repo, "man",
-                             paste(pkg.name, "-package.Rd", sep = ""),
-                             sep = "/"))
-
-  pkg.doc[grep("^Version", pkg.doc)] <- paste("Version: \\tab ",
-                                                       new.ver, "\\cr", sep = "")
-  pkg.doc[grep("^Date", pkg.doc)] <- paste("Date: \\tab ",
-                                                    Sys.Date(), "\\cr", sep = "")
-
-  writeLines(pkg.doc, paste(pkg.repo, "man",
-                            paste(pkg.name, "-package.Rd", sep = ""),
-                            sep = "/"))
-
-  ## NEWS
+  ## NEWS ======================================================================
   if (file.exists(news)) {
     newsfile <- readLines(news)
     newsfile[1] <- paste("##", pkg.name, new.ver)
