@@ -39,9 +39,6 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 int nrowC(DataFrame x) { 
   
-  // number of columns
-  int nCols = x.size();
-  
   // content of first column
   CharacterVector chContents = as<CharacterVector>(x[1]);
   

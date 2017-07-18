@@ -14,7 +14,7 @@
 #' @import methods raster devtools knitr lattice latticeExtra
 #' @importFrom Rcpp sourceCpp
 #' @importFrom stats coef complete.cases
-#' @useDynLib Orcs
+#' @rawNamespace useDynLib(Orcs, .registration = TRUE)
 #' 
 #' @keywords package
 #'

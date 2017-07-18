@@ -31,4 +31,5 @@ import(raster)
 importFrom(Rcpp,sourceCpp)
 importFrom(stats,coef)
 importFrom(stats,complete.cases)
-useDynLib(Orcs)
+useDynLib(Orcs, .registration = TRUE)
+

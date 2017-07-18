@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // nrowC
 int nrowC(DataFrame x);
-RcppExport SEXP Orcs_nrowC(SEXP xSEXP) {
+RcppExport SEXP _Orcs_nrowC(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -18,7 +18,7 @@ END_RCPP
 }
 // ncolC
 int ncolC(DataFrame x);
-RcppExport SEXP Orcs_ncolC(SEXP xSEXP) {
+RcppExport SEXP _Orcs_ncolC(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -29,7 +29,7 @@ END_RCPP
 }
 // dimC
 IntegerVector dimC(DataFrame x);
-RcppExport SEXP Orcs_dimC(SEXP xSEXP) {
+RcppExport SEXP _Orcs_dimC(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -37,16 +37,4 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(dimC(x));
     return rcpp_result_gen;
 END_RCPP
-}
-
-static const R_CallMethodDef CallEntries[] = {
-    {"Orcs_nrowC", (DL_FUNC) &Orcs_nrowC, 1},
-    {"Orcs_ncolC", (DL_FUNC) &Orcs_ncolC, 1},
-    {"Orcs_dimC", (DL_FUNC) &Orcs_dimC, 1},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_Orcs(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
 }
