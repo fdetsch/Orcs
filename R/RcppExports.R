@@ -35,20 +35,20 @@ NULL
 #' @aliases nrowC
 #' @describeIn OrcsCppFun 
 nrowC <- function(x) {
-    .Call('Orcs_nrowC', PACKAGE = 'Orcs', x)
+    .Call('_Orcs_nrowC', PACKAGE = 'Orcs', x)
 }
 
 #' @export ncolC
 #' @aliases ncolC
 #' @describeIn OrcsCppFun 
 ncolC <- function(x) {
-    .Call('Orcs_ncolC', PACKAGE = 'Orcs', x)
+    .Call('_Orcs_ncolC', PACKAGE = 'Orcs', x)
 }
 
 #' @export dimC
 #' @aliases dimC
 #' @describeIn OrcsCppFun 
 dimC <- function(x) {
-    .Call('Orcs_dimC', PACKAGE = 'Orcs', x)
+    .Call('_Orcs_dimC', PACKAGE = 'Orcs', x)
 }
 
