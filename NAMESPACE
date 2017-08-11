@@ -3,6 +3,7 @@
 export(assignSSH)
 export(bumpVersion)
 export(dimC)
+export(ifMissing)
 export(latticeCombineGrid)
 export(latticeCombineLayer)
 export(lineEnding)
