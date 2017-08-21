@@ -1,2 +1,6 @@
 src/
 * add documentation
+
+general
+* automated parallelization (ie library, makePSOCKCluster, etc.) for 'parallel' and 'foreach'.
+* 'merge,list-method' for input other than 'Raster*' (eg 'data.frame').
