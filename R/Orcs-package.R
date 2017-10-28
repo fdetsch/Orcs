@@ -12,7 +12,9 @@
 #' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
 #'
 #' @import methods raster devtools knitr lattice latticeExtra
+#' @importFrom bookdown render_book
 #' @importFrom Rcpp sourceCpp
+#' @importFrom sp proj4string
 #' @importFrom stats coef complete.cases
 #' @rawNamespace useDynLib(Orcs, .registration = TRUE)
 #' 

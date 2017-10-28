@@ -1,9 +1,11 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.0.5
-Date: 2017-07-23
-Author: Florian Detsch
+Version: 1.0.6
+Date: 2017-10-28
+Authors@R: c(
+	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
+	person("Tim", "Appelhans", role = "ctb"))
 Maintainer: Florian Detsch <fdetsch@web.de>
 Description: I tend to repeat the same code chunks over and over again. At
     first, this was fine for me and I paid little attention to such redundancies.
@@ -18,11 +20,13 @@ Depends:
     methods,
     raster
 Imports:
+    bookdown, 
     devtools,
     knitr,
     lattice,
     latticeExtra,
     Rcpp (>= 0.11.3),
+    sp,
     stats
 VignetteBuilder: knitr
 LinkingTo: Rcpp
