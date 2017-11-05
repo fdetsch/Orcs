@@ -40,7 +40,7 @@ buildBook = function(output_dir = "book", ...) {
   if (file.exists("_main.Rmd")) 
     jnk = file.remove("_main.Rmd")
   
-  bookdown::render_book(...)
+  bookdown::render_book(output_dir = output_dir, ...)
   
   ## remove leading underscore ("_*") from image links 
   html = list.files(output_dir, pattern = ".html$", full.names = TRUE)
