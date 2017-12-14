@@ -55,11 +55,11 @@ ifMissing = function(ofl, fun0 = raster::brick, fun1 = raster::writeRaster,
     do.call(fun0, args = list(ofl))
     
   } else {
+    dots = list(...)
+    
     if (!missing(arg1)) {
       ofl1 = list(ofl) 
       names(ofl1) = arg1
-      dots = list(...)
-      
       dots = append(dots, ofl1)
     }
     

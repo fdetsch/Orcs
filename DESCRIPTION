@@ -1,8 +1,8 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.0.6
-Date: 2017-10-28
+Version: 1.0.7
+Date: 2017-12-14
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "ctb"))
@@ -18,7 +18,8 @@ Description: I tend to repeat the same code chunks over and over again. At
 License: GPL (>= 3) | file LICENSE
 Depends:
     methods,
-    raster
+    raster,
+    rgdal
 Imports:
     bookdown, 
     devtools,
