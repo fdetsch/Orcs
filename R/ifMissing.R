@@ -51,8 +51,6 @@
 ifMissing = function(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, 
                      arg1, ...) {
   
-  dots = list(...)
-  
   if (file.exists(ofl)) {
     do.call(fun0, args = list(ofl))
     
@@ -60,6 +58,8 @@ ifMissing = function(ofl, fun0 = raster::brick, fun1 = raster::writeRaster,
     if (!missing(arg1)) {
       ofl1 = list(ofl) 
       names(ofl1) = arg1
+      dots = list(...)
+      
       dots = append(dots, ofl1)
     }
     
