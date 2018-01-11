@@ -15,7 +15,7 @@ Description: I tend to repeat the same code chunks over and over again. At
     package. And that's what this package is - a hodgepodge of various R functions
     meant to simplify (my) everyday-life coding work without, at the same time,
     being devoted to a particular scope of application.
-License: GPL (>= 3) | file LICENSE
+License: MIT + file LICENSE
 Depends:
     methods,
     raster,
