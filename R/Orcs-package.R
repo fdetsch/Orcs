@@ -11,8 +11,9 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
 #'
-#' @import methods raster rgdal devtools knitr lattice latticeExtra
+#' @import methods grid raster rgdal devtools knitr lattice latticeExtra
 #' @importFrom bookdown render_book
+#' @importFrom plotrix thigmophobe
 #' @importFrom Rcpp sourceCpp
 #' @importFrom sp proj4string
 #' @importFrom stats coef complete.cases
