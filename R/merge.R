@@ -10,7 +10,8 @@ if ( !isGeneric("merge") ) {
 #' this function accepts a \code{list} of objects that are to be merged 
 #' together.
 #' 
-#' @param x A \code{list} of objects of the same type (eg \code{Raster*}).
+#' @param x A \code{list} of objects of the same type (eg \code{Raster*} or 
+#' \code{data.frame}).
 #' @param ... Additional arguments passed to the underlying merge method (eg 
 #' arguments compatible with \code{\link[raster]{merge}} and 
 #' \code{\link[raster]{writeRaster}} for \code{Raster*} input).
@@ -19,7 +20,7 @@ if ( !isGeneric("merge") ) {
 #' A merged object (eg a new \code{Raster*} object with a larger spatial 
 #' extent).
 #' 
-#' @seealso \code{\link{merge}}, \code{\link{do.call}}.
+#' @seealso \code{\link{merge}}, \code{\link{do.call}}, \code{\link{Reduce}}.
 #' 
 #' @author Florian Detsch
 #' 
@@ -32,6 +33,11 @@ if ( !isGeneric("merge") ) {
 #' dem = merge(dms, tolerance = 1e4)                  
 #' plot(dem)
 #' 
+#' ## data.frame input
+#' mrg = merge(list(iris, iris, iris)
+#'             , by = c("Species", "Sepal.Length", "Petal.Width"))
+#' head(mrg)
+#' 
 #' @name merge
 #' @aliases merge,list-method
 NULL
@@ -43,7 +49,17 @@ setMethod('merge', signature(x = 'list', y = 'missing'),
   dots <- list(...)
   args <- append(x, dots)
   
+  ## check list validity
+  cls = sapply(x, class)
+  if (length(unq <- unique(cls)) > 1) {
+    stop("Not all list elements have the same class.")
+  }
+  
   ## perform merge
-  do.call(merge, args)
+  if (unq == "data.frame") {
+    Reduce(function(...) merge(..., unlist(dots)), x)
+  } else {
+    do.call(merge, args)
+  }
 })
 

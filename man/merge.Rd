@@ -5,7 +5,8 @@
 \alias{merge,list-method}
 \title{Merge Objects Stored in a List}
 \arguments{
-\item{x}{A \code{list} of objects of the same type (eg \code{Raster*}).}
+\item{x}{A \code{list} of objects of the same type (eg \code{Raster*} or 
+\code{data.frame}).}
 
 \item{...}{Additional arguments passed to the underlying merge method (eg 
 arguments compatible with \code{\link[raster]{merge}} and 
@@ -30,9 +31,14 @@ dms = lapply(dms, raster)
 dem = merge(dms, tolerance = 1e4)                  
 plot(dem)
 
+## data.frame input
+mrg = merge(list(iris, iris, iris)
+            , by = c("Species", "Sepal.Length", "Petal.Width"))
+head(mrg)
+
 }
 \seealso{
-\code{\link{merge}}, \code{\link{do.call}}.
+\code{\link{merge}}, \code{\link{do.call}}, \code{\link{Reduce}}.
 }
 \author{
 Florian Detsch
