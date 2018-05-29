@@ -3,6 +3,9 @@
 \name{trimImages}
 \alias{trimImages}
 \title{Remove whitespace from images}
+\source{
+Ooms J (2018) \href{https://cran.r-project.org/package=magick/vignettes/intro.html}{The \strong{magick} package: Advanced Image-Processing in R.}
+}
 \usage{
 trimImages(path = getwd(), pattern = c(".png$", ".tiff$"))
 }
@@ -19,12 +22,25 @@ A character vector containing the names of the processed images.
 \description{
 This is a wrapper function around \code{convert -trim} to automatically 
 remove any whitespace from locally saved images. Note that 'ImageMagick' must
-be installed on your local system.
+be installed on your local system, see Source.
 }
 \examples{
 \dontrun{
-## trim images in current working directory
-trimImages()
+## trim image of bart simpson
+download.file("http://pngimg.com/uploads/simpsons/simpsons_PNG93.png?i=1"
+, destfile = (ofl <- file.path(tempdir(), "bart.png", fsep = "\\\\"))
+, mode = "wb")
+
+par(mfrow = c(1, 2))
+
+img = brick(ofl)
+plotRGB(img)
+
+jnk = trimImages(tempdir(), "bart.png")
+trm = brick(jnk)
+plotRGB(trm)
+
+dev.off()
 }
 
 }
