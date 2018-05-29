@@ -32,7 +32,8 @@ installation of external software in order to work!
 infile <- paste(system.file(package = "Orcs"), "DESCRIPTION", sep = "/")
 
 ## convert to dos line endings and write to output file
-lineEnding(infile, outfile = "~/Desktop/DESCRIPTION4wd", to = "dos")
+ofl = file.path(tempdir(), "DESCRIPTION4wd")
+lineEnding(infile, outfile = ofl, to = "dos")
 
 }
 \seealso{

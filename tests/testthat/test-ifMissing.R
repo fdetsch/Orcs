@@ -3,7 +3,7 @@ context("ifMissing")
 ## raster files
 logo = system.file("external/rlogo.grd", package = "raster")
 
-ofl = "~/rlogo.tif"
+ofl = file.path(tmp <- tempdir(), "rlogo.tif")
 if (file.exists(ofl)) jnk = file.remove(ofl)
 
 test_that("nonexisting raster file is created", {
@@ -23,7 +23,7 @@ test_that("nonexisting raster file is created", {
 ## text files
 data(iris)
 
-ofl = "~/iris.csv"
+ofl = file.path(tmp, "iris.csv")
 if (file.exists(ofl)) jnk = file.remove(ofl)
 
 test_that("nonexisting text file is created", {

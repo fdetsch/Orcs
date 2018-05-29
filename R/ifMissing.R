@@ -32,7 +32,7 @@
 #' s <- ifMissing(logo) 
 #' 
 #' # create nonexisting file and import it afterwards
-#' logo2 <- "~/rlogo.tif"
+#' logo2 <- file.path(tempdir(), "rlogo.tif")
 #' s2 <- ifMissing(logo2, arg1 = "filename", x = s, datatype = "INT1U")
 #' 
 #' # this also works with text files and more sophisticated custom functions
@@ -42,7 +42,7 @@
 #' }
 #' 
 #' data(iris)
-#' ofl <- "~/iris.csv"
+#' ofl <- file.path(tempdir(), "iris.csv")
 #' iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.names = FALSE)
 #' }
 #' 
