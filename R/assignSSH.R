@@ -3,14 +3,14 @@
 #' @description 
 #' Assign an SSH key to a local Git repository to bypass user/password prompts 
 #' during \code{git push}. See 
-#' \url{https://help.github.com/articles/generating-an-ssh-key/} for further 
-#' information on how to generate an SSH key and add it to your GitHub account 
-#' in the first place.
+#' \href{https://help.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key} 
+#' for further information on how to generate an SSH key and add it to your 
+#' GitHub account.
 #' 
-#' @param user \code{character}. GitHub user name. If not specified, information 
-#' on GitHub user and repository name is taken from the current working 
-#' environment.
-#' @param repo \code{character}. GitHub repository name (see 'user'). 
+#' @param user GitHub user name as \code{character}. If not specified, 
+#' information on GitHub user and repository name is taken from the current 
+#' working environment.
+#' @param repo GitHub repository name as \code{character}, see 'user'. 
 #' 
 #' @seealso 
 #' \url{https://help.github.com/articles/generating-an-ssh-key/}

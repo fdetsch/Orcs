@@ -15,7 +15,7 @@ buildBook(output_dir = "book", ...)
 Since the use of underscores ('_') is not permitted when streaming 
 \strong{bookdown} documents via 
 \href{https://pages.github.com/}{GitHub Pages}, this wrapper function serves 
-to remove any unwanted underscores from subfolders and linking \code{.html} 
+to remove any unwanted underscores from subfolders and link \code{.html} 
 documents created by \code{\link[bookdown]{render_book}}.
 }
 \note{

@@ -16,7 +16,7 @@ ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1, ...)
 (defaults to \code{\link{writeRaster}}).}
 
 \item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to 
-'ofl', eg \code{filename} in \code{\link{writeRaster}} or \code{file} in 
+'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in 
 \code{\link{write.table}}. If missing (default), the target file name passed 
 to 'fun1' needs to be explicitly included via '...'.}
 

@@ -1,7 +1,7 @@
 #' Compute Selected Evaluation Metrics
 #' 
 #' @description
-#' Compute selected evaluation metrics for binary (ie two-class) confusion 
+#' Compute selected evaluation metrics for binary (i.e. two-class) confusion 
 #' matrices.
 #' 
 #' @param mat Binary confusion \code{matrix} (2-by-2; see Examples).

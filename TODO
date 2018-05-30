@@ -2,4 +2,4 @@ src/
 * add documentation
 
 general
-* automated parallelization (ie library, makePSOCKCluster, etc.) for 'parallel' and 'foreach'.
+* automated parallelization (i.e. library, makePSOCKCluster, etc.) for 'parallel' and 'foreach'.

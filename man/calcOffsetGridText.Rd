@@ -8,71 +8,60 @@ calcOffsetGridText(x, y = NULL, offset = 0.02, pos = NULL, xlim = NULL,
   ylim = NULL, ...)
 }
 \arguments{
-\item{x}{Numeric. A vector containing x coordinates, or a 2-column
-matrix containing x and y coordinates.}
+\item{x}{A \code{numeric} vector containing x coordinates, or a 2-column
+\code{matrix} containing x and y coordinates.}
 
-\item{y}{Numeric. A vector containing y coordinates, or \code{NULL} 
-if x is a two-column matrix.}
+\item{y}{A \code{numeric} vector containing y coordinates, or \code{NULL} 
+if 'x' is a two-column \code{matrix}.}
 
-\item{offset}{Numeric. The desired offset in normalized parent coordinates
-("npc", see \code{\link{unit}}).}
+\item{offset}{A \code{numeric} offset in normalized parent coordinates
+("npc", see \code{\link[grid]{unit}}).}
 
-\item{pos}{Integer. Text position specifier(s) as used by \code{\link{text}}.
-If not supplied, optimal text positions will be determined with respect to 
-neighboring locations using \code{\link{thigmophobe}}.}
+\item{pos}{Text position specifier(s) as \code{integer} used by 
+\code{\link{text}}. If not supplied, optimal text positions will be 
+determined with respect to neighboring locations using 
+\code{\link[plotrix]{thigmophobe}}.}
 
-\item{xlim}{Numeric. X-axis limits (xmin, xmax) of the current plot. If not
-supplied, limits are automatically calculated from supplied x and y
+\item{xlim, ylim}{X and Y-axis limits (\code{c(min, max)}) of the current plot. 
+If not supplied, limits are automatically calculated from supplied x and y
 coordinates.}
 
-\item{ylim}{Numeric. Y-axis limits (ymin, ymax) of the current plot. If not
-supplied, limits are automatically calculated from supplied x and y
-coordinates.}
-
-\item{...}{Further arguments. Currently not in use.}
+\item{...}{Currently not used.}
 }
 \value{
-A numeric matrix containing offset coordinates.
+A \code{numeric matrix} containing offset coordinates.
 }
 \description{
 Calculate offset coordinates for (\strong{grid}-based) text drawing 
 functions, e.g. \code{\link{grid.text}}.
 }
 \examples{
-# required packages
-library(grid)
-library(plotrix)
-library(lattice)
+stopifnot(
+  require(mapview)
+  , require(lattice)
+  , require(grid)
+)
 
-# sample point data
-x_cntr <- 330000
-y_cntr <- 9650000
+## calculate offsets for breweries with more than 3 different types of beer
+brw = as(subset(breweries, number.of.types > 3), "Spatial")
+loc = calcOffsetGridText(coordinates(brw), offset = .025)
 
-ls_xy <- lapply(c(x_cntr, y_cntr), function(i) {
-  set.seed(i * 100)
-  rnorm(10, i, 10000)
-})
+## create plot
+p = spplot(brw, zcol = "number.of.types", auto.key = FALSE)
 
-df <- data.frame(id = 1:10,
-                 x = ls_xy[[1]],
-                 y = ls_xy[[2]])
-coordinates(df) <- ~ x + y
-projection(df) <- "+init=epsg:21037"
+plot.new()
+print(p, newpage = FALSE)
 
-# offset point locations
-loc_lbl <- calcOffsetGridText(x = coordinates(df), offset = .015)
-
-# vis
-spplot(df, col.regions = "black", auto.key = FALSE)
-
+## add text labels
 downViewport(trellis.vpname(name = "figure"))
-for (i in 1:nrow(df))
-  grid.text(label = df$id[i], x = loc_lbl[i, 1], y = loc_lbl[i, 2],
-            just = Orcs:::pos2just(thigmophobe(coordinates(df)))[i])
+for (i in 1:length(brw)) {
+  grid.text(label = brw$number.of.types[i], x = loc[i, 1], y = loc[i, 2])
+}
               
 }
 \seealso{
-\code{\link{grid.text}}, \code{\link{text}}, \code{\link{thigmophobe}}
+\code{\link[grid]{grid.text}}, \code{\link{text}}, 
+\code{\link[plotrix]{thigmophobe}}
 }
 \author{
 Florian Detsch

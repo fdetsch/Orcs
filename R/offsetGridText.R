@@ -6,33 +6,31 @@
 #' \code{\link{grid.text}} and \code{\link{grid.stext}}) that automatically adds
 #' offset text annotations to a 'trellis' plot.
 #' 
-#' @param x Numeric. A vector containing x coordinates, or a 2-column
-#' matrix containing x and y coordinates.
-#' @param y Numeric. A vector containing y coordinates, or \code{NULL} 
-#' if x is a two-column matrix.
-#' @param labels Character. The text to be written.
-#' @param xlim Numeric. X-axis limits (xmin, xmax) of the current plot. If not
-#' supplied, limits are automatically calculated from supplied x and y
+#' @param x A \code{numeric} vector containing x coordinates, or a 2-column
+#' \code{matrix} containing x and y coordinates.
+#' @param y A \code{numeric} vector containing y coordinates, or \code{NULL} 
+#' if 'x' is a two-column \code{matrix}.
+#' @param labels The text to be written as \code{character}.
+#' @param xlim,ylim X and Y-axis limits (\code{c(min, max)}) of the current plot. 
+#' If not supplied, limits are automatically calculated from supplied x and y
 #' coordinates.
-#' @param ylim Numeric. Y-axis limits (ymin, ymax) of the current plot. If not
-#' supplied, limits are automatically calculated from supplied x and y
-#' coordinates.
-#' @param pos Integer. Text position specifier(s) as used by \code{\link{text}}.
-#' If not supplied, optimal text positions will be determined with respect to 
-#' neighboring locations using \code{\link{thigmophobe}}. 
-#' @param stext Logical. If \code{TRUE}, shadow text will be drawn (see 
-#' \code{grid.stext}) instead of ordinary \code{\link{grid.text}}.
-#' @param offset Numeric. The desired offset in normalized parent coordinates
-#' ("npc", see \code{\link{unit}}).
-#' @param ... Further arguments passed on the chosen \strong{grid} text 
-#' drawing function. 
+#' @param pos Text position specifier(s) as \code{integer} used by 
+#' \code{\link{text}}. If not supplied, optimal text positions will be 
+#' determined with respect to neighboring locations using 
+#' \code{\link[plotrix]{thigmophobe}}. 
+#' @param stext \code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow 
+#' text will be drawn around 'labels'.
+#' @param offset A \code{numeric} offset in normalized parent coordinates
+#' ("npc", see \code{\link[grid]{unit}}).
+#' @param ... Additional arguments passed to the respective \strong{grid} text 
+#' drawing function (depends on 'stext'). 
 #' 
 #' @author
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{grid.text}}, \code{\link{grid.stext}}, \code{\link{thigmophobe}}, 
-#' \code{\link{calcOffsetGridText}}.
+#' \code{\link[grid]{grid.text}}, \code{\link{grid.stext}}, 
+#' \code{\link[plotrix]{thigmophobe}}, \code{\link{calcOffsetGridText}}.
 #' 
 #' @examples
 #' \dontrun{

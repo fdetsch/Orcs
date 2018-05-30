@@ -8,7 +8,7 @@ ext2spy(x, crs = "+init=epsg:4326")
 }
 \arguments{
 \item{x}{An \code{Extent} object, or any object from which an \code{Extent} 
-can be extracted, eg. \code{Raster*}.}
+can be extracted, e.g. \code{Raster*}.}
 
 \item{crs}{Coordinate reference system passed to \code{\link{proj4string}}.}
 }

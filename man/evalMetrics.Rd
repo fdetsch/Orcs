@@ -17,7 +17,7 @@ evalMetrics(mat, type = c("accuracy", "precision", "recall"))
 A single \code{numeric}.
 }
 \description{
-Compute selected evaluation metrics for binary (ie two-class) confusion 
+Compute selected evaluation metrics for binary (i.e. two-class) confusion 
 matrices.
 }
 \examples{

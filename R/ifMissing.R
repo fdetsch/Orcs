@@ -12,7 +12,7 @@
 #' @param fun1 If 'ofl' does not exist, \code{function} used to create it 
 #' (defaults to \code{\link{writeRaster}}).
 #' @param arg1 Argument in 'fun1' (as \code{character}) that corresponds to 
-#' 'ofl', eg \code{filename} in \code{\link{writeRaster}} or \code{file} in 
+#' 'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in 
 #' \code{\link{write.table}}. If missing (default), the target file name passed 
 #' to 'fun1' needs to be explicitly included via '...'.
 #' @param ... Additional arguments passed to 'fun0,fun1'.

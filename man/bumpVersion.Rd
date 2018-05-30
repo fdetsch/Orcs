@@ -28,7 +28,10 @@ This function let's you bump the version number and creation date of
 your package's DESCRIPTION file. Additionally, it bumps the version 
 numbers of a NEWS.md file and automatically generates a corresponding 
 plain NEWS file (for R-help pages). Supported versioning system is 
-major.minor.patch.
+\href{https://semver.org/}{MAJOR.MINOR.PATCH}.
+}
+\seealso{
+\url{https://semver.org/}
 }
 \author{
 Tim Appelhans

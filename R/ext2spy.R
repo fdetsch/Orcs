@@ -4,7 +4,7 @@
 #' Convert a spatial extent to polygons.
 #' 
 #' @param x An \code{Extent} object, or any object from which an \code{Extent} 
-#' can be extracted, eg. \code{Raster*}.
+#' can be extracted, e.g. \code{Raster*}.
 #' @param crs Coordinate reference system passed to \code{\link{proj4string}}.
 #' 
 #' @return A \code{SpatialPolygons} object.

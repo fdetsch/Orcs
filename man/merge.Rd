@@ -5,19 +5,19 @@
 \alias{merge,list-method}
 \title{Merge Objects Stored in a List}
 \arguments{
-\item{x}{A \code{list} of objects of the same type (eg \code{Raster*} or 
+\item{x}{A \code{list} of objects of the same type (e.g. \code{Raster*} or 
 \code{data.frame}).}
 
-\item{...}{Additional arguments passed to the underlying merge method (eg 
+\item{...}{Additional arguments passed to the underlying merge method (e.g. 
 arguments compatible with \code{\link[raster]{merge}} and 
 \code{\link[raster]{writeRaster}} for \code{Raster*} input).}
 }
 \value{
-A merged object (eg a new \code{Raster*} object with a larger spatial 
+A merged object (e.g. a new \code{Raster*} object with a larger spatial 
 extent).
 }
 \description{
-Complementing existing merge methods, eg \code{\link[raster]{merge}} for 
+Complementing existing merge methods, e.g. \code{\link[raster]{merge}} for 
 \code{Raster*} objects, which typically work with one or two inputs only, 
 this function accepts a \code{list} of objects that are to be merged 
 together.
