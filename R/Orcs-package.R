@@ -22,3 +22,14 @@
 #' @keywords package
 #'
 NULL
+#'
+#' @docType data
+#' @name KiLi
+#' @title Bing Aerial Image of Kilimanjaro
+#' @description Bing aerial image of Kilimanjaro downloaded from 
+#' \href{https://www.openstreetmap.org/}{OpenStreetMap}.
+#' @format A \code{"RasterStack-class"} with 3 bands (red, green, blue).
+#' @details Copyright: OpenStreetMap contributors, see 
+#' \url{https://www.openstreetmap.org/copyright}.
+#' 
+NULL
