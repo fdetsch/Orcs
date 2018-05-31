@@ -1,8 +1,8 @@
 ---
 title: "Set working directory OS-dependent with `setwdOS`"
 author: "Florian Detsch"
-date: "2018-05-30"
-output: rmarkdown::html_document
+date: "2018-05-31"
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Set working directory OS-dependent with `setwdOS`}
   %\VignetteEngine{knitr::knitr}

@@ -1,8 +1,8 @@
 ---
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
-date: "2018-05-30"
-output: rmarkdown::html_document
+date: "2018-05-31"
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
   %\VignetteEngine{knitr::knitr}

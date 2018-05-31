@@ -36,6 +36,7 @@ Calculate offset coordinates for (\strong{grid}-based) text drawing
 functions, e.g. \code{\link{grid.text}}.
 }
 \examples{
+\dontrun{
 stopifnot(
   require(mapview)
   , require(lattice)
@@ -56,6 +57,7 @@ print(p, newpage = FALSE)
 downViewport(trellis.vpname(name = "figure"))
 for (i in 1:length(brw)) {
   grid.text(label = brw$number.of.types[i], x = loc[i, 1], y = loc[i, 2])
+}
 }
               
 }

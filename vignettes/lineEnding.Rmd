@@ -2,7 +2,7 @@
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_document
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
   %\VignetteEngine{knitr::knitr}

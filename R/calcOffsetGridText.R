@@ -30,6 +30,7 @@
 #' \code{\link[plotrix]{thigmophobe}}
 #' 
 #' @examples
+#' \dontrun{
 #' stopifnot(
 #'   require(mapview)
 #'   , require(lattice)
@@ -50,6 +51,7 @@
 #' downViewport(trellis.vpname(name = "figure"))
 #' for (i in 1:length(brw)) {
 #'   grid.text(label = brw$number.of.types[i], x = loc[i, 1], y = loc[i, 2])
+#' }
 #' }
 #'               
 #' @export calcOffsetGridText

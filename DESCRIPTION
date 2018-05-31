@@ -16,6 +16,8 @@ Description: I tend to repeat the same code chunks over and over again. At
     meant to simplify (my) everyday-life coding work without, at the same time,
     being devoted to a particular scope of application.
 License: MIT + file LICENSE
+LazyData: TRUE
+BugReports: https://github.com/fdetsch/Orcs/issues
 Depends:
     methods,
     raster,
