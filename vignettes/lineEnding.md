@@ -1,7 +1,7 @@
 ---
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
-date: "`r Sys.Date()`"
+date: "2018-05-30"
 output: rmarkdown::html_document
 vignette: >
   %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
@@ -9,9 +9,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r pkg, echo=FALSE, message=FALSE}
-library(Orcs)
-```
+
 
 Complementing the utility of `setwdOS`, another tool I came to develop in the 
 context of OS-dependent programming and, more specifically, line endings is 
@@ -39,7 +37,8 @@ versa (`to = "unix"`).
 Note that the code relies on the `dos2unix` external software tool which can 
 easily be installed on Linux via 
 
-```{r install, engine = 'bash', eval = FALSE}
+
+```bash
 sudo apt-get install dos2unix
 ```
 
@@ -48,7 +47,8 @@ for any other OS. Once everything is set up, try the following brief example to
 clarify what I was trying to explain and demonstrate the usefulness of 
 `lineEnding`:
 
-```{r lineEnding, eval=FALSE}
+
+```r
 ## input file
 infile <- file.path(system.file(package = "Orcs"), "DESCRIPTION")
 
