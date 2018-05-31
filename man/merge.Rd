@@ -8,9 +8,13 @@
 \item{x}{A \code{list} of objects of the same type (e.g. \code{Raster*} or 
 \code{data.frame}).}
 
+\item{by, all}{See \code{\link{merge.data.frame}}. Ignored if data stored 
+in 'x' is not of class \code{data.frame}.}
+
 \item{...}{Additional arguments passed to the underlying merge method (e.g. 
 arguments compatible with \code{\link[raster]{merge}} and 
-\code{\link[raster]{writeRaster}} for \code{Raster*} input).}
+\code{\link[raster]{writeRaster}} for \code{Raster*} input). Ignored if data 
+stored in 'x' is of class \code{data.frame}.}
 }
 \value{
 A merged object (e.g. a new \code{Raster*} object with a larger spatial 
@@ -38,7 +42,8 @@ head(mrg)
 
 }
 \seealso{
-\code{\link{merge}}, \code{\link{do.call}}, \code{\link{Reduce}}.
+\code{\link{merge.data.frame}}, \code{\link{do.call}}, 
+\code{\link{Reduce}}.
 }
 \author{
 Florian Detsch

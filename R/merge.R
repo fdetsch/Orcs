@@ -12,15 +12,19 @@ if ( !isGeneric("merge") ) {
 #' 
 #' @param x A \code{list} of objects of the same type (e.g. \code{Raster*} or 
 #' \code{data.frame}).
+#' @param by,all See \code{\link{merge.data.frame}}. Ignored if data stored 
+#' in 'x' is not of class \code{data.frame}.
 #' @param ... Additional arguments passed to the underlying merge method (e.g. 
 #' arguments compatible with \code{\link[raster]{merge}} and 
-#' \code{\link[raster]{writeRaster}} for \code{Raster*} input).
+#' \code{\link[raster]{writeRaster}} for \code{Raster*} input). Ignored if data 
+#' stored in 'x' is of class \code{data.frame}.
 #' 
 #' @return 
 #' A merged object (e.g. a new \code{Raster*} object with a larger spatial 
 #' extent).
 #' 
-#' @seealso \code{\link{merge}}, \code{\link{do.call}}, \code{\link{Reduce}}.
+#' @seealso \code{\link{merge.data.frame}}, \code{\link{do.call}}, 
+#' \code{\link{Reduce}}.
 #' 
 #' @author Florian Detsch
 #' 
@@ -43,7 +47,7 @@ if ( !isGeneric("merge") ) {
 NULL
 
 setMethod('merge', signature(x = 'list', y = 'missing'), 
-          function(x, ...) {
+          function(x, by = 1L, all = TRUE, ...) {
             
   ## additional arguments
   dots <- list(...)
@@ -57,7 +61,20 @@ setMethod('merge', signature(x = 'list', y = 'missing'),
   
   ## perform merge
   if (unq == "data.frame") {
-    Reduce(function(...) merge(..., unlist(dots)), x)
+    
+    # # if 'by' is specified and character, reorder data.frames (Reduce() call 
+    # # cannot find character column names for reasons unknown)
+    # if ("by" %in% names(dots)) {
+    #   if (inherits(dots$by, "character")) {
+    #     ids = sapply(x, function(i) grep(dots$by, names(i)))
+    #     for (i in 1:length(x)) {
+    #       x[[i]] = x[[i]][, c(ids[i], (tmp <- 1:ncol(x[[i]]))[!tmp == ids[i]])]
+    #     }
+    #     dots$by = 1L
+    #   }
+    # }
+    
+    Reduce(function(...) merge(..., by = by, all = all), x)
   } else {
     do.call(merge, args)
   }

@@ -9,5 +9,5 @@ ls_df <- list(data.frame(a = 1:10, b = 1:10),
               data.frame(a = sample(20, 10), d = runif(10)))
 
 ## merge data frames in one go
-multiMerge(ls_df, by = "a", all = TRUE)
+merge(ls_df, by = "a", all = TRUE)
 
