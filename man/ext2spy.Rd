@@ -4,22 +4,28 @@
 \alias{ext2spy}
 \title{Convert Spatial Extent to Polygon}
 \usage{
-ext2spy(x, crs = "+init=epsg:4326")
+ext2spy(x, crs = "+init=epsg:4326", as_sf = TRUE)
 }
 \arguments{
 \item{x}{An \code{Extent} object, or any object from which an \code{Extent} 
 can be extracted, e.g. \code{Raster*}.}
 
 \item{crs}{Coordinate reference system passed to \code{\link{proj4string}}.}
+
+\item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is 
+of class \code{sf} rather than \code{Spatial*}.}
 }
 \value{
-A \code{SpatialPolygons} object.
+Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons} 
+object.
 }
 \description{
 Convert a spatial extent to polygons.
 }
 \examples{
 ext = extent(c(25, 70, -5, 30))
+ext2spy(ext)
+ext2spy(ext, as_sf = TRUE)
 
 }
 \seealso{

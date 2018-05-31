@@ -31,6 +31,7 @@ Imports:
     latticeExtra,
     plotrix,
     Rcpp (>= 0.11.3),
+    sf,
     sp,
     stats
 LinkingTo: Rcpp

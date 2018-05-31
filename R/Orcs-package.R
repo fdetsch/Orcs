@@ -15,6 +15,7 @@
 #' @importFrom bookdown render_book
 #' @importFrom plotrix thigmophobe
 #' @importFrom Rcpp sourceCpp
+#' @importFrom sf st_as_sf
 #' @importFrom sp proj4string
 #' @importFrom stats coef complete.cases
 #' @rawNamespace useDynLib(Orcs, .registration = TRUE)
