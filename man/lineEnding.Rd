@@ -3,6 +3,9 @@
 \name{lineEnding}
 \alias{lineEnding}
 \title{Convert between DOS and UNIX line endings}
+\source{
+\href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}
+}
 \usage{
 lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos", "unix"),
   ...)
@@ -18,14 +21,14 @@ overwritten.}
 
 \item{to}{Either 'dos' or 'unix'.}
 
-\item{...}{Further arguments passed on to \code{\link{list.files}}, e.g. 
-'path', 'full.names'.}
+\item{...}{Additional arguments passed to \code{\link{list.files}}, only 
+applicable if 'infile' is not specified.}
 }
 \description{
 This function converts between DOS and UNIX style line endings by envoking 
 \code{unix2dos} (or \code{dos2unix}) upon a text file (see also 
-\code{system("unix2dos --help")}). Note that this function requires the 
-installation of external software in order to work!
+\code{system("unix2dos --help")}). Please note that this function requires 
+external software in order to work, see Source.
 }
 \examples{
 ## input file
