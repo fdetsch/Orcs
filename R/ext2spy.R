@@ -18,8 +18,8 @@
 #' 
 #' @examples 
 #' ext = extent(c(25, 70, -5, 30))
-#' ext2spy(ext)
-#' ext2spy(ext, as_sf = TRUE)
+#' ext2spy(ext) # 'sf' (default)
+#' ext2spy(ext, as_sf = FALSE) # 'Spatial*'
 #'
 #' @export ext2spy
 #' @name ext2spy 
