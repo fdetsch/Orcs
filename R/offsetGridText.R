@@ -1,7 +1,7 @@
 #' Insert offset text annotation into 'trellis' plot
 #' 
 #' @description
-#' This is a wrapper function around \code{\link{calcOffsetGridText}} and 
+#' This is a wrapper function around \code{Orcs:::calcOffsetGridText} and 
 #' \strong{grid}-based text drawing functions (currently including 
 #' \code{\link{grid.text}} and \code{\link{grid.stext}}) that automatically adds
 #' offset text annotations to a 'trellis' plot.
@@ -30,50 +30,44 @@
 #' 
 #' @seealso
 #' \code{\link[grid]{grid.text}}, \code{\link{grid.stext}}, 
-#' \code{\link[plotrix]{thigmophobe}}, \code{\link{calcOffsetGridText}}.
+#' \code{\link[plotrix]{thigmophobe}}, \code{Orcs::calcOffsetGridText}.
 #' 
 #' @examples
 #' \dontrun{
-#' #' bing satellite image of mt. kilimanjaro
-#' rst_kili <- kiliAerial(minNumTiles = 12,
-#'                        projection = "+init=epsg:4326")
-#' spl_kili <- rgb2spLayout(rst_kili, alpha = .8)
+#' stopifnot(
+#'   require(sf)
+#'   , require(latticeExtra)
+#'   , require(grid)
+#' )
 #' 
 #' #' kilimanjaro peaks
-#' kibo <- c(-3.065053, 37.359031)
-#' mawenzi <- c(-3.095436, 37.455061)
-#' shira <- c(-3.038222, 37.210408)
+#' peaks = data.frame(Peak = c("Kibo", "Mawenzi", "Shira")
+#'                    , Lon = c(37.359031, 37.455061, 37.210408)
+#'                    , Lat = c(-3.065053, -3.095436, -3.038222))
 #' 
-#' mat_peaks <- rbind(kibo, mawenzi, shira)
-#' df_peaks <- data.frame(peak = c("Kibo", "Mawenzi", "Shira"), 
-#'                        x = mat_peaks[, 2], 
-#'                        y = mat_peaks[, 1])
-#' 
-#' coordinates(df_peaks) <- ~ x + y
-#' projection(df_peaks) <- "+init=epsg:4326"
+#' coordinates(peaks) = ~ Lon + Lat
+#' proj4string(peaks) = "+init=epsg:4326"
 #' 
 #' #' visualization
-#' library(latticeExtra)
-#' 
 #' xlim_kili <- c(37.15, 37.55)
 #' ylim_kili <- c(-3.25, -2.9)
 #' 
-#' p_kili <- spplot(df_peaks, auto.key = FALSE, col.regions = "white", 
-#'                  xlim = xlim_kili, ylim = ylim_kili, cex = 2, pch = 20,
-#'                  scales = list(draw = TRUE), sp.layout = spl_kili) + 
-#'   layer(sp.points(df_peaks, cex = 1.5, pch = 20, col = "black"))
+#' p = spplot(KiLi[[1]], col.regions = "transparent", colorkey = FALSE, 
+#'            xlim = xlim_kili, ylim = ylim_kili,
+#'            scales = list(draw = TRUE, y = list(rot = 90)), 
+#'            sp.layout = rgb2spLayout(KiLi, quantiles = c(0, 1), alpha = .8)) + 
+#'   layer(sp.points(peaks, cex = 1.5, pch = 20, col = "black"))
 #' 
-#' print(p_kili)
+#' print(p)
 #' 
-#' library(grid)
 #' downViewport(trellis.vpname(name = "figure"))
-#' offsetGridText(x = coordinates(df_peaks), labels = c("Kibo", "Mawenzi", "Shira"),  
+#' offsetGridText(x = coordinates(peaks), labels = peaks$Peak,  
 #'                xlim = xlim_kili, ylim = ylim_kili, stext = TRUE, offset = .02,
-#'                gp = gpar(fontsize = 20, fontfamily = "Bookman Old Style"))
+#'                gp = gpar(fontsize = 16))
 #' }
 #'                                
 #' @export offsetGridText
-#' @aliases offsetGridText
+#' @name offsetGridText
 offsetGridText <- function(x, y = NULL, labels, xlim = NULL, ylim = NULL, 
                            pos = NULL, stext = FALSE, offset = .02, ...) {
 
@@ -97,10 +91,10 @@ offsetGridText <- function(x, y = NULL, labels, xlim = NULL, ylim = NULL,
                  y = grid::unit(mat_crd_rel_off[tmp_cnt, 2], "npc"), 
                  just = ch_loc_lbl[tmp_cnt], ...)
     } else {
-      grid.text(labels[tmp_cnt], 
-                x = grid::unit(mat_crd_rel_off[tmp_cnt, 1], "npc"), 
-                y = grid::unit(mat_crd_rel_off[tmp_cnt, 2], "npc"),
-                just = ch_loc_lbl[tmp_cnt], ...)
+      grid::grid.text(labels[tmp_cnt], 
+                      x = grid::unit(mat_crd_rel_off[tmp_cnt, 1], "npc"), 
+                      y = grid::unit(mat_crd_rel_off[tmp_cnt, 2], "npc"),
+                      just = ch_loc_lbl[tmp_cnt], ...)
     }
   }
 

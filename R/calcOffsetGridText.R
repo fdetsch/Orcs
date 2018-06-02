@@ -1,61 +1,61 @@
-#' Calculate offset coordinates for grid-based text annotations
-#' 
-#' @description
-#' Calculate offset coordinates for (\strong{grid}-based) text drawing 
-#' functions, e.g. \code{\link{grid.text}}.
-#' 
-#' @param x A \code{numeric} vector containing x coordinates, or a 2-column
-#' \code{matrix} containing x and y coordinates.
-#' @param y A \code{numeric} vector containing y coordinates, or \code{NULL} 
-#' if 'x' is a two-column \code{matrix}.
-#' @param offset A \code{numeric} offset in normalized parent coordinates
-#' ("npc", see \code{\link[grid]{unit}}).
-#' @param pos Text position specifier(s) as \code{integer} used by 
-#' \code{\link{text}}. If not supplied, optimal text positions will be 
-#' determined with respect to neighboring locations using 
-#' \code{\link[plotrix]{thigmophobe}}. 
-#' @param xlim,ylim X and Y-axis limits (\code{c(min, max)}) of the current plot. 
-#' If not supplied, limits are automatically calculated from supplied x and y
-#' coordinates.
-#' @param ... Currently not used. 
-#' 
-#' @return
-#' A \code{numeric matrix} containing offset coordinates.
-#' 
-#' @author
-#' Florian Detsch
-#' 
-#' @seealso
-#' \code{\link[grid]{grid.text}}, \code{\link{text}}, 
-#' \code{\link[plotrix]{thigmophobe}}
-#' 
-#' @examples
-#' \dontrun{
-#' stopifnot(
-#'   require(mapview)
-#'   , require(lattice)
-#'   , require(grid)
-#' )
-#' 
-#' ## calculate offsets for breweries with more than 3 different types of beer
-#' brw = as(subset(breweries, number.of.types > 3), "Spatial")
-#' loc = calcOffsetGridText(coordinates(brw), offset = .025)
-#' 
-#' ## create plot
-#' p = spplot(brw, zcol = "number.of.types", auto.key = FALSE)
-#' 
-#' plot.new()
-#' print(p, newpage = FALSE)
-#' 
-#' ## add text labels
-#' downViewport(trellis.vpname(name = "figure"))
-#' for (i in 1:length(brw)) {
-#'   grid.text(label = brw$number.of.types[i], x = loc[i, 1], y = loc[i, 2])
-#' }
-#' }
-#'               
-#' @export calcOffsetGridText
-#' @aliases calcOffsetGridText
+# Calculate offset coordinates for grid-based text annotations
+# 
+# @description
+# Calculate offset coordinates for (\strong{grid}-based) text drawing 
+# functions, e.g. \code{\link{grid.text}}.
+# 
+# @param x A \code{numeric} vector containing x coordinates, or a 2-column
+# \code{matrix} containing x and y coordinates.
+# @param y A \code{numeric} vector containing y coordinates, or \code{NULL} 
+# if 'x' is a two-column \code{matrix}.
+# @param offset A \code{numeric} offset in normalized parent coordinates
+# ("npc", see \code{\link[grid]{unit}}).
+# @param pos Text position specifier(s) as \code{integer} used by 
+# \code{\link{text}}. If not supplied, optimal text positions will be 
+# determined with respect to neighboring locations using 
+# \code{\link[plotrix]{thigmophobe}}. 
+# @param xlim,ylim X and Y-axis limits (\code{c(min, max)}) of the current plot. 
+# If not supplied, limits are automatically calculated from supplied x and y
+# coordinates.
+# @param ... Currently not used. 
+# 
+# @return
+# A \code{numeric matrix} containing offset coordinates.
+# 
+# @author
+# Florian Detsch
+# 
+# @seealso
+# \code{\link[grid]{grid.text}}, \code{\link{text}}, 
+# \code{\link[plotrix]{thigmophobe}}
+# 
+# @examples
+# \dontrun{
+# stopifnot(
+#   require(mapview)
+#   , require(lattice)
+#   , require(grid)
+# )
+# 
+# ## calculate offsets for breweries with more than 3 different types of beer
+# brw = as(subset(breweries, number.of.types > 3), "Spatial")
+# loc = calcOffsetGridText(coordinates(brw), offset = .025)
+# 
+# ## create plot
+# p = spplot(brw, zcol = "number.of.types", auto.key = FALSE)
+# 
+# plot.new()
+# print(p, newpage = FALSE)
+# 
+# ## add text labels
+# downViewport(trellis.vpname(name = "figure"))
+# for (i in 1:length(brw)) {
+#   grid.text(label = brw$number.of.types[i], x = loc[i, 1], y = loc[i, 2])
+# }
+# }
+#               
+# @export calcOffsetGridText
+# @aliases calcOffsetGridText
 calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL, 
                                xlim = NULL, ylim = NULL, ...) {
   
@@ -114,7 +114,7 @@ calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL,
 # 
 # @param pos Integer. A position specifier for text annotations as used by
 # \code{\link{text}}.
-# @param ... Further arguments. Currently not in use.
+# @param ... Currently not in use.
 # 
 # @return
 # A character vector used as input for text justification in \strong{grid}-based text
