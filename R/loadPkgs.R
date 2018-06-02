@@ -1,13 +1,17 @@
 #' Load multiple packages 
 #' 
 #' @description
-#' Being a wrapper around \code{\link{library}}, this function allows you to 
-#' load and attach multiple packages at once.
+#' Load and attach multiple packages at once.
 #' 
-#' @param pkgs 'character'. Packages to load. 
+#' @param pkgs Packages to load as \code{character}. 
+#' @param ... Additional arguments passed to \code{\link{library}}, except for 
+#' 'character.only' which is set to \code{TRUE}.
 #' 
 #' @author 
 #' Florian Detsch
+#' 
+#' @note 
+#' Package startup messages are automatically disabled.
 #' 
 #' @seealso 
 #' \code{\link{library}}.
@@ -17,11 +21,18 @@
 #' 
 #' @export loadPkgs
 #' @name loadPkgs
-loadPkgs <- function(pkgs) {
+loadPkgs <- function(pkgs, ...) {
   
-  sapply(pkgs, function(x) {
+  ## if 'character.only' has been specified, remove it from '...'
+  dots = list(...)
+  if ("character.only" %in% names(dots)) {
+    dots = dots[-grep("character.only", names(dots))]
+  }
+  
+  jnk = sapply(pkgs, function(x) {
+    dots_sub = append(list(package = x, character.only = TRUE), dots)
     suppressPackageStartupMessages(
-      library(x, character.only = TRUE)
+      do.call(library, args = dots_sub)
     )
   })
 

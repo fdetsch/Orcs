@@ -4,14 +4,19 @@
 \alias{loadPkgs}
 \title{Load multiple packages}
 \usage{
-loadPkgs(pkgs)
+loadPkgs(pkgs, ...)
 }
 \arguments{
-\item{pkgs}{'character'. Packages to load.}
+\item{pkgs}{Packages to load as \code{character}.}
+
+\item{...}{Additional arguments passed to \code{\link{library}}, except for 
+'character.only' which is set to \code{TRUE}.}
 }
 \description{
-Being a wrapper around \code{\link{library}}, this function allows you to 
-load and attach multiple packages at once.
+Load and attach multiple packages at once.
+}
+\note{
+Package startup messages are automatically disabled.
 }
 \examples{
 loadPkgs(c("raster", "rgdal"))
