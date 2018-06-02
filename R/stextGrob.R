@@ -10,10 +10,10 @@
 #' objects passed to \code{\link{grid.text}}.
 #' @param r Blur radius of colored framing as \code{numeric}.
 #' @param col,fill Framing and fill color passed to \code{\link[grid]{gpar}}.
-#' @param name,gp,vp Graphical parameters passed to \code{\link[grid]{gTree}}.
+#' @param name,gp,vp Graphical parameters passed to \code{\link{gTree}}.
 #' @param ... Additional arguments passed to \code{\link[grid]{grid.text}}.
 #' 
-#' @return A text grob created by \code{\link[grid]{gTree}}.
+#' @return A text grob created by \code{\link{gTree}}.
 #' 
 #' @seealso \code{\link[grid]{grid.text}}.
 #' 

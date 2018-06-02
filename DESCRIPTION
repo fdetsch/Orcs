@@ -1,8 +1,8 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.0.7
-Date: 2018-05-29
+Version: 1.0.0
+Date: 2018-06-02
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "ctb"))
@@ -16,8 +16,9 @@ Description: I tend to repeat the same code chunks over and over again. At
     meant to simplify (my) everyday-life coding work without, at the same time,
     being devoted to a particular scope of application.
 License: MIT + file LICENSE
-LazyData: TRUE
+URL: https://github.com/fdetsch/Orcs
 BugReports: https://github.com/fdetsch/Orcs/issues
+LazyData: TRUE
 Depends:
     methods,
     raster

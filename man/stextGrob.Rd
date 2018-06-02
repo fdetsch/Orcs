@@ -20,12 +20,12 @@ objects passed to \code{\link{grid.text}}.}
 
 \item{r}{Blur radius of colored framing as \code{numeric}.}
 
-\item{name, gp, vp}{Graphical parameters passed to \code{\link[grid]{gTree}}.}
+\item{name, gp, vp}{Graphical parameters passed to \code{\link{gTree}}.}
 
 \item{...}{Additional arguments passed to \code{\link[grid]{grid.text}}.}
 }
 \value{
-A text grob created by \code{\link[grid]{gTree}}.
+A text grob created by \code{\link{gTree}}.
 }
 \description{
 Create and draw shadow text by wrapping a textual expression into a colored 

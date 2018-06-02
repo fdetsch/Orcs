@@ -21,7 +21,7 @@
 #' @examples
 #' ## sample data
 #' set.seed(123)
-#' dat <- data.frame(matrix(rnorm(24), nc = 7))
+#' dat <- data.frame(matrix(rnorm(28), nc = 7))
 #' names(dat) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3", "Col4")
 #' 
 #' dat
@@ -43,8 +43,5 @@ rmDuplCols <- function(x, keep_first = TRUE, ...) {
   }
   
   # Remove duplicated columns from initial dataframe
-  out <- data.frame(x[, -dupl.cols])
-  names(out) = names(x)[-dupl.cols]
-  
-  return(out)
+  x[, -dupl.cols, drop = FALSE]
 }

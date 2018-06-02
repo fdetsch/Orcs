@@ -24,7 +24,7 @@ based on duplicated headers.
 \examples{
 ## sample data
 set.seed(123)
-dat <- data.frame(matrix(rnorm(24), nc = 7))
+dat <- data.frame(matrix(rnorm(28), nc = 7))
 names(dat) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3", "Col4")
 
 dat
