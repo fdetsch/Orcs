@@ -2,14 +2,14 @@
 #' 
 #' @description
 #' Similar to \code{\link{setwd}}, this function sets the working directory to a
-#' user-defined path. Rather than supplying a single \code{dir} argument, 
-#' however, both an OS-sensitive path to the desired hard disk partition and, 
-#' optionally, an extension of this file path are required.  
+#' user-defined path. Rather than supplying a single 'dir' argument, however, 
+#' both an OS-sensitive path to the desired hard disk partition and, optionally, 
+#' an extension of this file path are required.  
 #' 
-#' @param lin Character. Absolute file path to the Linux partition.
-#' @param win Character. Absolute file path to the Windows partition.
-#' @param ext Character. Optional file path extension that will be added to
-#' either \code{lin} or \code{win} after OS determination.
+#' @param lin,win Absolute file paths to the Linux and Windows partition as 
+#' \code{character}.
+#' @param ext Optional file path extension as \code{character} that will be 
+#' added to 'lin' or 'win' after automatic OS determination.
 #' 
 #' @author 
 #' Florian Detsch
@@ -29,7 +29,7 @@
 #' @export setwdOS
 #' @name setwdOS
 setwdOS <- function(lin = "/media/permanent/", 
-                    win = "D:/", 
+                    win = "C:/", 
                     ext = NULL) {
   
   ## determine os

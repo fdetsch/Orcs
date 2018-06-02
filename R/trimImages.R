@@ -5,13 +5,13 @@
 #' remove any whitespace from locally saved images. Note that 'ImageMagick' must
 #' be installed on your local system, see Source.
 #' 
-#' @param path Character. File path leading to image files; defaults to the 
-#' current working directory.
-#' @param pattern Character. A regular expression as taken by 
-#' \code{\link{list.files}}; defaults to \code{c(".png$", ".tiff$")}.
+#' @param path File path leading to image files as \code{character}, defaults to 
+#' the current working directory.
+#' @param pattern Character. A regular expression as \code{character} accepted
+#' by \code{\link{list.files}}, defaults to \code{c(".png$", ".tiff$")}.
 #' 
 #' @return
-#' A character vector containing the names of the processed images.
+#' A \code{character} vector containing the names of the processed images.
 #' 
 #' @author 
 #' Florian Detsch

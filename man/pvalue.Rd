@@ -2,15 +2,19 @@
 % Please edit documentation in R/pvalue.R
 \name{pvalue}
 \alias{pvalue}
-\title{Get \emph{p}-value from a univariate 'lm' object}
+\title{Get \emph{p}-value from 'lm' object}
+\source{
+\href{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}{retrieving p-values in lm}
+on R-help mailing list (last accessed 2018-06-02).
+}
 \usage{
 pvalue(mod)
 }
 \arguments{
-\item{mod}{An object of class 'lm'.}
+\item{mod}{An object of class \code{lm}.}
 }
 \value{
-A 'numeric' \emph{p}-value.
+A \code{numeric} \emph{p}-value.
 }
 \description{
 Retrieve the \emph{p}-value associated with a univariate linear regression.
@@ -25,10 +29,6 @@ lm.D9 <- lm(weight ~ group)
 
 pvalue(lm.D9)
 
-}
-\references{
-\url{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}
-(last accessed 2015-12-09).
 }
 \seealso{
 \code{\link{lm}}.

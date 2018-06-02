@@ -4,13 +4,14 @@
 \alias{loadFromGit}
 \title{Install and load a package from GitHub}
 \usage{
-loadFromGit(repo = "environmentalinformatics-marburg/Rsenal", ...)
+loadFromGit(repo = "fdetsch/Orcs", ...)
 }
 \arguments{
-\item{repo}{Character. Repository address, see \code{\link{install_github}}. 
-Defaults to "environmentalinformatics-marburg/Rsenal".}
+\item{repo}{Repository address as \code{character}, defaults to 
+"fdetsch/Orcs".}
 
-\item{...}{Further arguments passed on to \code{\link{install_github}}.}
+\item{...}{Additional arguments passed to 
+\code{\link[devtools]{install_github}}.}
 }
 \description{
 This function comprises multiple steps required to install and load a 
@@ -18,13 +19,13 @@ package directly from GitHub.
 }
 \examples{
 \dontrun{
-## install 'Rsenal' package directly from GitHub
-loadFromGit()
+## install 'Orcs' development version from GitHub
+loadFromGit("fdetsch/Orcs", ref = "develop")
 }
 
 }
 \seealso{
-\code{\link{install_github}}
+\code{\link[devtools]{install_github}}
 }
 \author{
 Florian Detsch

@@ -10,14 +10,14 @@ Ooms J (2018) \href{https://cran.r-project.org/package=magick/vignettes/intro.ht
 trimImages(path = getwd(), pattern = c(".png$", ".tiff$"))
 }
 \arguments{
-\item{path}{Character. File path leading to image files; defaults to the 
-current working directory.}
+\item{path}{File path leading to image files as \code{character}, defaults to 
+the current working directory.}
 
-\item{pattern}{Character. A regular expression as taken by 
-\code{\link{list.files}}; defaults to \code{c(".png$", ".tiff$")}.}
+\item{pattern}{Character. A regular expression as \code{character} accepted
+by \code{\link{list.files}}, defaults to \code{c(".png$", ".tiff$")}.}
 }
 \value{
-A character vector containing the names of the processed images.
+A \code{character} vector containing the names of the processed images.
 }
 \description{
 This is a wrapper function around \code{convert -trim} to automatically 

@@ -4,21 +4,20 @@
 \alias{setwdOS}
 \title{Set working directory dependent on current OS}
 \usage{
-setwdOS(lin = "/media/permanent/", win = "D:/", ext = NULL)
+setwdOS(lin = "/media/permanent/", win = "C:/", ext = NULL)
 }
 \arguments{
-\item{lin}{Character. Absolute file path to the Linux partition.}
+\item{lin, win}{Absolute file paths to the Linux and Windows partition as 
+\code{character}.}
 
-\item{win}{Character. Absolute file path to the Windows partition.}
-
-\item{ext}{Character. Optional file path extension that will be added to
-either \code{lin} or \code{win} after OS determination.}
+\item{ext}{Optional file path extension as \code{character} that will be 
+added to 'lin' or 'win' after automatic OS determination.}
 }
 \description{
 Similar to \code{\link{setwd}}, this function sets the working directory to a
-user-defined path. Rather than supplying a single \code{dir} argument, 
-however, both an OS-sensitive path to the desired hard disk partition and, 
-optionally, an extension of this file path are required.
+user-defined path. Rather than supplying a single 'dir' argument, however, 
+both an OS-sensitive path to the desired hard disk partition and, optionally, 
+an extension of this file path are required.
 }
 \examples{
 \dontrun{

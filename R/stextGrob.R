@@ -6,16 +6,16 @@
 #' 
 #' @param label A \code{character} or \code{\link{expression}} vector, see 
 #' \code{\link{textGrob}}.
-#' @param x,y Horizontal and vertical text position as \code{\link{unit}} 
+#' @param x,y Horizontal and vertical text position as \code{\link[grid]{unit}} 
 #' objects passed to \code{\link{grid.text}}.
 #' @param r Blur radius of colored framing as \code{numeric}.
-#' @param col,fill Framing and fill color passed to \code{\link{gpar}}.
-#' @param name,gp,vp Graphical parameters passed to \code{\link{gTree}}.
-#' @param ... Additional arguments passed to \code{\link{grid.text}}.
+#' @param col,fill Framing and fill color passed to \code{\link[grid]{gpar}}.
+#' @param name,gp,vp Graphical parameters passed to \code{\link[grid]{gTree}}.
+#' @param ... Additional arguments passed to \code{\link[grid]{grid.text}}.
 #' 
-#' @return A text grob created by \code{\link{gTree}}.
+#' @return A text grob created by \code{\link[grid]{gTree}}.
 #' 
-#' @seealso \code{\link{grid.text}}.
+#' @seealso \code{\link[grid]{grid.text}}.
 #' 
 #' @references \url{https://rdrr.io/github/baptiste/gridplot/src/R/tmatrix.r} 
 #' (accessed on 29 May 2018).
@@ -28,7 +28,7 @@
 #' grid.rect(gp = gpar(fill = "grey"))
 #' grid.stext("test")
 #' 
-#' @export
+#' @export stextGrob
 #' @aliases stextGrob grid.stext 
 stextGrob <- function(label, x = grid::unit(0.5, "npc"), y = grid::unit(0.5, "npc")
                       , col = "white", fill = "black", r = 0.1 

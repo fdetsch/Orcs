@@ -7,17 +7,19 @@
 unlistStrsplit(x, split, ...)
 }
 \arguments{
-\item{x}{Character vector with elements to be split.}
+\item{x}{A \code{character} vector with elements to be split.}
 
-\item{split}{Character vector used for splitting, see \code{\link{strsplit}}.}
+\item{split}{A \code{character} vector used for splitting, see 
+\code{\link{strsplit}}.}
 
-\item{...}{Further arguments passed on to \code{\link{strsplit}}.}
+\item{...}{Additional arguments passed to \code{\link{strsplit}}.}
 }
 \description{
-Per default, \code{\link{strsplit}} returns a list, with each entry holding
-the vector of splits of the initial string(s). This function is a simple 
-wrapper that casts \code{\link{unlist}} upon the returned list to produce a 
-concatenated \code{character} vector consisting of the single split elements.
+Per default, \code{\link{strsplit}} returns a \code{list}, with each entry 
+holding the vector of splits of the initial string(s). This function is a 
+simple wrapper that casts \code{\link{unlist}} upon the returned list to 
+produce a concatenated \code{character} vector consisting of the single split 
+elements.
 }
 \examples{
 ## 1st example

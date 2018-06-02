@@ -3,8 +3,8 @@
 #' @description
 #' This function converts between DOS and UNIX style line endings by envoking 
 #' \code{unix2dos} (or \code{dos2unix}) upon a text file (see also 
-#' \code{system("unix2dos --help")}). Please note that this function requires 
-#' external software in order to work, see Source.
+#' \code{system("unix2dos --help")}). Note that 'unix2dos' must be installed on 
+#' your local system, see Source.
 #' 
 #' @param infile Input filename(s). 
 #' @param pattern See \code{\link{list.files}}. This will be ignored if 'infile' 

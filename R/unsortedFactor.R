@@ -1,16 +1,16 @@
 #' Factor with unsorted levels
 #' 
 #' @description
-#' Casting \code{\link{factor}} upon a (\code{character}) vector usually 
-#' produces an object of class 'factor' with levels ordered alphabetically. 
-#' Although this seems reasonable in most cases, the automated ordering of 
-#' factor levels is seldomly desirable in the context of visualization, e.g. 
-#' when working with tiled \strong{lattice} or \strong{ggplot2} figures. This
-#' function returns a \code{factor} with levels ordered according to their first
-#' appearance in the supplied vector.
+#' Casting \code{\link{factor}} upon a (\code{character}) vector usually results 
+#' in alphabetically ordered factor levels. Although this seems reasonable in 
+#' most cases, the automated ordering of factor levels is seldomly desirable in 
+#' the context of visualization, e.g. when working with tiled \strong{lattice} 
+#' or \strong{ggplot2} figures. This function returns a \code{factor} with 
+#' levels ordered according to their first appearance in the supplied vector.
 #' 
-#' @param x Character vector with elements to be converted to class 'factor'. 
-#' @param ... Further arguments passed on to \code{\link{factor}}.
+#' @param x A \code{character} vector with elements to converted to 
+#' \code{factor}. 
+#' @param ... Additional arguments passed to \code{\link{factor}}.
 #' 
 #' @author 
 #' Florian Detsch

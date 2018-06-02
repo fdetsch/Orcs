@@ -4,24 +4,26 @@
 #' This function comprises multiple steps required to install and load a 
 #' package directly from GitHub.
 #' 
-#' @param repo Character. Repository address, see \code{\link{install_github}}. 
-#' Defaults to "environmentalinformatics-marburg/Rsenal".
-#' @param ... Further arguments passed on to \code{\link{install_github}}.
+#' @param repo Repository address as \code{character}, defaults to 
+#' "fdetsch/Orcs".
+#' @param ... Additional arguments passed to 
+#' \code{\link[devtools]{install_github}}.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{install_github}}
+#' \code{\link[devtools]{install_github}}
 #' 
 #' @examples
 #' \dontrun{
-#' ## install 'Rsenal' package directly from GitHub
-#' loadFromGit()
+#' ## install 'Orcs' development version from GitHub
+#' loadFromGit("fdetsch/Orcs", ref = "develop")
 #' }
 #' 
 #' @export loadFromGit
-loadFromGit <- function(repo = "environmentalinformatics-marburg/Rsenal", ...) {
+#' @name loadFromGit
+loadFromGit <- function(repo = "fdetsch/Orcs", ...) {
   ## install desired package
   devtools::install_github(repo, ...)
   

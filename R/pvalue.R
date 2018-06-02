@@ -1,16 +1,16 @@
-#' Get \emph{p}-value from a univariate 'lm' object
+#' Get \emph{p}-value from 'lm' object
 #' 
 #' @description 
 #' Retrieve the \emph{p}-value associated with a univariate linear regression. 
 #' 
-#' @param mod An object of class 'lm'.
+#' @param mod An object of class \code{lm}.
 #' 
 #' @return 
-#' A 'numeric' \emph{p}-value.
+#' A \code{numeric} \emph{p}-value.
 #' 
-#' @references 
-#' \url{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}
-#' (last accessed 2015-12-09).
+#' @source  
+#' \href{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}{retrieving p-values in lm}
+#' on R-help mailing list (last accessed 2018-06-02).
 #' 
 #' @seealso 
 #' \code{\link{lm}}.
@@ -26,8 +26,7 @@
 #' pvalue(lm.D9)
 #' 
 #' @export pvalue
-#' @aliases pvalue
-#' 
+#' @name pvalue
 pvalue <- function(mod) {
   
   mod_sum <- summary(mod)
