@@ -7,17 +7,17 @@
 pureBasename(path, slash = FALSE)
 }
 \arguments{
-\item{path}{A file name as \code{character}.}
+\item{path}{File name(s) as \code{character}.}
 
 \item{slash}{A \code{logical} determining whether to add a leading slash 
 ("/") to the returned file name.}
 }
 \value{
-A file name without extension as \code{character}.
+File name(s) without extension as \code{character}.
 }
 \description{
 As opposed to \code{\link{basename}}, this function returns the pure basename 
-of a file path, i.e. without extension.
+of one or multiple file names, i.e. without extension.
 }
 \examples{
 fls <- system.file("external/rlogo.grd", package = "raster")

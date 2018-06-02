@@ -2,14 +2,14 @@
 #' 
 #' @description
 #' As opposed to \code{\link{basename}}, this function returns the pure basename 
-#' of a file path, i.e. without extension.
+#' of one or multiple file names, i.e. without extension.
 #' 
-#' @param path A file name as \code{character}. 
+#' @param path File name(s) as \code{character}. 
 #' @param slash A \code{logical} determining whether to add a leading slash 
 #' ("/") to the returned file name.
 #' 
 #' @return 
-#' A file name without extension as \code{character}.
+#' File name(s) without extension as \code{character}.
 #' 
 #' @author 
 #' Florian Detsch
@@ -27,15 +27,17 @@
 pureBasename <- function(path, slash = FALSE) {
   
   ## extract basename, split and remove extension
-  ch_basename <- basename(path)
-  ch_split <- unlistStrsplit(ch_basename, "\\.")
-  ch_split <- ch_split[-length(ch_split)]
-  ch_purebasename <- paste(ch_split, collapse = ".")
+  ch_purebasename = sapply(path, function(i) {
+    ch_basename <- basename(i)
+    ch_split <- unlistStrsplit(ch_basename, "\\.")
+    ch_split = ifelse((len <- length(ch_split)) > 1, ch_split[-len], ch_split)
+    paste(ch_split, collapse = ".")
+  })
   
   ## optionally, add leading slash
   if (slash)
     ch_purebasename <- file.path("", ch_purebasename)
   
-  return(ch_purebasename)
+  return(as.character(ch_purebasename))
 }
 
