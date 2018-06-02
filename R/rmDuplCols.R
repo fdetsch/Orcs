@@ -1,12 +1,12 @@
-#' Remove duplicated columns from data frame
+#' Remove duplicated columns from \code{data.frame}
 #' 
 #' @description
-#' This function automatically detects and removes columns from a data frame 
+#' Automatically detect and remove columns from a \code{data.frame}
 #' based on duplicated headers.
 #' 
-#' @param x \code{data.frame}. Input data set to be processed.
-#' @param keep_first Logical. Determines whether the first column of an otherwise 
-#' duplicated header should be kept; defaults to \code{TRUE}. 
+#' @param x Input \code{data.frame}.
+#' @param keep_first A \code{logical} determining whether the first column of an 
+#' otherwise duplicated header should be kept, defaults to \code{TRUE}. 
 #' @param ... Currently not in use.
 #' 
 #' @return 
@@ -20,33 +20,31 @@
 #' 
 #' @examples
 #' ## sample data
-#' mat <- matrix(rnorm(24), nc = 6)
-#' df <- data.frame(mat)
-#' names(df) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3")
+#' set.seed(123)
+#' dat <- data.frame(matrix(rnorm(24), nc = 7))
+#' names(dat) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3", "Col4")
 #' 
-#' df
-#' rmDuplCols(df)
-#' rmDuplCols(df, keep_first = FALSE)
-#' 
+#' dat
+#' rmDuplCols(dat)
+#' rmDuplCols(dat, keep_first = FALSE)
 #' 
 #' @export rmDuplCols
+#' @name rmDuplCols
 rmDuplCols <- function(x, keep_first = TRUE, ...) {
   
   ## Identify duplicated column names
   dupl.cols.ff <- duplicated(names(x))
   dupl.cols.fl <- duplicated(names(x), fromLast = TRUE)
   
-  if (keep_first) {
-    dupl.cols <- which(dupl.cols.ff)
+  dupl.cols = if (keep_first) {
+    which(dupl.cols.ff)
   } else {
-    dupl.cols <- unique(c(which(dupl.cols.ff), which(dupl.cols.fl)))
+    unique(c(which(dupl.cols.ff), which(dupl.cols.fl)))
   }
   
-  #   # Build new dataframe with duplicated columns 
-  #   data2 <- x[, dupl.cols]
-  #   names(data2) <- names(x)[dupl.cols]
-  
   # Remove duplicated columns from initial dataframe
-  x <- x[, -dupl.cols]
-  return(x)
+  out <- data.frame(x[, -dupl.cols])
+  names(out) = names(x)[-dupl.cols]
+  
+  return(out)
 }

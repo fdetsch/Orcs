@@ -2,15 +2,15 @@
 % Please edit documentation in R/rmDuplCols.R
 \name{rmDuplCols}
 \alias{rmDuplCols}
-\title{Remove duplicated columns from data frame}
+\title{Remove duplicated columns from \code{data.frame}}
 \usage{
 rmDuplCols(x, keep_first = TRUE, ...)
 }
 \arguments{
-\item{x}{\code{data.frame}. Input data set to be processed.}
+\item{x}{Input \code{data.frame}.}
 
-\item{keep_first}{Logical. Determines whether the first column of an otherwise 
-duplicated header should be kept; defaults to \code{TRUE}.}
+\item{keep_first}{A \code{logical} determining whether the first column of an 
+otherwise duplicated header should be kept, defaults to \code{TRUE}.}
 
 \item{...}{Currently not in use.}
 }
@@ -18,19 +18,18 @@ duplicated header should be kept; defaults to \code{TRUE}.}
 Revised \code{data.frame}.
 }
 \description{
-This function automatically detects and removes columns from a data frame 
+Automatically detect and remove columns from a \code{data.frame}
 based on duplicated headers.
 }
 \examples{
 ## sample data
-mat <- matrix(rnorm(24), nc = 6)
-df <- data.frame(mat)
-names(df) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3")
+set.seed(123)
+dat <- data.frame(matrix(rnorm(24), nc = 7))
+names(dat) <- c("Col1", "Col1", "Col1", "Col2", "Col3", "Col3", "Col4")
 
-df
-rmDuplCols(df)
-rmDuplCols(df, keep_first = FALSE)
-
+dat
+rmDuplCols(dat)
+rmDuplCols(dat, keep_first = FALSE)
 
 }
 \seealso{
