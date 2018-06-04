@@ -46,7 +46,7 @@ plist <- lapply(seq(dat), function(i) {
   spplot(dat[[i]], scales = list(draw = TRUE))
 })
 
-\dontrun{
+\donttest{
 #draw individually
 plist[[1]]
 plist[[2]]

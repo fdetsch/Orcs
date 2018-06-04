@@ -41,7 +41,7 @@
 #'   spplot(dat[[i]], scales = list(draw = TRUE))
 #' })
 #' 
-#' \dontrun{
+#' \donttest{
 #' #draw individually
 #' plist[[1]]
 #' plist[[2]]
@@ -64,10 +64,18 @@ latticeCombineGrid <- function(trellis.list,
     requireNamespace("latticeExtra")
   )
   
+  ## combine plot objects
   outLayout <- function(x, y, ...) {
     update(c(x, y, ...), between = between, as.table = as.table)
   }
   
-  out <- Reduce(outLayout, trellis.list)
+  out <- suppressWarnings(Reduce(outLayout, trellis.list))
+  
+  ## apply additional customizations
+  dots = list(...)
+  if (length(dots) > 0) {
+    out <- do.call(update, args = append(list(object = out), dots))
+  }
+  
   return(out)
 }
