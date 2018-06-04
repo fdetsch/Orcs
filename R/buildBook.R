@@ -22,12 +22,12 @@
 #' 
 #' @author Florian Detsch
 #' 
-#' @examples 
-#' \dontrun{
-#' buildBook(input = "index.Rmd"
-#'           , output_format = "bookdown::gitbook"
-#'           , output_dir = "book")
-#' }
+# @examples 
+# \dontrun{
+# buildBook(input = "index.Rmd"
+#           , output_format = "bookdown::gitbook"
+#           , output_dir = "book")
+# }
 #' 
 #' @export buildBook
 #' @name buildBook

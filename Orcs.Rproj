@@ -15,5 +15,5 @@ LaTeX: pdfLaTeX
 BuildType: Package
 PackageInstallArgs: --no-multiarch --with-keep.source
 PackageBuildArgs: --resave-data=best
-PackageCheckArgs: --as-cran
+PackageCheckArgs: --as-cran --run-donttest
 PackageRoxygenize: rd,collate,namespace,vignette

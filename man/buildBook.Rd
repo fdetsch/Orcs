@@ -26,14 +26,6 @@ this were not the case (i.e. if the default value were used), the output
 document would be created in \code{"_book"} which is not desirable for 
 obvious reasons.
 }
-\examples{
-\dontrun{
-buildBook(input = "index.Rmd"
-          , output_format = "bookdown::gitbook"
-          , output_dir = "book")
-}
-
-}
 \seealso{
 \code{\link[bookdown]{render_book}}.
 }

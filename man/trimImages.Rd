@@ -7,7 +7,7 @@
 Ooms J (2018) \href{https://cran.r-project.org/package=magick/vignettes/intro.html}{The \strong{magick} package: Advanced Image-Processing in R.}
 }
 \usage{
-trimImages(path = getwd(), pattern = c(".png$", ".tiff$"))
+trimImages(path = ".", pattern = c(".png$", ".tiff$"))
 }
 \arguments{
 \item{path}{File path leading to image files as \code{character}, defaults to 
@@ -28,8 +28,8 @@ be installed on your local system, see Source.
 \dontrun{
 ## trim image of bart simpson
 download.file("http://pngimg.com/uploads/simpsons/simpsons_PNG93.png?i=1"
-, destfile = (ofl <- file.path(tempdir(), "bart.png", fsep = "\\\\"))
-, mode = "wb")
+              , destfile = (ofl <- file.path(tempdir(), "bart.png", fsep = "\\\\"))
+              , mode = "wb")
 
 par(mfrow = c(1, 2))
 

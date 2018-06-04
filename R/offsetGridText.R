@@ -33,14 +33,13 @@
 #' \code{\link[plotrix]{thigmophobe}}, \code{Orcs::calcOffsetGridText}.
 #' 
 #' @examples
-#' \dontrun{
 #' stopifnot(
 #'   require(sf)
 #'   , require(latticeExtra)
 #'   , require(grid)
 #' )
 #' 
-#' #' kilimanjaro peaks
+#' # kilimanjaro peaks
 #' peaks = data.frame(Peak = c("Kibo", "Mawenzi", "Shira")
 #'                    , Lon = c(37.359031, 37.455061, 37.210408)
 #'                    , Lat = c(-3.065053, -3.095436, -3.038222))
@@ -48,7 +47,7 @@
 #' coordinates(peaks) = ~ Lon + Lat
 #' proj4string(peaks) = "+init=epsg:4326"
 #' 
-#' #' visualization
+#' # visualization
 #' xlim_kili <- c(37.15, 37.55)
 #' ylim_kili <- c(-3.25, -2.9)
 #' 
@@ -64,7 +63,6 @@
 #' offsetGridText(x = coordinates(peaks), labels = peaks$Peak,  
 #'                xlim = xlim_kili, ylim = ylim_kili, stext = TRUE, offset = .02,
 #'                gp = gpar(fontsize = 16))
-#' }
 #'                                
 #' @export offsetGridText
 #' @name offsetGridText

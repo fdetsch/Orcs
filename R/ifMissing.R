@@ -26,7 +26,6 @@
 #' @author Florian Detsch
 #' 
 #' @examples
-#' \dontrun{
 #' # simply import existing file
 #' logo <- system.file("external/rlogo.grd", package = "raster")
 #' s <- ifMissing(logo) 
@@ -44,7 +43,6 @@
 #' data(iris)
 #' ofl <- file.path(tempdir(), "iris.csv")
 #' iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.names = FALSE)
-#' }
 #' 
 #' @export ifMissing
 #' @name ifMissing

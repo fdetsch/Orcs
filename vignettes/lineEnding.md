@@ -1,7 +1,7 @@
 ---
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
-date: "2018-05-31"
+date: "2018-06-04"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
@@ -53,11 +53,12 @@ clarify what I was trying to explain and demonstrate the usefulness of
 infile <- file.path(system.file(package = "Orcs"), "DESCRIPTION")
 
 system(paste("file", infile))
-# > /home/fdetsch/R/x86_64-pc-linux-gnu-library/3.2/Orcs/DESCRIPTION: ASCII text
+# > C:/Users/.../R/win-library/3.5/Orcs/DESCRIPTION: ASCII English text, with CRLF line terminators
 
 ## convert to dos line endings and write to output file
-lineEnding(infile, outfile = "~/Desktop/DESCRIPTION4wd", to = "dos")
+outfile = file.path(tempdir(), "DESCRIPTION4wd")
+lineEnding(infile, outfile = outfile, to = "unix")
 
-system("file ~/Desktop/DESCRIPTION4wd")
-# > /home/fdetsch/Desktop/DESCRIPTION4wd: ASCII text, with CRLF line terminators
+system(paste("file", outfile))
+# > C:\Users\...\AppData\Local\Temp\RtmpMX3o1b/DESCRIPTION4wd: ASCII English text
 ```

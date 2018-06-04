@@ -241,13 +241,14 @@ clarify what I was trying to explain and demonstrate the usefulness of
 infile &lt;- file.path(system.file(package = &quot;Orcs&quot;), &quot;DESCRIPTION&quot;)
 
 system(paste(&quot;file&quot;, infile))
-# &gt; /home/fdetsch/R/x86_64-pc-linux-gnu-library/3.2/Orcs/DESCRIPTION: ASCII text
+# &gt; C:/Users/.../R/win-library/3.5/Orcs/DESCRIPTION: ASCII English text, with CRLF line terminators
 
 ## convert to dos line endings and write to output file
-lineEnding(infile, outfile = &quot;~/Desktop/DESCRIPTION4wd&quot;, to = &quot;dos&quot;)
+outfile = file.path(tempdir(), &quot;DESCRIPTION4wd&quot;)
+lineEnding(infile, outfile = outfile, to = &quot;unix&quot;)
 
-system(&quot;file ~/Desktop/DESCRIPTION4wd&quot;)
-# &gt; /home/fdetsch/Desktop/DESCRIPTION4wd: ASCII text, with CRLF line terminators
+system(paste(&quot;file&quot;, outfile))
+# &gt; C:\Users\...\AppData\Local\Temp\RtmpMX3o1b/DESCRIPTION4wd: ASCII English text
 </code></pre>
 
 </body>

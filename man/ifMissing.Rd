@@ -33,7 +33,6 @@ user-defined function and subsequently returned, thus rendering explicit
 calls to \code{\link{file.exists}} unnecessary.
 }
 \examples{
-\dontrun{
 # simply import existing file
 logo <- system.file("external/rlogo.grd", package = "raster")
 s <- ifMissing(logo) 
@@ -51,7 +50,6 @@ fun = function(x, file = "", ...) {
 data(iris)
 ofl <- file.path(tempdir(), "iris.csv")
 iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.names = FALSE)
-}
 
 }
 \seealso{

@@ -26,8 +26,8 @@
 #' \dontrun{
 #' ## trim image of bart simpson
 #' download.file("http://pngimg.com/uploads/simpsons/simpsons_PNG93.png?i=1"
-#' , destfile = (ofl <- file.path(tempdir(), "bart.png", fsep = "\\"))
-#' , mode = "wb")
+#'               , destfile = (ofl <- file.path(tempdir(), "bart.png", fsep = "\\"))
+#'               , mode = "wb")
 #' 
 #' par(mfrow = c(1, 2))
 #' 
@@ -43,7 +43,7 @@
 #' 
 #' @export trimImages
 #' @name trimImages
-trimImages <- function(path = getwd(), pattern = c(".png$", ".tiff$")) {
+trimImages <- function(path = ".", pattern = c(".png$", ".tiff$")) {
   
   ## list files matching specified pattern
   lst_fls <- lapply(pattern, function(i) {
