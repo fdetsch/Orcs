@@ -43,6 +43,7 @@ if ( !isGeneric("merge") ) {
 #' head(mrg)
 #' 
 #' @name merge
+#' @rdname merge-methods
 #' @aliases merge,list-method
 NULL
 
