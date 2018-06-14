@@ -3,8 +3,11 @@
 \docType{methods}
 \name{merge}
 \alias{merge}
-\alias{merge,list-method}
+\alias{merge,list,missing-method}
 \title{Merge Objects Stored in a List}
+\usage{
+\S4method{merge}{list,missing}(x, by = 1L, all = TRUE, ...)
+}
 \arguments{
 \item{x}{A \code{list} of objects of the same type (e.g. \code{Raster*} or 
 \code{data.frame}).}

@@ -42,12 +42,11 @@ if ( !isGeneric("merge") ) {
 #'             , by = c("Species", "Sepal.Length", "Petal.Width"))
 #' head(mrg)
 #' 
-#' @name merge
+#' @export
 #' @docType methods
-#' @rdname merge
-#' @aliases merge,list-method
-NULL
-
+#' @name merge
+#' @rdname merge-methods
+#' @aliases merge,list,missing-method
 setMethod('merge', signature(x = 'list', y = 'missing'), 
           function(x, by = 1L, all = TRUE, ...) {
             
