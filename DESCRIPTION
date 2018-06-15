@@ -2,10 +2,12 @@ Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
 Version: 1.0.0
-Date: 2018-06-04
+Date: 2018-06-15
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
-	person("Tim", "Appelhans", role = "ctb"))
+	person("Tim", "Appelhans", role = "ctb"),
+	person("Baptiste", "Auguie", role = "ctb"),
+	person("OpenStreetMap contributors", role = "cph"))
 Maintainer: Florian Detsch <fdetsch@web.de>
 Description: I tend to repeat the same code chunks over and over again. At
     first, this was fine for me and I paid little attention to such redundancies.
