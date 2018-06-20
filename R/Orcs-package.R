@@ -18,7 +18,7 @@
 #' @importFrom Rcpp sourceCpp
 #' @importFrom sf st_as_sf
 #' @importFrom sp proj4string
-#' @importFrom stats coef complete.cases 
+#' @importFrom stats coef complete.cases  median na.exclude sd
 #' @rawNamespace useDynLib(Orcs, .registration = TRUE)
 #' 
 #' @keywords package
