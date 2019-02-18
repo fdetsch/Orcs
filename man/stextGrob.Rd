@@ -5,9 +5,9 @@
 \alias{grid.stext}
 \title{Draw Shadow Text}
 \usage{
-stextGrob(label, x = grid::unit(0.5, "npc"), y = grid::unit(0.5, "npc"),
-  col = "white", fill = "black", r = 0.1, gp = grid::gpar(),
-  vp = NULL, name = NULL, ...)
+stextGrob(label, x = grid::unit(0.5, "npc"), y = grid::unit(0.5,
+  "npc"), col = "white", fill = "black", r = 0.1,
+  gp = grid::gpar(), vp = NULL, name = NULL, ...)
 }
 \arguments{
 \item{label}{A \code{character} or \code{\link{expression}} vector, see 
@@ -48,3 +48,4 @@ grid.stext("test")
 \author{
 Baptiste Auguie, Florian Detsch
 }
+\concept{grob userlevel}

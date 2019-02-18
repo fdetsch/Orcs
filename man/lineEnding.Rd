@@ -7,8 +7,8 @@
 \href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}
 }
 \usage{
-lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos", "unix"),
-  ...)
+lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos",
+  "unix"), ...)
 }
 \arguments{
 \item{infile}{Input filename(s).}
