@@ -7,13 +7,13 @@
 #' @param repo Repository address as \code{character}, defaults to 
 #' "fdetsch/Orcs".
 #' @param ... Additional arguments passed to 
-#' \code{\link[devtools]{install_github}}.
+#' \code{\link[remotes]{install_github}}.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link[devtools]{install_github}}
+#' \code{\link[remotes]{install_github}}
 #' 
 #' @examples
 #' \dontrun{
@@ -25,7 +25,7 @@
 #' @name loadFromGit
 loadFromGit <- function(repo = "fdetsch/Orcs", ...) {
   ## install desired package
-  devtools::install_github(repo, ...)
+  remotes::install_github(repo, ...)
   
   ## load package
   ls_pkg <- strsplit(repo, "/")

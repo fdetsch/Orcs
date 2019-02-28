@@ -11,7 +11,7 @@ loadFromGit(repo = "fdetsch/Orcs", ...)
 "fdetsch/Orcs".}
 
 \item{...}{Additional arguments passed to 
-\code{\link[devtools]{install_github}}.}
+\code{\link[remotes]{install_github}}.}
 }
 \description{
 This function comprises multiple steps required to install and load a 
@@ -25,7 +25,7 @@ loadFromGit("fdetsch/Orcs", ref = "develop")
 
 }
 \seealso{
-\code{\link[devtools]{install_github}}
+\code{\link[remotes]{install_github}}
 }
 \author{
 Florian Detsch

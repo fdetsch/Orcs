@@ -1,8 +1,8 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.1.0
-Date: 2018-06-20
+Version: 1.1.1
+Date: 2019-02-28
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "ctb"),
@@ -26,7 +26,6 @@ Depends:
     raster
 Imports:
     bookdown, 
-    devtools,
     grDevices,
     grid,
     knitr,
@@ -34,6 +33,7 @@ Imports:
     latticeExtra,
     plotrix,
     Rcpp (>= 0.11.3),
+    remotes,
     rgdal,
     sf,
     sp,

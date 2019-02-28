@@ -11,11 +11,12 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
 #'
-#' @import methods grid raster rgdal devtools knitr lattice latticeExtra
+#' @import methods grid raster rgdal knitr lattice latticeExtra
 #' @importFrom bookdown render_book
 #' @importFrom grDevices rgb
 #' @importFrom plotrix thigmophobe
 #' @importFrom Rcpp sourceCpp
+#' @importFrom remotes install_github
 #' @importFrom sf st_as_sf
 #' @importFrom sp proj4string
 #' @importFrom stats coef complete.cases  median na.exclude sd
