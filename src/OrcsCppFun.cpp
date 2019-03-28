@@ -85,3 +85,4 @@ IntegerVector dimC(DataFrame x) {
   
   return(nDims);
 }
+

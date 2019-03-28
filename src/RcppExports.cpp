@@ -38,3 +38,29 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// substrC
+Rcpp::StringVector substrC(Rcpp::StringVector x, int pos, int len);
+RcppExport SEXP _Orcs_substrC(SEXP xSEXP, SEXP posSEXP, SEXP lenSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::StringVector >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type pos(posSEXP);
+    Rcpp::traits::input_parameter< int >::type len(lenSEXP);
+    rcpp_result_gen = Rcpp::wrap(substrC(x, pos, len));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_Orcs_nrowC", (DL_FUNC) &_Orcs_nrowC, 1},
+    {"_Orcs_ncolC", (DL_FUNC) &_Orcs_ncolC, 1},
+    {"_Orcs_dimC", (DL_FUNC) &_Orcs_dimC, 1},
+    {"_Orcs_substrC", (DL_FUNC) &_Orcs_substrC, 3},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_Orcs(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
+}
