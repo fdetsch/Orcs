@@ -4,8 +4,12 @@
 \alias{bumpVersion}
 \title{Bump package 'Version:' and 'Date:' in DESCRIPTION file}
 \usage{
-bumpVersion(element = "patch", pkg.repo = ".",
-  news = file.path(pkg.repo, "NEWS.md"), plain_news = TRUE)
+bumpVersion(
+  element = "patch",
+  pkg.repo = ".",
+  news = file.path(pkg.repo, "NEWS.md"),
+  plain_news = TRUE
+)
 }
 \arguments{
 \item{element}{\code{character}, one of "major", "minor", "patch" (default) 

@@ -5,9 +5,18 @@
 \alias{grid.stext}
 \title{Draw Shadow Text}
 \usage{
-stextGrob(label, x = grid::unit(0.5, "npc"), y = grid::unit(0.5,
-  "npc"), col = "white", fill = "black", r = 0.1,
-  gp = grid::gpar(), vp = NULL, name = NULL, ...)
+stextGrob(
+  label,
+  x = grid::unit(0.5, "npc"),
+  y = grid::unit(0.5, "npc"),
+  col = "white",
+  fill = "black",
+  r = 0.1,
+  gp = grid::gpar(),
+  vp = NULL,
+  name = NULL,
+  ...
+)
 }
 \arguments{
 \item{label}{A \code{character} or \code{\link{expression}} vector, see 
@@ -37,10 +46,6 @@ grid.newpage()
 grid.rect(gp = gpar(fill = "grey"))
 grid.stext("test")
 
-}
-\references{
-\url{https://rdrr.io/github/baptiste/gridplot/src/R/tmatrix.r} 
-(accessed on 29 May 2018).
 }
 \seealso{
 \code{\link[grid]{grid.text}}.

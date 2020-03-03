@@ -4,8 +4,7 @@
 \alias{ifMissing}
 \title{Take measures in case of nonexisting target files}
 \usage{
-ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1,
-  ...)
+ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1, ...)
 }
 \arguments{
 \item{ofl}{Target file name as \code{character}.}
