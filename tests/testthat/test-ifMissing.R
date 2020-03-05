@@ -31,7 +31,7 @@ test_that("nonexisting text file is created", {
   jnk = ifMissing(ofl, fun1 = write.csv, x = iris, file = ofl, row.names = FALSE)
   expect_null(jnk)
   
-  dat = ifMissing(ofl, fun0 = read.csv)
+  dat = ifMissing(ofl, fun0 = function(x) read.csv(x, stringsAsFactors = TRUE))
   expect_equal(dat, iris)
   
   jnk = file.remove(ofl)
@@ -39,7 +39,7 @@ test_that("nonexisting text file is created", {
   
   fun = function(x, file = "", ...) {
     write.csv(x, file, ...)
-    read.csv(file)
+    read.csv(file, stringsAsFactors = TRUE)
   }
   dat = ifMissing(ofl, fun1 = fun, arg1 = "file", x = iris, quote = FALSE, row.names = FALSE)
   expect_equal(dat, iris)
