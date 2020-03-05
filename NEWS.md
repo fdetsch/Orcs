@@ -1,3 +1,10 @@
+## Orcs 1.2.1
+
+Changes:
+
+  * Ensured compatibility of 'testthat' function suite with upcoming R>=4.0.
+
+
 ## Orcs 1.2.0
 
 New features:
