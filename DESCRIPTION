@@ -1,8 +1,8 @@
 Package: Orcs
 Type: Package
 Title: Omnidirectional R Code Snippets
-Version: 1.2.1
-Date: 2020-03-05
+Version: 1.2.2
+Date: 2020-11-16
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "ctb"),
@@ -22,6 +22,7 @@ URL: https://github.com/fdetsch/Orcs
 BugReports: https://github.com/fdetsch/Orcs/issues
 LazyData: TRUE
 Depends:
+    R (>= 2.10),
     methods,
     raster
 Imports:
@@ -39,7 +40,7 @@ Imports:
     sp,
     stats
 LinkingTo: Rcpp
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 SystemRequirements: GNU make, 7zip, unix2dos
 Suggests: testthat,
     rmarkdown
