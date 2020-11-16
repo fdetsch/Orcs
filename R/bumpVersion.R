@@ -34,7 +34,7 @@ bumpVersion <- function(element = "patch", pkg.repo = ".",
   ### DESCRIPTION file =========================================================
   desc <- readLines(paste(pkg.repo, "DESCRIPTION", sep = "/"))
 
-  old.ver <- substr(desc[grep("Version*", desc)], 10,
+  old.ver <- substr(desc[grep("^Version*", desc)], 10,
                     nchar(desc[grep("Version*", desc)]))
   old <- as.numeric(unlist(strsplit(old.ver, "\\.")))
   new.v <- switch(element,

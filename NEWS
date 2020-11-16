@@ -1,3 +1,10 @@
+Orcs 1.2.2
+
+Changes: 
+
+  * bumpVersion() to search for DESCRIPTION entries starting with '^Version*' only
+
+
 Orcs 1.2.1
 
 Changes:
