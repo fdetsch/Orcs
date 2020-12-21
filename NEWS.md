@@ -1,8 +1,12 @@
 ## Orcs 1.2.2
 
+New features:
+
+  * st_extend() for simple feature bounding analogous to **Raster** method.
+
 Changes: 
 
-  * bumpVersion() to search for DESCRIPTION entries starting with '^Version*' only
+  * bumpVersion() to search for DESCRIPTION entries starting with '^Version*' only.
 
 
 ## Orcs 1.2.1

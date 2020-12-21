@@ -17,7 +17,7 @@
 #' @importFrom plotrix thigmophobe
 #' @importFrom Rcpp sourceCpp
 #' @importFrom remotes install_github
-#' @importFrom sf st_as_sf
+#' @importFrom sf st_as_sf st_as_sfc st_bbox st_buffer
 #' @importFrom sp proj4string
 #' @importFrom stats coef complete.cases  median na.exclude sd
 #' @rawNamespace useDynLib(Orcs, .registration = TRUE)
