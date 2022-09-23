@@ -42,7 +42,7 @@ easily be installed on Linux via
 sudo apt-get install dos2unix
 ```
 
-or downloaded directly from the [project website](http://dos2unix.sourceforge.net/) 
+or downloaded directly from the [project website](https://dos2unix.sourceforge.io/) 
 for any other OS. Once everything is set up, try the following brief example to 
 clarify what I was trying to explain and demonstrate the usefulness of 
 `lineEnding`:

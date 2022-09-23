@@ -4,7 +4,7 @@
 \alias{lineEnding}
 \title{Convert between DOS and UNIX line endings}
 \source{
-\href{https://dos2unix.sourceforge.io/}{Dos2Unix/Unix2Dos Text file format converters}
+\href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}
 }
 \usage{
 lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos", "unix"), ...)
