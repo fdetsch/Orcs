@@ -47,10 +47,6 @@ grid.rect(gp = gpar(fill = "grey"))
 grid.stext("test")
 
 }
-\references{
-\url{https://rdrr.io/github/baptiste/gridplot/src/R/tmatrix.r} 
-(accessed on 29 May 2018).
-}
 \seealso{
 \code{\link[grid]{grid.text}}.
 }

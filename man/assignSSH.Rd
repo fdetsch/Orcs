@@ -16,7 +16,7 @@ working environment.}
 \description{
 Assign an SSH key to a local Git repository to bypass user/password prompts 
 during \code{git push}. See 
-\href{https://help.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key} 
+\href{https://docs.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key} 
 for further information on how to generate an SSH key and add it to your 
 GitHub account.
 }
@@ -31,5 +31,5 @@ assignSSH(user = "fdetsch", repo = "Orcs")
 
 }
 \seealso{
-\url{https://help.github.com/articles/generating-an-ssh-key/}
+\url{https://docs.github.com/articles/generating-an-ssh-key/}
 }

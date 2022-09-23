@@ -17,8 +17,6 @@
 #' 
 #' @seealso \code{\link[grid]{grid.text}}.
 #' 
-#' @references \url{https://rdrr.io/github/baptiste/gridplot/src/R/tmatrix.r} 
-#' (accessed on 29 May 2018).
 #' @author Baptiste Auguie, Florian Detsch
 #' @family grob userlevel
 #' 

@@ -25,6 +25,6 @@ substrC("Hello, world!", pos = 1, len = 5)
 
 }
 \seealso{
-\url{http://www.cplusplus.com/reference/string/string/substr/},
+\url{https://cplusplus.com/reference/string/string/substr/},
 \code{\link{substr}}.
 }

@@ -14,7 +14,7 @@ using namespace Rcpp;
 //' A \code{character} vector of the same length as 'x'.
 //' 
 //' @seealso
-//' \url{http://www.cplusplus.com/reference/string/string/substr/},
+//' \url{https://cplusplus.com/reference/string/string/substr/},
 //' \code{\link{substr}}.
 //' 
 //' @examples

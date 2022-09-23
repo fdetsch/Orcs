@@ -1,7 +1,7 @@
 ---
 title: "`lineEnding` and the clash of operating systems"
 author: "Florian Detsch"
-date: "2018-06-04"
+date: "2022-09-23"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{`lineEnding` and the clash of operating systems}
@@ -24,7 +24,7 @@ as modified.
 I came to face this issue when dealing with version control on Subversion and 
 couldn't help but develop this short code snippet in order for my collaborators 
 to track my changes. GitHub seemingly offers a built-in option to manipulate 
-[global settings for line endings](https://help.github.com/articles/dealing-with-line-endings/), 
+[global settings for line endings](https://docs.github.com/articles/dealing-with-line-endings/), 
 but I haven't tried this so far. Anyway, my manual approach goes by the name 
 `lineEnding` and requires 
 
