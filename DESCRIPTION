@@ -37,7 +37,7 @@ Imports:
     sp,
     stats
 LinkingTo: Rcpp
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.1
 SystemRequirements: GNU make, 7zip, unix2dos
 Suggests: testthat,
     rmarkdown

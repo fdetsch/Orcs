@@ -4,8 +4,12 @@
 \alias{latticeCombineGrid}
 \title{Combine multiple lattice plots in a facetted grid (panels)}
 \usage{
-latticeCombineGrid(trellis.list, between = list(y = 0.3, x = 0.3),
-  as.table = TRUE, ...)
+latticeCombineGrid(
+  trellis.list,
+  between = list(y = 0.3, x = 0.3),
+  as.table = TRUE,
+  ...
+)
 }
 \arguments{
 \item{trellis.list}{A \code{list} containing \strong{lattice} plot objects.}

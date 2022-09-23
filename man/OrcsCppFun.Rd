@@ -28,13 +28,13 @@ rows and columns of a \code{data.frame}.
 }
 \section{Functions}{
 \itemize{
-\item \code{nrowC}: 
+\item \code{nrowC()}: 
 
-\item \code{ncolC}: 
+\item \code{ncolC()}: 
 
-\item \code{dimC}: 
+\item \code{dimC()}: 
+
 }}
-
 \examples{
 dat <- data.frame(a = 1:4, b = 2:5, c = 3:6)
 

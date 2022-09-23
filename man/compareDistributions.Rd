@@ -4,9 +4,18 @@
 \alias{compareDistributions}
 \title{Compare two density distributions side by side}
 \usage{
-compareDistributions(left, right, add.spread = TRUE,
-  print.stats = TRUE, xlim = NULL, ylim = NULL, clrs = c("purple",
-  "lightblue"), xlab = "density", ylab = "value", ...)
+compareDistributions(
+  left,
+  right,
+  add.spread = TRUE,
+  print.stats = TRUE,
+  xlim = NULL,
+  ylim = NULL,
+  clrs = c("purple", "lightblue"),
+  xlab = "density",
+  ylab = "value",
+  ...
+)
 }
 \arguments{
 \item{left}{\code{numeric} vector.}

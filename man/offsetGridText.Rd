@@ -4,8 +4,17 @@
 \alias{offsetGridText}
 \title{Insert offset text annotation into 'trellis' plot}
 \usage{
-offsetGridText(x, y = NULL, labels, xlim = NULL, ylim = NULL,
-  pos = NULL, stext = FALSE, offset = 0.02, ...)
+offsetGridText(
+  x,
+  y = NULL,
+  labels,
+  xlim = NULL,
+  ylim = NULL,
+  pos = NULL,
+  stext = FALSE,
+  offset = 0.02,
+  ...
+)
 }
 \arguments{
 \item{x}{A \code{numeric} vector containing x coordinates, or a 2-column
