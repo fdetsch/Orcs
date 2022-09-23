@@ -19,10 +19,10 @@ License: MIT + file LICENSE
 URL: https://github.com/fdetsch/Orcs
 BugReports: https://github.com/fdetsch/Orcs/issues
 LazyData: TRUE
-Depends:
+Depends: 
     methods,
     raster
-Imports:
+Imports: 
     bookdown, 
     grDevices,
     grid,
@@ -39,7 +39,8 @@ Imports:
 LinkingTo: Rcpp
 RoxygenNote: 7.2.1
 SystemRequirements: GNU make, 7zip, unix2dos
-Suggests: testthat,
-    rmarkdown
+Suggests:
+    rmarkdown, 
+    tinytest
 VignetteBuilder: knitr
 Encoding: UTF-8
