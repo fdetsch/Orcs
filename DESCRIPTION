@@ -1,6 +1,6 @@
 Package: Orcs
 Title: Omnidirectional R Code Snippets
-Version: 1.2.0
+Version: 1.2.0.9000
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "ctb"),
