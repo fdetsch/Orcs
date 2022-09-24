@@ -7,8 +7,8 @@
 #' an extension of this file path are required.  
 #' 
 #' @param lin,win Absolute file paths to the Linux and Windows partition as 
-#' \code{character}.
-#' @param ext Optional file path extension as \code{character} that will be 
+#' `character`.
+#' @param ext Optional file path extension as `character` that will be 
 #' added to 'lin' or 'win' after automatic OS determination.
 #' 
 #' @author 

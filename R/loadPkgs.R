@@ -1,26 +1,22 @@
-#' Load multiple packages 
+#' Load Multiple Packages
 #' 
 #' @description
 #' Load and attach multiple packages at once.
 #' 
-#' @param pkgs Packages to load as \code{character}. 
-#' @param ... Additional arguments passed to \code{\link{library}}, except for 
-#' 'character.only' which is set to \code{TRUE}.
+#' @param pkgs Packages to load as `character`. 
+#' @param ... Additional arguments passed to [library()], except for 
+#'   'character.only' which is set to `TRUE`.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @note 
-#' Package startup messages are automatically disabled.
-#' 
-#' @seealso 
-#' \code{\link{library}}.
+#' Package start-up messages are automatically disabled.
 #' 
 #' @examples
 #' loadPkgs(c("raster", "rgdal"))
 #' 
-#' @export loadPkgs
-#' @name loadPkgs
+#' @export
 loadPkgs <- function(pkgs, ...) {
   
   ## if 'character.only' has been specified, remove it from '...'

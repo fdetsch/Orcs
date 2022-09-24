@@ -6,15 +6,15 @@
 #' a specified folder (and, optionally, matching a particular pattern)
 #' to standard Markdown (\code{.md}).
 #' 
-#' @param path_in Input file path as \code{character}, defaults to the current
+#' @param path_in Input file path as `character`, defaults to the current
 #' working directory.
-#' @param path_out Output file path as \code{character}, defaults to 'path_in'.
-#' @param pattern Passed to \code{\link{list.files}}, defaults to 
+#' @param path_out Output file path as `character`, defaults to 'path_in'.
+#' @param pattern Passed to [list.files()], defaults to 
 #' \code{"*.Rmd$"}.
 #' @param ... Additional arguments passed to \code{\link[knitr]{knit}}.
 #' 
 #' @return 
-#' Output filenames as \code{character}.
+#' Output filenames as `character`.
 #' 
 #' @author 
 #' Florian Detsch

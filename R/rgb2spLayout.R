@@ -1,11 +1,11 @@
 #' Convert an RGB RasterBrick/Stack to use with spplot
 #'
 #' @description
-#' This function takes a red-green-blue \code{Raster*} object and produces a 
+#' This function takes a red-green-blue `Raster*` object and produces a 
 #' list with color information that can be passed on to the 'sp.layout' 
 #' argument from \code{\link[sp]{spplot}}.
 #'
-#' @param x A 3-layered \code{Raster*} object.
+#' @param x A 3-layered `Raster*` object.
 #' @param quantiles Upper and lower quantiles used for color stretching.
 #' @param alpha Level of transparency.
 #'

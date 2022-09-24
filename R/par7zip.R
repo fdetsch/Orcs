@@ -5,23 +5,23 @@
 #' performs parallelized 7-zip compression of selected files based on the 
 #' built-in \strong{parallel} package.
 #' 
-#' @param outfile Target file for compression as \code{character}. A file 
+#' @param outfile Target file for compression as `character`. A file 
 #' extension compatible with 7-zip needs to be included, see 
 #' \href{https://sevenzip.osdn.jp/chm/general/formats.htm}{Supported formats}.
 #' If missing, this defaults to the found input file names with a \code{.7z} 
 #' extension attached.
-#' @param nodes Number of cores to use for parallelization as \code{integer}, 
+#' @param nodes Number of cores to use for parallelization as `integer`, 
 #' defaults to \code{1}.
-#' @param ... Additional arguments passed to \code{\link{list.files}}.
+#' @param ... Additional arguments passed to [list.files()].
 #' 
 #' @return 
-#' Output filename(s) as \code{character}.
+#' Output filename(s) as `character`.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{list.files}}, \code{\link{system}}
+#' [list.files()], [system()]
 #' 
 #' @export par7zip
 #' @name par7zip

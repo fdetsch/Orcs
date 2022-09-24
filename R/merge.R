@@ -6,24 +6,24 @@ if ( !isGeneric("merge") ) {
 #' 
 #' @description 
 #' Complementing existing merge methods, e.g. \code{\link[raster]{merge}} for 
-#' \code{Raster*} objects, which typically work with one or two inputs only, 
-#' this function accepts a \code{list} of objects that are to be merged 
+#' `Raster*` objects, which typically work with one or two inputs only, 
+#' this function accepts a `list` of objects that are to be merged 
 #' together.
 #' 
-#' @param x A \code{list} of objects of the same type (e.g. \code{Raster*} or 
-#' \code{data.frame}).
+#' @param x A `list` of objects of the same type (e.g. `Raster*` or 
+#' `data.frame`).
 #' @param by,all See \code{\link{merge.data.frame}}. Ignored if data stored 
-#' in 'x' is not of class \code{data.frame}.
+#' in 'x' is not of class `data.frame`.
 #' @param ... Additional arguments passed to the underlying merge method (e.g. 
 #' arguments compatible with \code{\link[raster]{merge}} and 
-#' \code{\link[raster]{writeRaster}} for \code{Raster*} input). Ignored if data 
-#' stored in 'x' is of class \code{data.frame}.
+#' \code{\link[raster]{writeRaster}} for `Raster*` input). Ignored if data 
+#' stored in 'x' is of class `data.frame`.
 #' 
 #' @return 
-#' A merged object (e.g. a new \code{Raster*} object with a larger spatial 
+#' A merged object (e.g. a new `Raster*` object with a larger spatial 
 #' extent).
 #' 
-#' @seealso \code{\link{merge.data.frame}}, \code{\link{do.call}}, 
+#' @seealso \code{\link{merge.data.frame}}, [do.call()], 
 #' \code{\link{Reduce}}.
 #' 
 #' @author Florian Detsch

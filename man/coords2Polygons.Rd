@@ -4,36 +4,36 @@
 \alias{coords2Polygons}
 \alias{coords2Polygons,matrix-method}
 \alias{coords2Polygons,Polygon-method}
-\title{Convert points to SpatialPolygons*}
+\title{Convert Points to \verb{SpatialPolygons*}}
 \usage{
 \S4method{coords2Polygons}{matrix}(coords, hole = NA, ID, data, match.ID = TRUE, ...)
 
 \S4method{coords2Polygons}{Polygon}(coords, ID, data, match.ID = TRUE, ...)
 }
 \arguments{
-\item{coords}{\code{Polygon} object or 2-column \code{numeric} matrix with x
-and y coordinates.}
+\item{coords}{\code{Polygon} object or 2-column \code{numeric} matrix with x and y
+coordinates.}
 
-\item{hole}{\code{logical}, see \code{\link{Polygon}}.}
+\item{hole}{\code{logical}, see \code{\link[sp:SpatialPolygons]{sp::Polygon()}}.}
 
-\item{ID}{\code{character}, see \code{\link{Polygons}}.}
+\item{ID}{\code{character}, see \code{\link[sp:SpatialPolygons]{sp::Polygons()}}.}
 
-\item{data}{\code{data.frame} with data to add to the output
-\code{SpatialPolygons*} object (optional).}
+\item{data}{\code{data.frame} with data to add to the output \verb{SpatialPolygons*}
+object (optional).}
 
-\item{match.ID}{\code{logical}, see \code{\link{SpatialPolygonsDataFrame}}.}
+\item{match.ID}{\code{logical}, see \code{\link[sp:SpatialPolygons]{sp::SpatialPolygonsDataFrame()}}.}
 
-\item{...}{Further arguments passed on to \code{\link{SpatialPolygons}}
-(i.e., \code{p0} and \code{proj4string}).}
+\item{...}{Further arguments passed on to \code{\link[sp:SpatialPolygons]{sp::SpatialPolygons()}}, i.e. \code{p0}
+and \code{proj4string}.}
 }
 \value{
-If \code{data} is missing, a \code{SpatialPolygons} object; else a
+If 'data' is missing, a \code{SpatialPolygons} object; else a
 \code{SpatialPolygonsDataFrame} object.
 }
 \description{
-Create a \code{SpatialPolygons*} object from a \code{Polygon} object or set
-of point coordinates in one go, i.e. without being required to run through
-the single steps outlined in \code{\link{SpatialPolygons}}.
+Create a \verb{SpatialPolygons*} object from a \code{Polygon} object or set of point
+coordinates in one go, i.e. without being required to run through the single
+steps outlined in \code{\link[sp:SpatialPolygons]{sp::SpatialPolygons()}}.
 }
 \examples{
 library(sp)
@@ -47,7 +47,4 @@ spy2 <- coords2Polygons(coords2, ID = "B")
 plot(spy1, col = "grey75")
 plot(spy2, col = "grey25", add = TRUE)
 
-}
-\seealso{
-\code{\link{SpatialPolygons-class}}, \code{\link{SpatialPolygonsDataFrame}}.
 }

@@ -1,27 +1,27 @@
-#' Take measures in case of nonexisting target files
+#' Take Measures in Case of Nonexisting Target Files
 #' 
 #' @description 
-#' If a target file already exists, it is simply being imported into R. However, 
+#' If a target file already exists, it is simply being imported into R. However,
 #' if the specified target file does not exist, it is first created by a 
 #' user-defined function and subsequently returned, thus rendering explicit 
-#' calls to \code{\link{file.exists}} unnecessary.
+#' calls to [file.exists()] unnecessary.
 #' 
-#' @param ofl Target file name as \code{character}.
-#' @param fun0 If 'ofl' exists, \code{function} to be applied to it (defaults to 
-#' \code{\link[raster]{brick}}). 
-#' @param fun1 If 'ofl' does not exist, \code{function} used to create it 
-#' (defaults to \code{\link{writeRaster}}).
-#' @param arg1 Argument in 'fun1' (as \code{character}) that corresponds to 
-#' 'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in 
-#' \code{\link{write.table}}. If missing (default), the target file name passed 
-#' to 'fun1' needs to be explicitly included via '...'.
-#' @param ... Additional arguments passed to 'fun0,fun1'.
+#' @param ofl Target file name as `character`.
+#' @param fun0 If 'ofl' exists, `function` to be applied to it. Defaults to 
+#'   [raster::brick()]). 
+#' @param fun1 If 'ofl' does not exist, `function` used to create it. Defaults 
+#'   to [raster::writeRaster()]).
+#' @param arg1 Argument in 'fun1' (as `character`) that corresponds to 'ofl', 
+#'   e.g. 'filename' in [raster::writeRaster()] or 'file' in 
+#'   [utils::write.table()]. If missing (default), the target file name passed 
+#'   to 'fun1' needs to be explicitly included via '...'.
+#' @param ... Additional arguments passed to 'fun0' and 'fun1'.
 #' 
 #' @return 
-#' If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else 
+#' If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else
 #' the output resultant from 'fun1'.
 #' 
-#' @seealso \code{\link{file.exists}}, \code{\link{do.call}}.
+#' @seealso [file.exists()], [do.call()].
 #' 
 #' @author Florian Detsch
 #' 
@@ -44,8 +44,7 @@
 #' ofl <- file.path(tempdir(), "iris.csv")
 #' iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.names = FALSE)
 #' 
-#' @export ifMissing
-#' @name ifMissing
+#' @export
 ifMissing = function(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, 
                      arg1, ...) {
   

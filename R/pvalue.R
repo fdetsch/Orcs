@@ -6,7 +6,7 @@
 #' @param mod An object of class \code{lm}.
 #' 
 #' @return 
-#' A \code{numeric} \emph{p}-value.
+#' A `numeric` \emph{p}-value.
 #' 
 #' @source  
 #' \href{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}{retrieving p-values in lm}

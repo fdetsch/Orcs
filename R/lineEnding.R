@@ -1,28 +1,28 @@
-#' Convert between DOS and UNIX line endings
+#' Convert Between DOS and UNIX Line Endings
 #' 
 #' @description
-#' This function converts between DOS and UNIX style line endings by envoking 
-#' \code{unix2dos} (or \code{dos2unix}) upon a text file (see also 
-#' \code{system("unix2dos --help")}). Note that 'unix2dos' must be installed on 
-#' your local system, see Source.
+#' This function converts between DOS and UNIX style line endings by invoking 
+#' `unix2dos` (or `dos2unix`) upon a text file (see also 
+#' `system("unix2dos --help")`). Note that 'unix2dos' must be installed on your 
+#' local system, see Source.
 #' 
 #' @param infile Input filename(s). 
-#' @param pattern See \code{\link{list.files}}. This will be ignored if 'infile' 
-#' is specified.
+#' @param pattern See [list.files()]. This will be ignored if 'infile' is 
+#'   specified.
 #' @param outfile Output filename. If not supplied, 'infile' will be 
-#' overwritten.
-#' @param to Either 'dos' or 'unix'.
-#' @param ... Additional arguments passed to \code{\link{list.files}}, only 
-#' applicable if 'infile' is not specified.
+#'   overwritten.
+#' @param to Either `"dos"` or `"unix"`.
+#' @param ... Additional arguments passed to [list.files()], only applicable if 
+#'   'infile' is not specified.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso 
-#' \code{\link{list.files}}, \code{\link{system}}
+#' [list.files()], [system()].
 #' 
 #' @source 
-#' \href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}
+#' [Dos2Unix/Unix2Dos Text file format converters](https://waterlan.home.xs4all.nl/dos2unix.html).
 #' 
 #' @examples
 #' ## input file
@@ -32,7 +32,7 @@
 #' ofl = file.path(tempdir(), "DESCRIPTION4wd")
 #' lineEnding(infile, outfile = ofl, to = "dos")
 #' 
-#' @export lineEnding
+#' @export
 lineEnding <- function(infile, pattern = NULL, outfile = NULL, 
                        to = c("dos", "unix"), ...) {
 

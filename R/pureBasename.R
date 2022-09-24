@@ -4,12 +4,12 @@
 #' As opposed to \code{\link{basename}}, this function returns the pure basename 
 #' of one or multiple file names, i.e. without extension.
 #' 
-#' @param path File name(s) as \code{character}. 
-#' @param slash A \code{logical} determining whether to add a leading slash 
+#' @param path File name(s) as `character`. 
+#' @param slash A `logical` determining whether to add a leading slash 
 #' ("/") to the returned file name.
 #' 
 #' @return 
-#' File name(s) without extension as \code{character}.
+#' File name(s) without extension as `character`.
 #' 
 #' @author 
 #' Florian Detsch

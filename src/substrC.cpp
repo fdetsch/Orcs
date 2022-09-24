@@ -3,15 +3,15 @@ using namespace Rcpp;
 
 //' Substrings of a Character Vector (C++ Style)
 //' 
-//' @description Extract substrings from a \code{character} vector in C++.
+//' @description Extract substrings from a `character` vector in C++.
 //' 
-//' @param x A \code{character} vector.
-//' @param pos The start point of the substring as \code{integer}. Position 
+//' @param x A `character` vector.
+//' @param pos The start point of the substring as `integer`. Position 
 //' indications start from \code{1}, which is the default in R.
-//' @param len The length of the substring as \code{integer}.
+//' @param len The length of the substring as `integer`.
 //' 
 //' @return
-//' A \code{character} vector of the same length as 'x'.
+//' A `character` vector of the same length as 'x'.
 //' 
 //' @seealso
 //' \url{https://cplusplus.com/reference/string/string/substr/},

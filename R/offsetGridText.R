@@ -6,21 +6,21 @@
 #' \code{\link{grid.text}} and \code{\link{grid.stext}}) that automatically adds
 #' offset text annotations to a 'trellis' plot.
 #' 
-#' @param x A \code{numeric} vector containing x coordinates, or a 2-column
-#' \code{matrix} containing x and y coordinates.
-#' @param y A \code{numeric} vector containing y coordinates, or \code{NULL} 
-#' if 'x' is a two-column \code{matrix}.
-#' @param labels The text to be written as \code{character}.
+#' @param x A `numeric` vector containing x coordinates, or a 2-column
+#' `matrix` containing x and y coordinates.
+#' @param y A `numeric` vector containing y coordinates, or `NULL` 
+#' if 'x' is a two-column `matrix`.
+#' @param labels The text to be written as `character`.
 #' @param xlim,ylim X and Y-axis limits (\code{c(min, max)}) of the current plot. 
 #' If not supplied, limits are automatically calculated from supplied x and y
 #' coordinates.
-#' @param pos Text position specifier(s) as \code{integer} used by 
+#' @param pos Text position specifier(s) as `integer` used by 
 #' \code{\link{text}}. If not supplied, optimal text positions will be 
 #' determined with respect to neighboring locations using 
 #' \code{\link[plotrix]{thigmophobe}}. 
-#' @param stext \code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow 
+#' @param stext `logical`, defaults to \code{FALSE}. If `TRUE`, shadow 
 #' text will be drawn around 'labels'.
-#' @param offset A \code{numeric} offset in normalized parent coordinates
+#' @param offset A `numeric` offset in normalized parent coordinates
 #' ("npc", see \code{\link[grid]{unit}}).
 #' @param ... Additional arguments passed to the respective \strong{grid} text 
 #' drawing function (depends on 'stext'). 

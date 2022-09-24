@@ -10,8 +10,7 @@ evalMetrics(mat, type = c("accuracy", "precision", "recall"))
 \item{mat}{Binary confusion \code{matrix} (2-by-2; see Examples).}
 
 \item{type}{Target evaluation metric as \code{character}, defaults to
-\code{"accuracy"}. Other available options are \code{"precision"} and
-\code{"recall"}.}
+\code{"accuracy"}. Other available options are \code{"precision"} and \code{"recall"}.}
 }
 \value{
 A single \code{numeric}.

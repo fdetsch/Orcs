@@ -4,34 +4,34 @@
 \alias{coords2Lines}
 \alias{coords2Lines,matrix-method}
 \alias{coords2Lines,Line-method}
-\title{Convert points to SpatialLines*}
+\title{Convert Points to \verb{SpatialLines*}}
 \usage{
 \S4method{coords2Lines}{matrix}(coords, ID, data, match.ID = TRUE, ...)
 
 \S4method{coords2Lines}{Line}(coords, ID, data, match.ID = TRUE, ...)
 }
 \arguments{
-\item{coords}{\code{Line} object or 2-column \code{numeric matrix} with x and
-y coordinates.}
+\item{coords}{\code{Line} object or 2-column \code{numeric} \code{matrix} with x and y
+coordinates.}
 
-\item{ID}{\code{character}, see \code{\link{Lines}}.}
+\item{ID}{\code{character}, see \code{\link[sp:Line]{sp::Lines()}}.}
 
-\item{data}{\code{data.frame} with data to add to the output
-\code{SpatialLines*} object (optional).}
+\item{data}{\code{data.frame} with data to add to the output \verb{SpatialLines*}
+object (optional).}
 
-\item{match.ID}{\code{logical}, see \code{\link{SpatialLinesDataFrame}}.}
+\item{match.ID}{\code{logical}, see \code{\link[sp:SpatialLines]{sp::SpatialLinesDataFrame()}}.}
 
-\item{...}{Further arguments passed on to \code{\link{SpatialLines}} (i.e.,
-\code{proj4string}).}
+\item{...}{Further arguments passed on to \code{\link[sp:SpatialLines]{sp::SpatialLines()}}, i.e.
+\code{proj4string}.}
 }
 \value{
-If \code{data} is missing, a \code{SpatialLines} object; else a
+If 'data' is missing, a \code{SpatialLines} object; else a
 \code{SpatialLinesDataFrame} object.
 }
 \description{
-Create a \code{SpatialLines*} object from a \code{Line} object or set of
-point coordinates in one go, i.e. without being required to run through the
-single steps outlined in \code{\link{SpatialLines}}.
+Create a \verb{SpatialLines*} object from a \code{Line} object or set of point
+coordinates in one go, i.e. without being required to run through the single
+steps outlined in \code{\link[sp:SpatialLines]{sp::SpatialLines()}}.
 }
 \examples{
 library(sp)
@@ -45,7 +45,4 @@ sln2 <- coords2Lines(coords2, ID = "B")
 plot(sln1, col = "grey75")
 plot(sln2, col = "grey25", add = TRUE)
 
-}
-\seealso{
-\code{\link{SpatialLines-class}}, \code{\link{SpatialLinesDataFrame}}.
 }

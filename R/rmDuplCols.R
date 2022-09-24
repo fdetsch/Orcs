@@ -1,16 +1,16 @@
-#' Remove duplicated columns from \code{data.frame}
+#' Remove duplicated columns from `data.frame`
 #' 
 #' @description
-#' Automatically detect and remove columns from a \code{data.frame}
+#' Automatically detect and remove columns from a `data.frame`
 #' based on duplicated headers.
 #' 
-#' @param x Input \code{data.frame}.
-#' @param keep_first A \code{logical} determining whether the first column of an 
-#' otherwise duplicated header should be kept, defaults to \code{TRUE}. 
+#' @param x Input `data.frame`.
+#' @param keep_first A `logical` determining whether the first column of an 
+#' otherwise duplicated header should be kept, defaults to `TRUE`. 
 #' @param ... Currently not in use.
 #' 
 #' @return 
-#' Revised \code{data.frame}.
+#' Revised `data.frame`.
 #' 
 #' @author 
 #' Florian Detsch

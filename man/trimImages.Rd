@@ -14,7 +14,7 @@ trimImages(path = ".", pattern = c(".png$", ".tiff$"))
 the current working directory.}
 
 \item{pattern}{Character. A regular expression as \code{character} accepted
-by \code{\link{list.files}}, defaults to \code{c(".png$", ".tiff$")}.}
+by \code{\link[=list.files]{list.files()}}, defaults to \code{c(".png$", ".tiff$")}.}
 }
 \value{
 A \code{character} vector containing the names of the processed images.
@@ -45,7 +45,7 @@ dev.off()
 
 }
 \seealso{
-\code{\link{list.files}}, \code{\link{system}}
+\code{\link[=list.files]{list.files()}}, \code{\link[=system]{system()}}
 }
 \author{
 Florian Detsch

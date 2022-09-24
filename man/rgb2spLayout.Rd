@@ -7,14 +7,14 @@
 rgb2spLayout(x, quantiles = c(0.02, 0.98), alpha = 1)
 }
 \arguments{
-\item{x}{A 3-layered \code{Raster*} object.}
+\item{x}{A 3-layered \verb{Raster*} object.}
 
 \item{quantiles}{Upper and lower quantiles used for color stretching.}
 
 \item{alpha}{Level of transparency.}
 }
 \description{
-This function takes a red-green-blue \code{Raster*} object and produces a
+This function takes a red-green-blue \verb{Raster*} object and produces a
 list with color information that can be passed on to the 'sp.layout'
 argument from \code{\link[sp]{spplot}}.
 }

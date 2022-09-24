@@ -4,11 +4,11 @@
 #' Create and draw shadow text by wrapping a textual expression into a colored 
 #' framing.
 #' 
-#' @param label A \code{character} or \code{\link{expression}} vector, see 
+#' @param label A `character` or \code{\link{expression}} vector, see 
 #' \code{\link{textGrob}}.
 #' @param x,y Horizontal and vertical text position as \code{\link[grid]{unit}} 
 #' objects passed to \code{\link{grid.text}}.
-#' @param r Blur radius of colored framing as \code{numeric}.
+#' @param r Blur radius of colored framing as `numeric`.
 #' @param col,fill Framing and fill color passed to \code{\link[grid]{gpar}}.
 #' @param name,gp,vp Graphical parameters passed to \code{\link{gTree}}.
 #' @param ... Additional arguments passed to \code{\link[grid]{grid.text}}.

@@ -16,7 +16,7 @@ extension attached.}
 \item{nodes}{Number of cores to use for parallelization as \code{integer},
 defaults to \code{1}.}
 
-\item{...}{Additional arguments passed to \code{\link{list.files}}.}
+\item{...}{Additional arguments passed to \code{\link[=list.files]{list.files()}}.}
 }
 \value{
 Output filename(s) as \code{character}.
@@ -27,7 +27,7 @@ performs parallelized 7-zip compression of selected files based on the
 built-in \strong{parallel} package.
 }
 \seealso{
-\code{\link{list.files}}, \code{\link{system}}
+\code{\link[=list.files]{list.files()}}, \code{\link[=system]{system()}}
 }
 \author{
 Florian Detsch

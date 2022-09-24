@@ -1,18 +1,14 @@
-#' Create \code{data.frame} from \code{list}
+#' Create `data.frame` from `list`
 #' 
-#' Create a \code{data.frame} from a \code{list} directly, \emph{i.e.} without 
-#' being required to explicitly call \code{\link{rbind}} first.
+#' Create a `data.frame` from a `list` directly, i.e. without being required to 
+#' explicitly call [rbind()] first.
 #' 
-#' @param x A \code{list} object.
-#' @param bind Binding direction. Available options are \code{"rows"} (default) 
-#' and \code{"cols"} for \code{\link{rbind}} and \code{\link{cbind}}, 
-#' respectively.
-#' @param ... Additional arguments passed to \code{\link{data.frame}}.
+#' @param x A `list` object.
+#' @param bind Binding direction. Available options are `"rows"` (default) and 
+#'   `"cols"` for [rbind()] and [cbind()], respectively.
+#' @param ... Additional arguments passed to [data.frame()].
 #' 
-#' @return A \code{data.frame} object.
-#' 
-#' @seealso 
-#' \code{\link{data.frame}}, \code{\link{rbind}}, \code{\link{cbind}}.
+#' @return A `data.frame` object.
 #' 
 #' @examples 
 #' lst <- list(letters[1:3], letters[4:6], letters[7:9])
@@ -21,8 +17,7 @@
 #' list2df(lst)          # results in data.frame created using rbind()
 #' list2df(lst, bind = "cols") # same for cbind()
 #' 
-#' @export list2df
-#' @name list2df
+#' @export
 list2df <- function(x, bind = c("rows", "cols"), ...) {
   
   bind = bind[1]

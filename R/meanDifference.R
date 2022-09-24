@@ -8,11 +8,11 @@ if ( !isGeneric("meanDifference") ) {
 #' Calculate the mean difference between two datasets as suggested by 
 #' Wang \emph{et al.} (2012). 
 #'
-#' @param x,y Objects of class \code{RasterLayer} or \code{numeric}. 
+#' @param x,y Objects of class \code{RasterLayer} or `numeric`. 
 #'
 #' @return
 #' The mean difference between the two inputs either as \code{RasterLayer} or 
-#' \code{numeric}.
+#' `numeric`.
 #'  
 #' @source 
 #' Wang \emph{et al.} (2012) Impact of sensor degradation on the MODIS NDVI time 

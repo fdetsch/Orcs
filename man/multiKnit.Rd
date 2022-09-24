@@ -12,7 +12,7 @@ working directory.}
 
 \item{path_out}{Output file path as \code{character}, defaults to 'path_in'.}
 
-\item{pattern}{Passed to \code{\link{list.files}}, defaults to
+\item{pattern}{Passed to \code{\link[=list.files]{list.files()}}, defaults to
 \code{"*.Rmd$"}.}
 
 \item{...}{Additional arguments passed to \code{\link[knitr]{knit}}.}
