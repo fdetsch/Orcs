@@ -14,8 +14,8 @@ rgb2spLayout(x, quantiles = c(0.02, 0.98), alpha = 1)
 \item{alpha}{Level of transparency.}
 }
 \description{
-This function takes a red-green-blue \code{Raster*} object and produces a 
-list with color information that can be passed on to the 'sp.layout' 
+This function takes a red-green-blue \code{Raster*} object and produces a
+list with color information that can be passed on to the 'sp.layout'
 argument from \code{\link[sp]{spplot}}.
 }
 \examples{

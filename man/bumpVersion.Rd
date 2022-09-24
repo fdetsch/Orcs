@@ -12,26 +12,26 @@ bumpVersion(
 )
 }
 \arguments{
-\item{element}{\code{character}, one of "major", "minor", "patch" (default) 
+\item{element}{\code{character}, one of "major", "minor", "patch" (default)
 to be bumped.}
 
 \item{pkg.repo}{Path to package repository folder. Default is current
 working directory (".").}
 
-\item{news}{The NEWS.md file of the repo (assumed to be in top level path). 
-If this exists, the first line of that file will be rewritten 
-to be "<packagename> <major.minor.patch>". Note that the current implementation 
-assumes that the NEWS file is in .md format, thus NEWS.md. A plain NEWS
-file (for R-help pages) will be generated automatically.}
+\item{news}{The NEWS.md file of the repo (assumed to be in top level path).
+If this exists, the first line of that file will be rewritten
+to be "\<packagename\> \<major.minor.patch\>". Note that the current
+implementation assumes that the NEWS file is in .md format, thus NEWS.md. A
+plain NEWS file (for R-help pages) will be generated automatically.}
 
 \item{plain_news}{whether to generate a plain NEWS file in the package
 root directory from the NEWS.md file supplied to argument \code{news}.}
 }
 \description{
 This function let's you bump the version number and creation date of
-your package's DESCRIPTION file. Additionally, it bumps the version 
-numbers of a NEWS.md file and automatically generates a corresponding 
-plain NEWS file (for R-help pages). Supported versioning system is 
+your package's DESCRIPTION file. Additionally, it bumps the version
+numbers of a NEWS.md file and automatically generates a corresponding
+plain NEWS file (for R-help pages). Supported versioning system is
 \href{https://semver.org/}{MAJOR.MINOR.PATCH}.
 }
 \seealso{

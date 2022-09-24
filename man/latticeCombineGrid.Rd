@@ -25,9 +25,9 @@ A single \strong{lattice} plot object.
 }
 \description{
 This function combines multiple \strong{lattice} plot objects in a facetted
-grid. Note that the global plot settings (e.g. xlim, ylim, ...) are taken 
-from the first object though the user can specify whether \code{scales} 
-should be identical or not. This is particularly useful when looping over 
+grid. Note that the global plot settings (e.g. xlim, ylim, ...) are taken
+from the first object though the user can specify whether \code{scales}
+should be identical or not. This is particularly useful when looping over
 large amounts of data using \code{\link{lapply}} (see examples).
 }
 \examples{

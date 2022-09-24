@@ -22,16 +22,16 @@ compareDistributions(
 
 \item{right}{\code{numeric} vector.}
 
-\item{add.spread}{\code{logical}, whether to plot the spread (q25 to q75 and 
+\item{add.spread}{\code{logical}, whether to plot the spread (q25 to q75 and
 the median).}
 
-\item{print.stats}{\code{logical}, whether to print summary statistics for 
+\item{print.stats}{\code{logical}, whether to print summary statistics for
 each distribution.}
 
-\item{xlim, ylim}{\code{numeric} axis limits, see 
+\item{xlim, ylim}{\code{numeric} axis limits, see
 \code{\link[lattice]{xyplot}}.}
 
-\item{clrs}{A \code{character} vector of length 2 specifying the colors 
+\item{clrs}{A \code{character} vector of length 2 specifying the colors
 for the filled density regions.}
 
 \item{xlab, ylab}{\code{character} axis labels, see \code{\link{plot}}.}
@@ -42,7 +42,7 @@ for the filled density regions.}
 A \code{trellis} object.
 }
 \description{
-This function will produce a plot of two density functions displayed 
+This function will produce a plot of two density functions displayed
 side by side
 }
 \examples{

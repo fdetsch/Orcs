@@ -9,7 +9,7 @@
 Omnidirectional R Code Snippets
 }
 \details{
-The package provides a variety of functions which I regularly use during my 
+The package provides a variety of functions which I regularly use during my
 everyday work.
 }
 \author{

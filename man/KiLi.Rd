@@ -8,10 +8,10 @@
 A \code{"RasterStack-class"} with 3 bands (red, green, blue).
 }
 \description{
-Bing aerial image of Kilimanjaro downloaded from 
+Bing aerial image of Kilimanjaro downloaded from
 \href{https://www.openstreetmap.org/}{OpenStreetMap}.
 }
 \details{
-Copyright: OpenStreetMap contributors, see 
+Copyright: OpenStreetMap contributors, see
 \url{https://www.openstreetmap.org/copyright}.
 }

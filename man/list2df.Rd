@@ -9,8 +9,8 @@ list2df(x, bind = c("rows", "cols"), ...)
 \arguments{
 \item{x}{A \code{list} object.}
 
-\item{bind}{Binding direction. Available options are \code{"rows"} (default) 
-and \code{"cols"} for \code{\link{rbind}} and \code{\link{cbind}}, 
+\item{bind}{Binding direction. Available options are \code{"rows"} (default)
+and \code{"cols"} for \code{\link{rbind}} and \code{\link{cbind}},
 respectively.}
 
 \item{...}{Additional arguments passed to \code{\link{data.frame}}.}
@@ -19,7 +19,7 @@ respectively.}
 A \code{data.frame} object.
 }
 \description{
-Create a \code{data.frame} from a \code{list} directly, \emph{i.e.} without 
+Create a \code{data.frame} from a \code{list} directly, \emph{i.e.} without
 being required to explicitly call \code{\link{rbind}} first.
 }
 \examples{

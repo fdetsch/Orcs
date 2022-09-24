@@ -9,14 +9,14 @@ pureBasename(path, slash = FALSE)
 \arguments{
 \item{path}{File name(s) as \code{character}.}
 
-\item{slash}{A \code{logical} determining whether to add a leading slash 
+\item{slash}{A \code{logical} determining whether to add a leading slash
 ("/") to the returned file name.}
 }
 \value{
 File name(s) without extension as \code{character}.
 }
 \description{
-As opposed to \code{\link{basename}}, this function returns the pure basename 
+As opposed to \code{\link{basename}}, this function returns the pure basename
 of one or multiple file names, i.e. without extension.
 }
 \examples{

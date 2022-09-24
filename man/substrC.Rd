@@ -9,7 +9,7 @@ substrC(x, pos, len)
 \arguments{
 \item{x}{A \code{character} vector.}
 
-\item{pos}{The start point of the substring as \code{integer}. Position 
+\item{pos}{The start point of the substring as \code{integer}. Position
 indications start from \code{1}, which is the default in R.}
 
 \item{len}{The length of the substring as \code{integer}.}

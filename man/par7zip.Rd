@@ -7,13 +7,13 @@
 par7zip(outfile, nodes = 1L, ...)
 }
 \arguments{
-\item{outfile}{Target file for compression as \code{character}. A file 
-extension compatible with 7-zip needs to be included, see 
+\item{outfile}{Target file for compression as \code{character}. A file
+extension compatible with 7-zip needs to be included, see
 \href{https://sevenzip.osdn.jp/chm/general/formats.htm}{Supported formats}.
-If missing, this defaults to the found input file names with a \code{.7z} 
+If missing, this defaults to the found input file names with a \code{.7z}
 extension attached.}
 
-\item{nodes}{Number of cores to use for parallelization as \code{integer}, 
+\item{nodes}{Number of cores to use for parallelization as \code{integer},
 defaults to \code{1}.}
 
 \item{...}{Additional arguments passed to \code{\link{list.files}}.}
@@ -22,8 +22,8 @@ defaults to \code{1}.}
 Output filename(s) as \code{character}.
 }
 \description{
-By calling the Unix terminal or Windows command prompt, this function 
-performs parallelized 7-zip compression of selected files based on the 
+By calling the Unix terminal or Windows command prompt, this function
+performs parallelized 7-zip compression of selected files based on the
 built-in \strong{parallel} package.
 }
 \seealso{

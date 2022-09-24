@@ -9,27 +9,27 @@ ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1, ...)
 \arguments{
 \item{ofl}{Target file name as \code{character}.}
 
-\item{fun0}{If 'ofl' exists, \code{function} to be applied to it (defaults to 
+\item{fun0}{If 'ofl' exists, \code{function} to be applied to it (defaults to
 \code{\link[raster]{brick}}).}
 
-\item{fun1}{If 'ofl' does not exist, \code{function} used to create it 
+\item{fun1}{If 'ofl' does not exist, \code{function} used to create it
 (defaults to \code{\link{writeRaster}}).}
 
-\item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to 
-'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in 
-\code{\link{write.table}}. If missing (default), the target file name passed 
+\item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to
+'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in
+\code{\link{write.table}}. If missing (default), the target file name passed
 to 'fun1' needs to be explicitly included via '...'.}
 
 \item{...}{Additional arguments passed to 'fun0,fun1'.}
 }
 \value{
-If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else 
+If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else
 the output resultant from 'fun1'.
 }
 \description{
-If a target file already exists, it is simply being imported into R. However, 
-if the specified target file does not exist, it is first created by a 
-user-defined function and subsequently returned, thus rendering explicit 
+If a target file already exists, it is simply being imported into R. However,
+if the specified target file does not exist, it is first created by a
+user-defined function and subsequently returned, thus rendering explicit
 calls to \code{\link{file.exists}} unnecessary.
 }
 \examples{

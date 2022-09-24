@@ -20,32 +20,32 @@ offsetGridText(
 \item{x}{A \code{numeric} vector containing x coordinates, or a 2-column
 \code{matrix} containing x and y coordinates.}
 
-\item{y}{A \code{numeric} vector containing y coordinates, or \code{NULL} 
+\item{y}{A \code{numeric} vector containing y coordinates, or \code{NULL}
 if 'x' is a two-column \code{matrix}.}
 
 \item{labels}{The text to be written as \code{character}.}
 
-\item{xlim, ylim}{X and Y-axis limits (\code{c(min, max)}) of the current plot. 
+\item{xlim, ylim}{X and Y-axis limits (\code{c(min, max)}) of the current plot.
 If not supplied, limits are automatically calculated from supplied x and y
 coordinates.}
 
-\item{pos}{Text position specifier(s) as \code{integer} used by 
-\code{\link{text}}. If not supplied, optimal text positions will be 
-determined with respect to neighboring locations using 
+\item{pos}{Text position specifier(s) as \code{integer} used by
+\code{\link{text}}. If not supplied, optimal text positions will be
+determined with respect to neighboring locations using
 \code{\link[plotrix]{thigmophobe}}.}
 
-\item{stext}{\code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow 
+\item{stext}{\code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow
 text will be drawn around 'labels'.}
 
 \item{offset}{A \code{numeric} offset in normalized parent coordinates
 ("npc", see \code{\link[grid]{unit}}).}
 
-\item{...}{Additional arguments passed to the respective \strong{grid} text 
+\item{...}{Additional arguments passed to the respective \strong{grid} text
 drawing function (depends on 'stext').}
 }
 \description{
-This is a wrapper function around \code{Orcs:::calcOffsetGridText} and 
-\strong{grid}-based text drawing functions (currently including 
+This is a wrapper function around \code{Orcs:::calcOffsetGridText} and
+\strong{grid}-based text drawing functions (currently including
 \code{\link{grid.text}} and \code{\link{grid.stext}}) that automatically adds
 offset text annotations to a 'trellis' plot.
 }
@@ -83,7 +83,7 @@ offsetGridText(x = coordinates(peaks), labels = peaks$Peak,
                                
 }
 \seealso{
-\code{\link[grid]{grid.text}}, \code{\link{grid.stext}}, 
+\code{\link[grid]{grid.text}}, \code{\link{grid.stext}},
 \code{\link[plotrix]{thigmophobe}}, \code{Orcs::calcOffsetGridText}.
 }
 \author{

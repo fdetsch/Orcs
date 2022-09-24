@@ -7,16 +7,16 @@
 setwdOS(lin = "/media/permanent/", win = "C:/", ext = NULL)
 }
 \arguments{
-\item{lin, win}{Absolute file paths to the Linux and Windows partition as 
+\item{lin, win}{Absolute file paths to the Linux and Windows partition as
 \code{character}.}
 
-\item{ext}{Optional file path extension as \code{character} that will be 
+\item{ext}{Optional file path extension as \code{character} that will be
 added to 'lin' or 'win' after automatic OS determination.}
 }
 \description{
 Similar to \code{\link{setwd}}, this function sets the working directory to a
-user-defined path. Rather than supplying a single 'dir' argument, however, 
-both an OS-sensitive path to the desired hard disk partition and, optionally, 
+user-defined path. Rather than supplying a single 'dir' argument, however,
+both an OS-sensitive path to the desired hard disk partition and, optionally,
 an extension of this file path are required.
 }
 \examples{

@@ -9,7 +9,7 @@ loadPkgs(pkgs, ...)
 \arguments{
 \item{pkgs}{Packages to load as \code{character}.}
 
-\item{...}{Additional arguments passed to \code{\link{library}}, except for 
+\item{...}{Additional arguments passed to \code{\link{library}}, except for
 'character.only' which is set to \code{TRUE}.}
 }
 \description{

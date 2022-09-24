@@ -7,14 +7,14 @@
 loadFromGit(repo = "fdetsch/Orcs", ...)
 }
 \arguments{
-\item{repo}{Repository address as \code{character}, defaults to 
+\item{repo}{Repository address as \code{character}, defaults to
 "fdetsch/Orcs".}
 
-\item{...}{Additional arguments passed to 
+\item{...}{Additional arguments passed to
 \code{\link[remotes]{install_github}}.}
 }
 \description{
-This function comprises multiple steps required to install and load a 
+This function comprises multiple steps required to install and load a
 package directly from GitHub.
 }
 \examples{

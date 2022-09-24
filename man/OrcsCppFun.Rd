@@ -17,13 +17,13 @@ dimC(x)
 \item{x}{A \code{data.frame}.}
 }
 \value{
-\code{dimC} returns an 'integer' vector of length 2 (number of rows 
-and columns); \code{nrowC} (or \code{ncolC}) returns the number of rows 
+\code{dimC} returns an 'integer' vector of length 2 (number of rows
+and columns); \code{nrowC} (or \code{ncolC}) returns the number of rows
 (or columns) as a single 'integer'.
 }
 \description{
-Similar to base-R \code{\link{nrow}}, \code{\link{ncol}} and 
-\code{\link{dim}}, this set of functions let's you retrieve the number of 
+Similar to base-R \code{\link{nrow}}, \code{\link{ncol}} and
+\code{\link{dim}}, this set of functions let's you retrieve the number of
 rows and columns of a \code{data.frame}.
 }
 \section{Functions}{

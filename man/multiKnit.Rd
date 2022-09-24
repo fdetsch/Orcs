@@ -12,7 +12,7 @@ working directory.}
 
 \item{path_out}{Output file path as \code{character}, defaults to 'path_in'.}
 
-\item{pattern}{Passed to \code{\link{list.files}}, defaults to 
+\item{pattern}{Passed to \code{\link{list.files}}, defaults to
 \code{"*.Rmd$"}.}
 
 \item{...}{Additional arguments passed to \code{\link[knitr]{knit}}.}
@@ -22,7 +22,7 @@ Output filenames as \code{character}.
 }
 \description{
 This function is a convenient wrapper around \code{\link{knit}} as
-it automatically converts multiple R Markdown files (\code{.Rmd}) located in 
+it automatically converts multiple R Markdown files (\code{.Rmd}) located in
 a specified folder (and, optionally, matching a particular pattern)
 to standard Markdown (\code{.md}).
 }

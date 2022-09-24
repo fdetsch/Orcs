@@ -38,6 +38,7 @@ Imports:
     stats
 LinkingTo: Rcpp
 RoxygenNote: 7.2.1
+Roxygen: list(markdown = TRUE)
 SystemRequirements: GNU make, 7zip, unix2dos
 Suggests:
     rmarkdown, 

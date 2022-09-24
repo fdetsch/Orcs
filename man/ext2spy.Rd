@@ -7,16 +7,16 @@
 ext2spy(x, crs = "+init=epsg:4326", as_sf = TRUE)
 }
 \arguments{
-\item{x}{An \code{Extent} object, or any object from which an \code{Extent} 
+\item{x}{An \code{Extent} object, or any object from which an \code{Extent}
 can be extracted, e.g. \code{Raster*}.}
 
 \item{crs}{Coordinate reference system passed to \code{\link{proj4string}}.}
 
-\item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is 
+\item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is
 of class \code{sf} rather than \code{Spatial*}.}
 }
 \value{
-Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons} 
+Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons}
 object.
 }
 \description{

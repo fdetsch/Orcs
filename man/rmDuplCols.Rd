@@ -9,7 +9,7 @@ rmDuplCols(x, keep_first = TRUE, ...)
 \arguments{
 \item{x}{Input \code{data.frame}.}
 
-\item{keep_first}{A \code{logical} determining whether the first column of an 
+\item{keep_first}{A \code{logical} determining whether the first column of an
 otherwise duplicated header should be kept, defaults to \code{TRUE}.}
 
 \item{...}{Currently not in use.}

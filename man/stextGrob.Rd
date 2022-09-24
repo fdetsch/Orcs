@@ -19,10 +19,10 @@ stextGrob(
 )
 }
 \arguments{
-\item{label}{A \code{character} or \code{\link{expression}} vector, see 
+\item{label}{A \code{character} or \code{\link{expression}} vector, see
 \code{\link{textGrob}}.}
 
-\item{x, y}{Horizontal and vertical text position as \code{\link[grid]{unit}} 
+\item{x, y}{Horizontal and vertical text position as \code{\link[grid]{unit}}
 objects passed to \code{\link{grid.text}}.}
 
 \item{col, fill}{Framing and fill color passed to \code{\link[grid]{gpar}}.}
@@ -37,7 +37,7 @@ objects passed to \code{\link{grid.text}}.}
 A text grob created by \code{\link{gTree}}.
 }
 \description{
-Create and draw shadow text by wrapping a textual expression into a colored 
+Create and draw shadow text by wrapping a textual expression into a colored
 framing.
 }
 \examples{

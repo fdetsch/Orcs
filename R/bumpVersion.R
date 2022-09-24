@@ -13,9 +13,9 @@
 #' working directory ("."). 
 #' @param news The NEWS.md file of the repo (assumed to be in top level path). 
 #' If this exists, the first line of that file will be rewritten 
-#' to be "<packagename> <major.minor.patch>". Note that the current implementation 
-#' assumes that the NEWS file is in .md format, thus NEWS.md. A plain NEWS
-#' file (for R-help pages) will be generated automatically.
+#' to be "\<packagename\> \<major.minor.patch\>". Note that the current 
+#' implementation assumes that the NEWS file is in .md format, thus NEWS.md. A 
+#' plain NEWS file (for R-help pages) will be generated automatically.
 #' @param plain_news whether to generate a plain NEWS file in the package
 #' root directory from the NEWS.md file supplied to argument \code{news}.
 #'

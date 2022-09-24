@@ -15,10 +15,10 @@ latticeCombineLayer(trellis.list, ...)
 A single \strong{lattice} plot object.
 }
 \description{
-This function combines multiple \strong{lattice} plot objects drawing each as 
-a layer on top of the previous plots. Note that the global plot settings 
-(e.g. xlim, ylim, ...) are taken from the first object. This is particularly 
-useful when looping over large amounts of data using \code{\link{lapply}} 
+This function combines multiple \strong{lattice} plot objects drawing each as
+a layer on top of the previous plots. Note that the global plot settings
+(e.g. xlim, ylim, ...) are taken from the first object. This is particularly
+useful when looping over large amounts of data using \code{\link{lapply}}
 (see examples).
 }
 \examples{
