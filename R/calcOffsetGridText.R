@@ -103,11 +103,11 @@ calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL,
 # 
 # @description
 # Convert integer position specifiers as supported by
-# \code{\link{text}} to character position specifiers as supported by
-# \strong{grid}-based text drawing functions (e.g. \code{\link{grid.text}}).
+# [graphics::text()] to character position specifiers as supported by
+# \strong{grid}-based text drawing functions (e.g. [grid::grid.text()]).
 # 
 # @param pos Integer. A position specifier for text annotations as used by
-# \code{\link{text}}.
+# [graphics::text()].
 # @param ... Currently not in use.
 # 
 # @return
@@ -118,7 +118,7 @@ calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL,
 # Florian Detsch
 # 
 # @seealso
-# \code{\link{text}}, \code{\link{grid.text}}
+# [graphics::text()], [grid::grid.text()]
 # 
 # @examples
 # set.seed(100)

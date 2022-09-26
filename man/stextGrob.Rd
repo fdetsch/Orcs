@@ -19,22 +19,21 @@ stextGrob(
 )
 }
 \arguments{
-\item{label}{A \code{character} or \code{\link{expression}} vector, see
-\code{\link{textGrob}}.}
+\item{label}{A \code{character} or \code{expression} vector, see \code{\link[grid:grid.text]{grid::textGrob()}}.}
 
-\item{x, y}{Horizontal and vertical text position as \code{\link[grid]{unit}}
-objects passed to \code{\link{grid.text}}.}
+\item{x, y}{Horizontal and vertical text position as \code{\link[grid:unit]{grid::unit()}} objects
+passed to \code{\link[grid:grid.text]{grid::grid.text()}}.}
 
-\item{col, fill}{Framing and fill color passed to \code{\link[grid]{gpar}}.}
+\item{col, fill}{Framing and fill color passed to \code{\link[grid:gpar]{grid::gpar()}}.}
 
 \item{r}{Blur radius of colored framing as \code{numeric}.}
 
-\item{name, gp, vp}{Graphical parameters passed to \code{\link{gTree}}.}
+\item{name, gp, vp}{Graphical parameters passed to \code{\link[grid:grid.grob]{grid::gTree()}}.}
 
-\item{...}{Additional arguments passed to \code{\link[grid]{grid.text}}.}
+\item{...}{Additional arguments passed to [grid::grid.text()].}
 }
 \value{
-A text grob created by \code{\link{gTree}}.
+A text grob created by \code{\link[grid:grid.grob]{grid::gTree()}}.
 }
 \description{
 Create and draw shadow text by wrapping a textual expression into a colored
@@ -46,9 +45,6 @@ grid.newpage()
 grid.rect(gp = gpar(fill = "grey"))
 grid.stext("test")
 
-}
-\seealso{
-\code{\link[grid]{grid.text}}.
 }
 \author{
 Baptiste Auguie, Florian Detsch

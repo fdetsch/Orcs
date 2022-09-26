@@ -13,8 +13,9 @@ The package provides a variety of functions which I regularly use during my
 everyday work.
 }
 \author{
-Florian Detsch \cr
+Florian Detsch, Tim Appelhans, Baptiste Auguie,
+OpenStreetMap contributors \cr
 \cr
-\emph{Maintainer:} Florian Detsch \email{florian.detsch@staff.uni-marburg.de}
+\emph{Maintainer:} Florian Detsch \email{fdetsch@web.de}
 }
 \keyword{package}

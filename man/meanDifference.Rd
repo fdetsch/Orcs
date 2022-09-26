@@ -4,7 +4,7 @@
 \alias{meanDifference}
 \alias{meanDifference,RasterLayer-method}
 \alias{meanDifference,numeric-method}
-\title{Calculate mean difference between two datasets}
+\title{Calculate Mean Difference Between Two Datasets}
 \source{
 Wang \emph{et al.} (2012) Impact of sensor degradation on the MODIS NDVI time
 series. Remote Sensing of Environment 119, 55-61,
@@ -28,8 +28,8 @@ The mean difference between the two inputs either as \code{RasterLayer} or
 \code{numeric}.
 }
 \description{
-Calculate the mean difference between two datasets as suggested by
-Wang \emph{et al.} (2012).
+Calculate the mean difference between two datasets as suggested by Wang
+\emph{et al.} (2012).
 }
 \examples{
 x <- 1:10

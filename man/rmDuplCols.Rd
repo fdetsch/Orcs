@@ -2,7 +2,7 @@
 % Please edit documentation in R/rmDuplCols.R
 \name{rmDuplCols}
 \alias{rmDuplCols}
-\title{Remove duplicated columns from \code{data.frame}}
+\title{Remove Duplicated Columns from \code{data.frame}}
 \usage{
 rmDuplCols(x, keep_first = TRUE, ...)
 }
@@ -18,8 +18,8 @@ otherwise duplicated header should be kept, defaults to \code{TRUE}.}
 Revised \code{data.frame}.
 }
 \description{
-Automatically detect and remove columns from a \code{data.frame}
-based on duplicated headers.
+Automatically detect and remove columns from a \code{data.frame} based on
+duplicated headers.
 }
 \examples{
 ## sample data
@@ -33,7 +33,7 @@ rmDuplCols(dat, keep_first = FALSE)
 
 }
 \seealso{
-\code{\link{duplicated}}
+\code{\link[=duplicated]{duplicated()}}.
 }
 \author{
 Florian Detsch

@@ -4,21 +4,17 @@
 #' Dimensions of a `data.frame`
 #' 
 #' @description
-#' Similar to base-R \code{\link{nrow}}, \code{\link{ncol}} and 
-#' \code{\link{dim}}, this set of functions let's you retrieve the number of 
-#' rows and columns of a `data.frame`.
+#' Similar to base-R [nrow()], [ncol()] and [dim()], this set of functions 
+#' let's you retrieve the number of rows and columns of a `data.frame`.
 #' 
 #' @param x A `data.frame`.
 #' 
-#' @return \code{dimC} returns an 'integer' vector of length 2 (number of rows 
-#' and columns); \code{nrowC} (or \code{ncolC}) returns the number of rows 
-#' (or columns) as a single 'integer'.
+#' @return `dimC()` returns an `integer` vector of length 2 (number of rows and 
+#' columns); `nrowC()` (or `ncolC()`) returns the number of rows (or columns) 
+#' as a single `integer`.
 #' 
 #' @author
 #' Florian Detsch
-#' 
-#' @seealso
-#' \code{\link{nrow}}, \code{\link{ncol}}, \code{\link{dim}}.
 #' 
 #' @name OrcsCppFun
 #' 
@@ -58,15 +54,14 @@ dimC <- function(x) {
 #' 
 #' @param x A `character` vector.
 #' @param pos The start point of the substring as `integer`. Position 
-#' indications start from \code{1}, which is the default in R.
+#'   indications start from `1L`, which is the default in R.
 #' @param len The length of the substring as `integer`.
 #' 
 #' @return
 #' A `character` vector of the same length as 'x'.
 #' 
 #' @seealso
-#' \url{https://cplusplus.com/reference/string/string/substr/},
-#' \code{\link{substr}}.
+#' <https://cplusplus.com/reference/string/string/substr/>, [substr()].
 #' 
 #' @examples
 #' substrC("Hello, world!", pos = 1, len = 5)

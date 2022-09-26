@@ -1,17 +1,16 @@
-#' Convert multiple R Markdown files to ordinary Markdown
+#' Convert Multiple R Markdown Files to Ordinary Markdown
 #' 
 #' @description
-#' This function is a convenient wrapper around \code{\link{knit}} as
-#' it automatically converts multiple R Markdown files (\code{.Rmd}) located in 
-#' a specified folder (and, optionally, matching a particular pattern)
-#' to standard Markdown (\code{.md}).
+#' This function is a convenient wrapper around [knitr::knit()] as it 
+#' automatically converts multiple R Markdown files (`.Rmd`) located in a 
+#' specified folder (and, optionally, matching a particular pattern) to standard
+#' Markdown (`.md`).
 #' 
 #' @param path_in Input file path as `character`, defaults to the current
-#' working directory.
+#'   working directory.
 #' @param path_out Output file path as `character`, defaults to 'path_in'.
-#' @param pattern Passed to [list.files()], defaults to 
-#' \code{"*.Rmd$"}.
-#' @param ... Additional arguments passed to \code{\link[knitr]{knit}}.
+#' @param pattern Passed to [list.files()], defaults to `"*.Rmd$"`.
+#' @param ... Additional arguments passed to [knitr::knit()].
 #' 
 #' @return 
 #' Output filenames as `character`.
@@ -19,11 +18,7 @@
 #' @author 
 #' Florian Detsch
 #' 
-#' @seealso
-#' \code{\link[knitr]{knit}}
-#' 
-#' @export multiKnit
-#' @name multiKnit
+#' @export
 multiKnit <- function(path_in = ".", path_out = path_in, pattern = "*.Rmd$", ...) {
   
   ## input *.Rmd files
