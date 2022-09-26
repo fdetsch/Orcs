@@ -2,23 +2,19 @@
 #' 
 #' @description 
 #' Since the use of underscores ('_') is not permitted when streaming 
-#' \strong{bookdown} documents via 
-#' \href{https://pages.github.com/}{GitHub Pages}, this wrapper function serves 
-#' to remove any unwanted underscores from subfolders and link \code{.html} 
-#' documents created by \code{\link[bookdown]{render_book}}. 
+#' **bookdown** documents via [GitHub Pages](https://pages.github.com/), this 
+#' wrapper function serves to remove any unwanted underscores from subfolders 
+#' and link `.html` documents created by [bookdown::render_book()]. 
 #'  
-#' @param output_dir Output directory as \code{character}. 
-#' @param ... Arguments passed to \code{\link[bookdown]{render_book}}.
-#' 
-#' @seealso \code{\link[bookdown]{render_book}}.
+#' @param output_dir Output directory as `character`. 
+#' @param ... Arguments passed to [bookdown::render_book()].
 #' 
 #' @note 
-#' While all remaining arguments passed to \code{\link[bookdown]{render_book}} 
-#' remain untouched, and hence, their specification is freely up to the user, 
-#' the default value of 'output_dir' is explicitly set to \code{"book"} here. If 
-#' this were not the case (i.e. if the default value were used), the output 
-#' document would be created in \code{"_book"} which is not desirable for 
-#' obvious reasons.
+#' While all remaining arguments passed to [bookdown::render_book()] remain 
+#' untouched, and hence their specification is freely up to the user, the 
+#' default value of 'output_dir' is explicitly set to `"book"` here. If this 
+#' were not the case (i.e. if the default value were used), the output document 
+#' would be created in `"_book"` which is not desirable for obvious reasons.
 #' 
 #' @author Florian Detsch
 #' 
@@ -29,8 +25,7 @@
 #           , output_dir = "book")
 # }
 #' 
-#' @export buildBook
-#' @name buildBook
+#' @export
 buildBook = function(output_dir = "book", ...) {
   
   if (is.null(output_dir))

@@ -2,24 +2,20 @@
 #include <Rcpp.h>
 using namespace Rcpp;
 
-//' Dimensions of a \code{data.frame}
+//' Dimensions of a `data.frame`
 //' 
 //' @description
-//' Similar to base-R \code{\link{nrow}}, \code{\link{ncol}} and 
-//' \code{\link{dim}}, this set of functions let's you retrieve the number of 
-//' rows and columns of a \code{data.frame}.
+//' Similar to base-R [nrow()], [ncol()] and [dim()], this set of functions 
+//' let's you retrieve the number of rows and columns of a `data.frame`.
 //' 
-//' @param x A \code{data.frame}.
+//' @param x A `data.frame`.
 //' 
-//' @return \code{dimC} returns an 'integer' vector of length 2 (number of rows 
-//' and columns); \code{nrowC} (or \code{ncolC}) returns the number of rows 
-//' (or columns) as a single 'integer'.
+//' @return `dimC()` returns an `integer` vector of length 2 (number of rows and 
+//' columns); `nrowC()` (or `ncolC()`) returns the number of rows (or columns) 
+//' as a single `integer`.
 //' 
 //' @author
 //' Florian Detsch
-//' 
-//' @seealso
-//' \code{\link{nrow}}, \code{\link{ncol}}, \code{\link{dim}}.
 //' 
 //' @name OrcsCppFun
 //' 

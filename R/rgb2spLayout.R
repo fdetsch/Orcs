@@ -1,15 +1,15 @@
-#' Convert an RGB RasterBrick/Stack to use with spplot
+#' Convert an RGB `Raster*` to Use with `spplot()`
 #'
 #' @description
-#' This function takes a red-green-blue \code{Raster*} object and produces a 
-#' list with color information that can be passed on to the 'sp.layout' 
-#' argument from \code{\link[sp]{spplot}}.
+#' This function takes a red-green-blue `Raster*` object and produces a list 
+#' with color information that can be passed on to the 'sp.layout' argument from
+#' [sp::spplot()].
 #'
-#' @param x A 3-layered \code{Raster*} object.
+#' @param x A 3-layered `Raster*` object.
 #' @param quantiles Upper and lower quantiles used for color stretching.
 #' @param alpha Level of transparency.
 #'
-#' @seealso \code{\link{plotRGB}}
+#' @seealso [raster::plotRGB()].
 #'
 #' @author
 #' Tim Appelhans, Florian Detsch
@@ -37,8 +37,7 @@
 #' spplot(df, sp.layout = lout)
 #' spplot(df, sp.layout = lout_alph)
 #'
-#' @export rgb2spLayout
-#' @name rgb2spLayout
+#' @export
 rgb2spLayout <- function(x,
                          quantiles = c(0.02, 0.98),
                          alpha = 1) {

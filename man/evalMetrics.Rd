@@ -9,15 +9,14 @@ evalMetrics(mat, type = c("accuracy", "precision", "recall"))
 \arguments{
 \item{mat}{Binary confusion \code{matrix} (2-by-2; see Examples).}
 
-\item{type}{Target evaluation metric as \code{character}, defaults to 
-\code{"accuracy"}. Other available options are \code{"precision"} and 
-\code{"recall"}.}
+\item{type}{Target evaluation metric as \code{character}, defaults to
+\code{"accuracy"}. Other available options are \code{"precision"} and \code{"recall"}.}
 }
 \value{
 A single \code{numeric}.
 }
 \description{
-Compute selected evaluation metrics for binary (i.e. two-class) confusion 
+Compute selected evaluation metrics for binary (i.e. two-class) confusion
 matrices.
 }
 \examples{
@@ -35,7 +34,7 @@ evalMetrics(in2, "recall")
 
 }
 \references{
-University of Michigan (2017) Applied Machine Learning in Python. Available 
+University of Michigan (2017) Applied Machine Learning in Python. Available
 online: \url{https://www.coursera.org/learn/python-machine-learning/home/welcome}.
 }
 \author{

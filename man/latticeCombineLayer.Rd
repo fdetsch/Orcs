@@ -2,24 +2,24 @@
 % Please edit documentation in R/latticeCombineLayer.R
 \name{latticeCombineLayer}
 \alias{latticeCombineLayer}
-\title{Combine multiple lattice plots layerwise}
+\title{Combine Multiple Lattice Plots Layerwise}
 \usage{
 latticeCombineLayer(trellis.list, ...)
 }
 \arguments{
 \item{trellis.list}{A \code{list} containing \strong{lattice} plot objects.}
 
-\item{...}{Additional arguments passed to \code{\link{as.layer}}.}
+\item{...}{Additional arguments passed to \code{\link[latticeExtra:as.layer]{latticeExtra::as.layer()}}.}
 }
 \value{
 A single \strong{lattice} plot object.
 }
 \description{
-This function combines multiple \strong{lattice} plot objects drawing each as 
-a layer on top of the previous plots. Note that the global plot settings 
-(e.g. xlim, ylim, ...) are taken from the first object. This is particularly 
-useful when looping over large amounts of data using \code{\link{lapply}} 
-(see examples).
+This function combines multiple \strong{lattice} plot objects drawing each as a
+layer on top of the previous plots. Note that the global plot settings (e.g.
+'xlim', 'ylim', ...) are taken from the first object. This is particularly
+useful when looping over large amounts of data using \code{\link[=lapply]{lapply()}} (see
+Examples).
 }
 \examples{
 library(latticeExtra)
@@ -39,7 +39,7 @@ print(p)
 
 }
 \seealso{
-\code{\link{as.layer}}.
+\code{\link[latticeExtra:as.layer]{latticeExtra::as.layer()}}.
 }
 \author{
 Tim Appelhans

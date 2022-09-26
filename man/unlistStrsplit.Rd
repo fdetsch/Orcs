@@ -2,24 +2,22 @@
 % Please edit documentation in R/unlistStrsplit.R
 \name{unlistStrsplit}
 \alias{unlistStrsplit}
-\title{Unlist the outcome of \code{strsplit}}
+\title{Unlist the Outcome of \code{strsplit()}}
 \usage{
 unlistStrsplit(x, split, ...)
 }
 \arguments{
 \item{x}{A \code{character} vector with elements to be split.}
 
-\item{split}{A \code{character} vector used for splitting, see 
-\code{\link{strsplit}}.}
+\item{split}{A \code{character} vector used for splitting, see \code{\link[=strsplit]{strsplit()}}.}
 
-\item{...}{Additional arguments passed to \code{\link{strsplit}}.}
+\item{...}{Additional arguments passed to \code{\link[=strsplit]{strsplit()}}.}
 }
 \description{
-Per default, \code{\link{strsplit}} returns a \code{list}, with each entry 
-holding the vector of splits of the initial string(s). This function is a 
-simple wrapper that casts \code{\link{unlist}} upon the returned list to 
-produce a concatenated \code{character} vector consisting of the single split 
-elements.
+Per default, \code{\link[=strsplit]{strsplit()}} returns a \code{list}, with each entry holding the
+vector of splits of the initial string(s). This function is a simple wrapper
+that casts \code{\link[=unlist]{unlist()}} upon the returned list to produce a concatenated
+\code{character} vector consisting of the single split elements.
 }
 \examples{
 ## 1st example
@@ -30,9 +28,6 @@ unlistStrsplit(x, " ")
 x2 <- "This is a 2nd test."
 unlistStrsplit(c(x, x2))
 
-}
-\seealso{
-\code{\link{strsplit}}
 }
 \author{
 Florian Detsch

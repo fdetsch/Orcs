@@ -2,27 +2,24 @@ if ( !isGeneric("coords2Lines") ) {
   setGeneric("coords2Lines", function(coords, ...)
     standardGeneric("coords2Lines"))
 }
-#' Convert points to SpatialLines*
+#' Convert Points to `SpatialLines*`
 #'
 #' @description
-#' Create a \code{SpatialLines*} object from a \code{Line} object or set of
-#' point coordinates in one go, i.e. without being required to run through the
-#' single steps outlined in \code{\link{SpatialLines}}.
+#' Create a `SpatialLines*` object from a `Line` object or set of point 
+#' coordinates in one go, i.e. without being required to run through the single 
+#' steps outlined in [sp::SpatialLines()].
 #'
-#' @param coords \code{Line} object or 2-column \code{numeric matrix} with x and
-#' y coordinates.
-#' @param ID \code{character}, see \code{\link{Lines}}.
-#' @param data \code{data.frame} with data to add to the output
-#' \code{SpatialLines*} object (optional).
-#' @param match.ID \code{logical}, see \code{\link{SpatialLinesDataFrame}}.
-#' @param ... Further arguments passed on to \code{\link{SpatialLines}} (i.e.,
-#' \code{proj4string}).
+#' @param coords `Line` object or 2-column `numeric` `matrix` with x and y 
+#'   coordinates.
+#' @param ID `character`, see [sp::Lines()].
+#' @param data `data.frame` with data to add to the output `SpatialLines*` 
+#'   object (optional).
+#' @param match.ID `logical`, see [sp::SpatialLinesDataFrame()].
+#' @param ... Further arguments passed on to [sp::SpatialLines()], i.e. 
+#'   `proj4string`.
 #'
-#' @return If \code{data} is missing, a \code{SpatialLines} object; else a
-#' \code{SpatialLinesDataFrame} object.
-#'
-#' @seealso
-#' \code{\link{SpatialLines-class}}, \code{\link{SpatialLinesDataFrame}}.
+#' @return If 'data' is missing, a `SpatialLines` object; else a
+#' `SpatialLinesDataFrame` object.
 #'
 #' @examples
 #' library(sp)
@@ -36,13 +33,13 @@ if ( !isGeneric("coords2Lines") ) {
 #' plot(sln1, col = "grey75")
 #' plot(sln2, col = "grey25", add = TRUE)
 #'
-#' @export coords2Lines
 #' @name coords2Lines
 NULL
 
 ### matrix method -----
 #' @aliases coords2Lines,matrix-method
 #' @rdname coords2Lines
+#' @export
 setMethod("coords2Lines",
           signature(coords = "matrix"),
           function(coords, ID, data, match.ID = TRUE, ...) {
@@ -59,6 +56,7 @@ setMethod("coords2Lines",
 ### Line method -----
 #' @aliases coords2Lines,Line-method
 #' @rdname coords2Lines
+#' @export
 setMethod("coords2Lines",
           signature(coords = "Line"),
           function(coords, ID, data, match.ID = TRUE, ...) {

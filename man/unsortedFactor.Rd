@@ -2,23 +2,22 @@
 % Please edit documentation in R/unsortedFactor.R
 \name{unsortedFactor}
 \alias{unsortedFactor}
-\title{Factor with unsorted levels}
+\title{Factor with Unsorted Levels}
 \usage{
 unsortedFactor(x, ...)
 }
 \arguments{
-\item{x}{A \code{character} vector with elements to converted to 
-\code{factor}.}
+\item{x}{A \code{character} vector with elements to converted to \code{factor}.}
 
-\item{...}{Additional arguments passed to \code{\link{factor}}.}
+\item{...}{Additional arguments passed to \code{\link[=factor]{factor()}}.}
 }
 \description{
-Casting \code{\link{factor}} upon a (\code{character}) vector usually results 
-in alphabetically ordered factor levels. Although this seems reasonable in 
-most cases, the automated ordering of factor levels is seldomly desirable in 
-the context of visualization, e.g. when working with tiled \strong{lattice} 
-or \strong{ggplot2} figures. This function returns a \code{factor} with 
-levels ordered according to their first appearance in the supplied vector.
+Casting \code{\link[=factor]{factor()}} upon a (\code{character}) vector usually results in
+alphabetically ordered factor levels. Although this seems reasonable in most
+cases, the automated ordering of factor levels is seldomly desirable in the
+context of visualization, e.g. when working with tiled \strong{lattice} or
+\strong{ggplot2} figures. This function returns a \code{factor} with levels ordered
+according to their first appearance in the supplied vector.
 }
 \examples{
 mnth <- month.abb
@@ -31,9 +30,6 @@ levels(fc_mnth)
 fc_mnth2 <- unsortedFactor(mnth)
 levels(fc_mnth2)
 
-}
-\seealso{
-\code{\link{factor}}
 }
 \author{
 Florian Detsch

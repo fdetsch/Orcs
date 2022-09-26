@@ -2,7 +2,7 @@
 % Please edit documentation in R/multiKnit.R
 \name{multiKnit}
 \alias{multiKnit}
-\title{Convert multiple R Markdown files to ordinary Markdown}
+\title{Convert Multiple R Markdown Files to Ordinary Markdown}
 \usage{
 multiKnit(path_in = ".", path_out = path_in, pattern = "*.Rmd$", ...)
 }
@@ -12,22 +12,18 @@ working directory.}
 
 \item{path_out}{Output file path as \code{character}, defaults to 'path_in'.}
 
-\item{pattern}{Passed to \code{\link{list.files}}, defaults to 
-\code{"*.Rmd$"}.}
+\item{pattern}{Passed to \code{\link[=list.files]{list.files()}}, defaults to \code{"*.Rmd$"}.}
 
-\item{...}{Additional arguments passed to \code{\link[knitr]{knit}}.}
+\item{...}{Additional arguments passed to \code{\link[knitr:knit]{knitr::knit()}}.}
 }
 \value{
 Output filenames as \code{character}.
 }
 \description{
-This function is a convenient wrapper around \code{\link{knit}} as
-it automatically converts multiple R Markdown files (\code{.Rmd}) located in 
-a specified folder (and, optionally, matching a particular pattern)
-to standard Markdown (\code{.md}).
-}
-\seealso{
-\code{\link[knitr]{knit}}
+This function is a convenient wrapper around \code{\link[knitr:knit]{knitr::knit()}} as it
+automatically converts multiple R Markdown files (\code{.Rmd}) located in a
+specified folder (and, optionally, matching a particular pattern) to standard
+Markdown (\code{.md}).
 }
 \author{
 Florian Detsch

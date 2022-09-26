@@ -1,24 +1,23 @@
-#' Compare two density distributions side by side
+#' Compare Two Density Distributions Side by Side
 #' 
 #' @description 
-#' This function will produce a plot of two density functions displayed 
-#' side by side
+#' This function will produce a plot of two density functions displayed side by 
+#' side.
 #' 
-#' @param left \code{numeric} vector.
-#' @param right \code{numeric} vector.
-#' @param add.spread \code{logical}, whether to plot the spread (q25 to q75 and 
-#' the median).
-#' @param print.stats \code{logical}, whether to print summary statistics for 
-#' each distribution.
-#' @param xlim,ylim \code{numeric} axis limits, see 
-#' \code{\link[lattice]{xyplot}}.
-#' @param clrs A \code{character} vector of length 2 specifying the colors 
-#' for the filled density regions.
-#' @param xlab,ylab \code{character} axis labels, see \code{\link{plot}}.
-#' @param ... Additional arguments passed to \code{\link{density}}.
+#' @param left `numeric` vector.
+#' @param right `numeric` vector.
+#' @param add.spread `logical`, whether to plot the spread (q25 to q75 and the 
+#'   median).
+#' @param print.stats `logical`, whether to print summary statistics for each 
+#'   distribution.
+#' @param xlim,ylim `numeric` axis limits, see [lattice::xyplot()].
+#' @param clrs A `character` vector of length 2 specifying the colors for the 
+#'   filled density regions.
+#' @param xlab,ylab `character` axis labels, see [graphics::plot()].
+#' @param ... Additional arguments passed to [stats::density()].
 #' 
 #' @return
-#' A \code{trellis} object.
+#' A `trellis` object.
 #' 
 #' @author
 #' Tim Appelhans
@@ -46,9 +45,7 @@
 #' compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
 #'                      print.stats = TRUE, add.spread = TRUE, bw = 0.5)                    
 #' 
-#' @export compareDistributions
-#' @aliases compareDistributions
-
+#' @export
 compareDistributions <- function(left, 
                                  right,
                                  add.spread = TRUE,

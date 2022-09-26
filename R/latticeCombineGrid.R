@@ -1,25 +1,25 @@
-#' Combine multiple lattice plots in a facetted grid (panels)
+#' Combine Multiple Lattice Plots in a Faceted Grid (Panels)
 #' 
 #' @description
-#' This function combines multiple \strong{lattice} plot objects in a facetted
-#' grid. Note that the global plot settings (e.g. xlim, ylim, ...) are taken 
-#' from the first object though the user can specify whether \code{scales} 
-#' should be identical or not. This is particularly useful when looping over 
-#' large amounts of data using \code{\link{lapply}} (see examples).
+#' This function combines multiple **lattice** plot objects in a faceted grid. 
+#' Note that the global plot settings (e.g. 'xlim', 'ylim', ...) are taken from 
+#' the first object though the user can specify whether 'scales' should be 
+#' identical or not. This is particularly useful when looping over large amounts
+#' of data using [lapply()] (see Examples).
 #' 
-#' @param trellis.list A \code{list} containing \strong{lattice} plot objects.
+#' @param trellis.list A `list` containing **lattice** plot objects.
 #' @param between Space between panels.
-#' @param as.table If TRUE (default) drawing is top left to bottom right
-#' @param ... Additional arguments passed to \code{\link{c.trellis}}.
+#' @param as.table If `TRUE` (default), drawing is top left to bottom right.
+#' @param ... Additional arguments passed to [latticeExtra::c.trellis()].
 #' 
 #' @return
-#' A single \strong{lattice} plot object.
+#' A single **lattice** plot object.
 #' 
 #' @author
 #' Tim Appelhans
 #' 
 #' @seealso
-#' \code{\link{c.trellis}}.
+#' [latticeExtra::c.trellis()].
 #' 
 #' @examples
 #' #load data
@@ -52,9 +52,7 @@
 #' p <- latticeCombineGrid(plist, layout = c(1, 3))
 #' print(p)
 #' 
-#' @export latticeCombineGrid
-#' @aliases latticeCombineGrid
-
+#' @export
 latticeCombineGrid <- function(trellis.list,
                                between = list(y = 0.3, x = 0.3),
                                as.table = TRUE,

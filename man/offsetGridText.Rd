@@ -2,43 +2,52 @@
 % Please edit documentation in R/offsetGridText.R
 \name{offsetGridText}
 \alias{offsetGridText}
-\title{Insert offset text annotation into 'trellis' plot}
+\title{Insert Offset Text Annotation into \code{trellis} Plot}
 \usage{
-offsetGridText(x, y = NULL, labels, xlim = NULL, ylim = NULL,
-  pos = NULL, stext = FALSE, offset = 0.02, ...)
+offsetGridText(
+  x,
+  y = NULL,
+  labels,
+  xlim = NULL,
+  ylim = NULL,
+  pos = NULL,
+  stext = FALSE,
+  offset = 0.02,
+  ...
+)
 }
 \arguments{
-\item{x}{A \code{numeric} vector containing x coordinates, or a 2-column
-\code{matrix} containing x and y coordinates.}
+\item{x}{A \code{numeric} vector containing x coordinates, or a 2-column \code{matrix}
+containing x and y coordinates.}
 
-\item{y}{A \code{numeric} vector containing y coordinates, or \code{NULL} 
-if 'x' is a two-column \code{matrix}.}
+\item{y}{A \code{numeric} vector containing y coordinates, or \code{NULL} if 'x' is a
+two-column \code{matrix}.}
 
 \item{labels}{The text to be written as \code{character}.}
 
-\item{xlim, ylim}{X and Y-axis limits (\code{c(min, max)}) of the current plot. 
-If not supplied, limits are automatically calculated from supplied x and y
+\item{xlim, ylim}{X and Y-axis limits (\code{c(min, max)}) of the current plot. If
+not supplied, limits are automatically calculated from supplied x and y
 coordinates.}
 
-\item{pos}{Text position specifier(s) as \code{integer} used by 
-\code{\link{text}}. If not supplied, optimal text positions will be 
-determined with respect to neighboring locations using 
-\code{\link[plotrix]{thigmophobe}}.}
+\item{pos}{Text position specifier(s) as \code{integer} used by
+\code{\link[graphics:text]{graphics::text()}}. If not supplied, optimal text positions will be
+determined with respect to neighboring locations using
+\code{\link[plotrix:thigmophobe]{plotrix::thigmophobe()}}.}
 
-\item{stext}{\code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow 
-text will be drawn around 'labels'.}
+\item{stext}{\code{logical}, defaults to \code{FALSE}. If \code{TRUE}, shadow text will be
+drawn around 'labels'.}
 
-\item{offset}{A \code{numeric} offset in normalized parent coordinates
-("npc", see \code{\link[grid]{unit}}).}
+\item{offset}{A \code{numeric} offset in normalized parent coordinates (\code{"npc"},
+see \code{\link[grid:unit]{grid::unit()}}).}
 
-\item{...}{Additional arguments passed to the respective \strong{grid} text 
+\item{...}{Additional arguments passed to the respective \strong{grid} text
 drawing function (depends on 'stext').}
 }
 \description{
-This is a wrapper function around \code{Orcs:::calcOffsetGridText} and 
-\strong{grid}-based text drawing functions (currently including 
-\code{\link{grid.text}} and \code{\link{grid.stext}}) that automatically adds
-offset text annotations to a 'trellis' plot.
+This is a wrapper function around \code{Orcs:::calcOffsetGridText} and \strong{grid}
+based text drawing functions (currently including \code{\link[grid:grid.text]{grid::grid.text()}} and
+\code{\link[=grid.stext]{grid.stext()}}) that automatically adds offset text annotations to a
+\code{trellis} plot.
 }
 \examples{
 stopifnot(
@@ -72,10 +81,6 @@ offsetGridText(x = coordinates(peaks), labels = peaks$Peak,
                xlim = xlim_kili, ylim = ylim_kili, stext = TRUE, offset = .02,
                gp = gpar(fontsize = 16))
                                
-}
-\seealso{
-\code{\link[grid]{grid.text}}, \code{\link{grid.stext}}, 
-\code{\link[plotrix]{thigmophobe}}, \code{Orcs::calcOffsetGridText}.
 }
 \author{
 Florian Detsch

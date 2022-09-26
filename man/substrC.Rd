@@ -9,8 +9,8 @@ substrC(x, pos, len)
 \arguments{
 \item{x}{A \code{character} vector.}
 
-\item{pos}{The start point of the substring as \code{integer}. Position 
-indications start from \code{1}, which is the default in R.}
+\item{pos}{The start point of the substring as \code{integer}. Position
+indications start from \code{1L}, which is the default in R.}
 
 \item{len}{The length of the substring as \code{integer}.}
 }
@@ -25,6 +25,5 @@ substrC("Hello, world!", pos = 1, len = 5)
 
 }
 \seealso{
-\url{http://www.cplusplus.com/reference/string/string/substr/},
-\code{\link{substr}}.
+\url{https://cplusplus.com/reference/string/string/substr/}, \code{\link[=substr]{substr()}}.
 }

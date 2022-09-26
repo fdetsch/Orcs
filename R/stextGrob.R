@@ -4,21 +4,16 @@
 #' Create and draw shadow text by wrapping a textual expression into a colored 
 #' framing.
 #' 
-#' @param label A \code{character} or \code{\link{expression}} vector, see 
-#' \code{\link{textGrob}}.
-#' @param x,y Horizontal and vertical text position as \code{\link[grid]{unit}} 
-#' objects passed to \code{\link{grid.text}}.
-#' @param r Blur radius of colored framing as \code{numeric}.
-#' @param col,fill Framing and fill color passed to \code{\link[grid]{gpar}}.
-#' @param name,gp,vp Graphical parameters passed to \code{\link{gTree}}.
-#' @param ... Additional arguments passed to \code{\link[grid]{grid.text}}.
+#' @param label A `character` or `expression` vector, see [grid::textGrob()].
+#' @param x,y Horizontal and vertical text position as [grid::unit()] objects 
+#'   passed to [grid::grid.text()].
+#' @param r Blur radius of colored framing as `numeric`.
+#' @param col,fill Framing and fill color passed to [grid::gpar()].
+#' @param name,gp,vp Graphical parameters passed to [grid::gTree()].
+#' @param ... Additional arguments passed to \[grid::grid.text()].
 #' 
-#' @return A text grob created by \code{\link{gTree}}.
+#' @return A text grob created by [grid::gTree()].
 #' 
-#' @seealso \code{\link[grid]{grid.text}}.
-#' 
-#' @references \url{https://rdrr.io/github/baptiste/gridplot/src/R/tmatrix.r} 
-#' (accessed on 29 May 2018).
 #' @author Baptiste Auguie, Florian Detsch
 #' @family grob userlevel
 #' 

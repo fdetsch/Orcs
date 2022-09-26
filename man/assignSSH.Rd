@@ -7,17 +7,17 @@
 assignSSH(user, repo)
 }
 \arguments{
-\item{user}{GitHub user name as \code{character}. If not specified, 
-information on GitHub user and repository name is taken from the current 
-working environment.}
+\item{user}{GitHub user name as \code{character}. If not specified, information on
+GitHub user and repository name is taken from the current working
+environment.}
 
 \item{repo}{GitHub repository name as \code{character}, see 'user'.}
 }
 \description{
-Assign an SSH key to a local Git repository to bypass user/password prompts 
-during \code{git push}. See 
-\href{https://help.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key} 
-for further information on how to generate an SSH key and add it to your 
+Assign an SSH key to a local Git repository to bypass user/password prompts
+during `git push. See
+\href{https://docs.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key}
+for further information on how to generate an SSH key and add it to your
 GitHub account.
 }
 \examples{
@@ -31,5 +31,5 @@ assignSSH(user = "fdetsch", repo = "Orcs")
 
 }
 \seealso{
-\url{https://help.github.com/articles/generating-an-ssh-key/}
+\url{https://docs.github.com/articles/generating-an-ssh-key/}.
 }

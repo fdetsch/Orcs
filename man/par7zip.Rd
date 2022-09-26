@@ -2,32 +2,32 @@
 % Please edit documentation in R/par7zip.R
 \name{par7zip}
 \alias{par7zip}
-\title{Parallelized 7-zip compression}
+\title{Parallelized 7-Zip Compression}
 \usage{
 par7zip(outfile, nodes = 1L, ...)
 }
 \arguments{
-\item{outfile}{Target file for compression as \code{character}. A file 
-extension compatible with 7-zip needs to be included, see 
-\href{https://sevenzip.osdn.jp/chm/general/formats.htm}{Supported formats}.
-If missing, this defaults to the found input file names with a \code{.7z} 
-extension attached.}
+\item{outfile}{Target file for compression as \code{character}. A file extension
+compatible with 7-zip needs to be included, see
+\href{https://sevenzip.osdn.jp/chm/general/formats.htm}{supported formats}. If
+missing, this defaults to the found input file names with a \verb{.7z} extension
+attached.}
 
-\item{nodes}{Number of cores to use for parallelization as \code{integer}, 
-defaults to \code{1}.}
+\item{nodes}{Number of cores to use for parallelization as \code{integer},
+defaults to \code{1L}.}
 
-\item{...}{Additional arguments passed to \code{\link{list.files}}.}
+\item{...}{Additional arguments passed to \code{\link[=list.files]{list.files()}}.}
 }
 \value{
 Output filename(s) as \code{character}.
 }
 \description{
-By calling the Unix terminal or Windows command prompt, this function 
-performs parallelized 7-zip compression of selected files based on the 
+By calling the Unix terminal or Windows command prompt, this function
+performs parallelized 7-zip compression of selected files based on the
 built-in \strong{parallel} package.
 }
 \seealso{
-\code{\link{list.files}}, \code{\link{system}}
+\code{\link[=list.files]{list.files()}}, \code{\link[=system]{system()}}
 }
 \author{
 Florian Detsch

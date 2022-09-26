@@ -2,10 +2,10 @@
 % Please edit documentation in R/pvalue.R
 \name{pvalue}
 \alias{pvalue}
-\title{Get \emph{p}-value from 'lm' object}
+\title{Get \emph{p}-Value from 'lm' Object}
 \source{
 \href{https://stat.ethz.ch/pipermail/r-help/2005-December/084308.html}{retrieving p-values in lm}
-on R-help mailing list (last accessed 2018-06-02).
+on R-help mailing list.
 }
 \usage{
 pvalue(mod)
@@ -31,5 +31,5 @@ pvalue(lm.D9)
 
 }
 \seealso{
-\code{\link{lm}}.
+\code{\link[stats:lm]{stats::lm()}}.
 }

@@ -1,7 +1,7 @@
-## ----pkg, echo=FALSE, message=FALSE--------------------------------------
+## ----pkg, echo=FALSE, message=FALSE-------------------------------------------
 library(Orcs)
 
-## ----lineEnding, eval=FALSE----------------------------------------------
+## ----lineEnding, eval=FALSE---------------------------------------------------
 #  ## input file
 #  infile <- file.path(system.file(package = "Orcs"), "DESCRIPTION")
 #  

@@ -9,18 +9,17 @@ list2df(x, bind = c("rows", "cols"), ...)
 \arguments{
 \item{x}{A \code{list} object.}
 
-\item{bind}{Binding direction. Available options are \code{"rows"} (default) 
-and \code{"cols"} for \code{\link{rbind}} and \code{\link{cbind}}, 
-respectively.}
+\item{bind}{Binding direction. Available options are \code{"rows"} (default) and
+\code{"cols"} for \code{\link[=rbind]{rbind()}} and \code{\link[=cbind]{cbind()}}, respectively.}
 
-\item{...}{Additional arguments passed to \code{\link{data.frame}}.}
+\item{...}{Additional arguments passed to \code{\link[=data.frame]{data.frame()}}.}
 }
 \value{
 A \code{data.frame} object.
 }
 \description{
-Create a \code{data.frame} from a \code{list} directly, \emph{i.e.} without 
-being required to explicitly call \code{\link{rbind}} first.
+Create a \code{data.frame} from a \code{list} directly, i.e. without being required to
+explicitly call \code{\link[=rbind]{rbind()}} first.
 }
 \examples{
 lst <- list(letters[1:3], letters[4:6], letters[7:9])
@@ -29,7 +28,4 @@ do.call("rbind", lst) # results in matrix
 list2df(lst)          # results in data.frame created using rbind()
 list2df(lst, bind = "cols") # same for cbind()
 
-}
-\seealso{
-\code{\link{data.frame}}, \code{\link{rbind}}, \code{\link{cbind}}.
 }

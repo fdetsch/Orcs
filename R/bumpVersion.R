@@ -1,23 +1,23 @@
-#' Bump package 'Version:' and 'Date:' in DESCRIPTION file
+#' Bump Package 'Version:' and 'Date:' in DESCRIPTION File
 #'
 #' @description
-#' This function let's you bump the version number and creation date of
-#' your package's DESCRIPTION file. Additionally, it bumps the version 
-#' numbers of a NEWS.md file and automatically generates a corresponding 
-#' plain NEWS file (for R-help pages). Supported versioning system is 
-#' \href{https://semver.org/}{MAJOR.MINOR.PATCH}. 
+#' This function let's you bump the version number and creation date of your 
+#' package's `DESCRIPTION` file. Additionally, it bumps the version numbers of a
+#' `NEWS.md` file and automatically generates a corresponding plain NEWS file 
+#' (for R-help pages). Supported versioning system is 
+#' [MAJOR.MINOR.PATCH](https://semver.org/). 
 #'
-#' @param element \code{character}, one of "major", "minor", "patch" (default) 
-#' to be bumped.
-#' @param pkg.repo Path to package repository folder. Default is current
-#' working directory ("."). 
-#' @param news The NEWS.md file of the repo (assumed to be in top level path). 
-#' If this exists, the first line of that file will be rewritten 
-#' to be "<packagename> <major.minor.patch>". Note that the current implementation 
-#' assumes that the NEWS file is in .md format, thus NEWS.md. A plain NEWS
-#' file (for R-help pages) will be generated automatically.
-#' @param plain_news whether to generate a plain NEWS file in the package
-#' root directory from the NEWS.md file supplied to argument \code{news}.
+#' @param element `character`, one of `"major"`, `"minor"`, `"patch"` (default) 
+#'   to be bumped.
+#' @param pkg.repo Path to package repository folder. Default is current working
+#'   directory, i.e. `"."`. 
+#' @param news The `NEWS.md` file of the repo (assumed to be in top level path).
+#'   If this exists, the first line of that file will be rewritten to be 
+#'   "\<packagename\> \<major.minor.patch\>". Note that the current 
+#'   implementation assumes that the NEWS file is in `.md` format. A plain NEWS 
+#'   file (for R-help pages) will be generated automatically.
+#' @param plain_news whether to generate a plain NEWS file in the package root 
+#'   directory from the `NEWS.md` file supplied to argument 'news'.
 #'
 #' @author
 #' Tim Appelhans
@@ -25,8 +25,7 @@
 #' @seealso 
 #' \url{https://semver.org/}
 #'
-#' @export bumpVersion
-#' @name bumpVersion
+#' @export
 bumpVersion <- function(element = "patch", pkg.repo = ".", 
                         news = file.path(pkg.repo, "NEWS.md"),
                         plain_news = TRUE) {

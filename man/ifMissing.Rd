@@ -2,36 +2,35 @@
 % Please edit documentation in R/ifMissing.R
 \name{ifMissing}
 \alias{ifMissing}
-\title{Take measures in case of nonexisting target files}
+\title{Take Measures in Case of Nonexisting Target Files}
 \usage{
-ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1,
-  ...)
+ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1, ...)
 }
 \arguments{
 \item{ofl}{Target file name as \code{character}.}
 
-\item{fun0}{If 'ofl' exists, \code{function} to be applied to it (defaults to 
-\code{\link[raster]{brick}}).}
+\item{fun0}{If 'ofl' exists, \code{function} to be applied to it. Defaults to
+\code{\link[raster:brick]{raster::brick()}}).}
 
-\item{fun1}{If 'ofl' does not exist, \code{function} used to create it 
-(defaults to \code{\link{writeRaster}}).}
+\item{fun1}{If 'ofl' does not exist, \code{function} used to create it. Defaults
+to \code{\link[raster:writeRaster]{raster::writeRaster()}}).}
 
-\item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to 
-'ofl', e.g. \code{filename} in \code{\link{writeRaster}} or \code{file} in 
-\code{\link{write.table}}. If missing (default), the target file name passed 
+\item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to 'ofl',
+e.g. 'filename' in \code{\link[raster:writeRaster]{raster::writeRaster()}} or 'file' in
+\code{\link[utils:write.table]{utils::write.table()}}. If missing (default), the target file name passed
 to 'fun1' needs to be explicitly included via '...'.}
 
-\item{...}{Additional arguments passed to 'fun0,fun1'.}
+\item{...}{Additional arguments passed to 'fun0' and 'fun1'.}
 }
 \value{
-If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else 
+If 'ofl' has already existed, the contents of 'ofl' derived from 'fun0'; else
 the output resultant from 'fun1'.
 }
 \description{
-If a target file already exists, it is simply being imported into R. However, 
-if the specified target file does not exist, it is first created by a 
-user-defined function and subsequently returned, thus rendering explicit 
-calls to \code{\link{file.exists}} unnecessary.
+If a target file already exists, it is simply being imported into R. However,
+if the specified target file does not exist, it is first created by a
+user-defined function and subsequently returned, thus rendering explicit
+calls to \code{\link[=file.exists]{file.exists()}} unnecessary.
 }
 \examples{
 # simply import existing file
@@ -54,7 +53,7 @@ iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.nam
 
 }
 \seealso{
-\code{\link{file.exists}}, \code{\link{do.call}}.
+\code{\link[=file.exists]{file.exists()}}, \code{\link[=do.call]{do.call()}}.
 }
 \author{
 Florian Detsch

@@ -2,18 +2,18 @@
 #' 
 #' @description 
 #' Assign an SSH key to a local Git repository to bypass user/password prompts 
-#' during \code{git push}. See 
-#' \href{https://help.github.com/articles/generating-an-ssh-key/}{Generating an SSH Key} 
+#' during `git push. See 
+#' [Generating an SSH Key](https://docs.github.com/articles/generating-an-ssh-key/) 
 #' for further information on how to generate an SSH key and add it to your 
 #' GitHub account.
 #' 
-#' @param user GitHub user name as \code{character}. If not specified, 
-#' information on GitHub user and repository name is taken from the current 
-#' working environment.
-#' @param repo GitHub repository name as \code{character}, see 'user'. 
+#' @param user GitHub user name as `character`. If not specified, information on
+#'   GitHub user and repository name is taken from the current working 
+#'   environment.
+#' @param repo GitHub repository name as `character`, see 'user'. 
 #' 
 #' @seealso 
-#' \url{https://help.github.com/articles/generating-an-ssh-key/}
+#' <https://docs.github.com/articles/generating-an-ssh-key/>.
 #' 
 #' @examples 
 #' \dontrun{
@@ -24,8 +24,7 @@
 #' assignSSH(user = "fdetsch", repo = "Orcs")
 #' }
 #' 
-#' @export assignSSH
-#' @name assignSSH
+#' @export
 assignSSH <- function(user, repo) {
   
   ## if 'user' or 'repo' are missing, try to get information from current 

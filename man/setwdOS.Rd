@@ -2,21 +2,21 @@
 % Please edit documentation in R/setwdOS.R
 \name{setwdOS}
 \alias{setwdOS}
-\title{Set working directory dependent on current OS}
+\title{Set Working Directory Dependent on Current OS}
 \usage{
 setwdOS(lin = "/media/permanent/", win = "C:/", ext = NULL)
 }
 \arguments{
-\item{lin, win}{Absolute file paths to the Linux and Windows partition as 
+\item{lin, win}{Absolute file paths to the Linux and Windows partition as
 \code{character}.}
 
-\item{ext}{Optional file path extension as \code{character} that will be 
-added to 'lin' or 'win' after automatic OS determination.}
+\item{ext}{Optional file path extension as \code{character} that will be added to
+'lin' or 'win' after automatic OS determination.}
 }
 \description{
-Similar to \code{\link{setwd}}, this function sets the working directory to a
-user-defined path. Rather than supplying a single 'dir' argument, however, 
-both an OS-sensitive path to the desired hard disk partition and, optionally, 
+Similar to \code{\link[=setwd]{setwd()}}, this function sets the working directory to a
+user-defined path. Rather than supplying a single 'dir' argument, however,
+both an OS-sensitive path to the desired hard disk partition and, optionally,
 an extension of this file path are required.
 }
 \examples{
@@ -30,7 +30,7 @@ setwdOS(ext = "kilimanjaro/nubiscope")
 
 }
 \seealso{
-\code{\link{setwd}}, \code{\link{switch}}
+\code{\link[=switch]{switch()}}.
 }
 \author{
 Florian Detsch

@@ -1,22 +1,22 @@
-#' Remove duplicated columns from \code{data.frame}
+#' Remove Duplicated Columns from `data.frame`
 #' 
 #' @description
-#' Automatically detect and remove columns from a \code{data.frame}
-#' based on duplicated headers.
+#' Automatically detect and remove columns from a `data.frame` based on 
+#' duplicated headers.
 #' 
-#' @param x Input \code{data.frame}.
-#' @param keep_first A \code{logical} determining whether the first column of an 
-#' otherwise duplicated header should be kept, defaults to \code{TRUE}. 
+#' @param x Input `data.frame`.
+#' @param keep_first A `logical` determining whether the first column of an 
+#'   otherwise duplicated header should be kept, defaults to `TRUE`. 
 #' @param ... Currently not in use.
 #' 
 #' @return 
-#' Revised \code{data.frame}.
+#' Revised `data.frame`.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{duplicated}}
+#' [duplicated()].
 #' 
 #' @examples
 #' ## sample data
@@ -28,8 +28,7 @@
 #' rmDuplCols(dat)
 #' rmDuplCols(dat, keep_first = FALSE)
 #' 
-#' @export rmDuplCols
-#' @name rmDuplCols
+#' @export
 rmDuplCols <- function(x, keep_first = TRUE, ...) {
   
   ## Identify duplicated column names

@@ -1,26 +1,27 @@
-#' Remove whitespace from images
+#' Remove Whitespace from Images
 #' 
 #' @description
-#' This is a wrapper function around \code{convert -trim} to automatically 
-#' remove any whitespace from locally saved images. Note that 'ImageMagick' must
-#' be installed on your local system, see Source.
+#' This is a wrapper function around `convert -trim` to automatically remove any
+#' whitespace from locally saved images. Note that 'ImageMagick' must be 
+#' installed on your local system, see Source.
 #' 
-#' @param path File path leading to image files as \code{character}, defaults to 
-#' the current working directory.
-#' @param pattern Character. A regular expression as \code{character} accepted
-#' by \code{\link{list.files}}, defaults to \code{c(".png$", ".tiff$")}.
+#' @param path File path leading to image files as `character`, defaults to the 
+#'   current working directory.
+#' @param pattern A regular expression as `character` accepted by 
+#'   [list.files()], defaults to `c(".png$", ".tiff$")`.
 #' 
 #' @return
-#' A \code{character} vector containing the names of the processed images.
+#' A `character` vector containing the names of the processed images.
 #' 
 #' @author 
 #' Florian Detsch
 #' 
 #' @seealso
-#' \code{\link{list.files}}, \code{\link{system}} 
+#' [system()] 
 #' 
 #' @source 
-#' Ooms J (2018) \href{https://cran.r-project.org/package=magick/vignettes/intro.html}{The \strong{magick} package: Advanced Image-Processing in R.}
+#' Ooms J (2018) The **magick** package: Advanced Image-Processing in R. 
+#' Available online: <https://cran.r-project.org/package=magick/vignettes/intro.html>.
 #' 
 #' @examples
 #' \dontrun{
@@ -41,8 +42,7 @@
 #' dev.off()
 #' }
 #' 
-#' @export trimImages
-#' @name trimImages
+#' @export
 trimImages <- function(path = ".", pattern = c(".png$", ".tiff$")) {
   
   ## list files matching specified pattern

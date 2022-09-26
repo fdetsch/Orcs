@@ -1,33 +1,28 @@
-# Calculate offset coordinates for grid-based text annotations
+# Calculate Offset Coordinates for Grid-Based Text Annotations
 # 
 # @description
-# Calculate offset coordinates for (\strong{grid}-based) text drawing 
-# functions, e.g. \code{\link{grid.text}}.
+# Calculate offset coordinates for (**grid** based) text drawing functions, e.g.
+# [grid::grid.text()].
 # 
-# @param x A \code{numeric} vector containing x coordinates, or a 2-column
-# \code{matrix} containing x and y coordinates.
-# @param y A \code{numeric} vector containing y coordinates, or \code{NULL} 
-# if 'x' is a two-column \code{matrix}.
-# @param offset A \code{numeric} offset in normalized parent coordinates
-# ("npc", see \code{\link[grid]{unit}}).
-# @param pos Text position specifier(s) as \code{integer} used by 
-# \code{\link{text}}. If not supplied, optimal text positions will be 
-# determined with respect to neighboring locations using 
-# \code{\link[plotrix]{thigmophobe}}. 
-# @param xlim,ylim X and Y-axis limits (\code{c(min, max)}) of the current plot. 
-# If not supplied, limits are automatically calculated from supplied x and y
-# coordinates.
+# @param x A `numeric` vector containing x coordinates, or a 2-column `matrix` 
+#   containing x and y coordinates.
+# @param y A `numeric` vector containing y coordinates, or `NULL` if 'x' is a 
+#   two-column `matrix`.
+# @param offset A `numeric` offset in normalized parent coordinates (`"npc"`, 
+#   see [grid::unit()]).
+# @param pos Text position specifier(s) as `integer` used by [graphics::text()].
+#   If not supplied, optimal text positions will be determined with respect to 
+#   neighboring locations using [plotrix::thigmophobe()].
+# @param xlim,ylim X and Y-axis limits (`c(min, max)`) of the current plot. If 
+#   not supplied, limits are automatically calculated from supplied x and y 
+#   coordinates.
 # @param ... Currently not used. 
 # 
 # @return
-# A \code{numeric matrix} containing offset coordinates.
+# A `numeric` `matrix` containing offset coordinates.
 # 
 # @author
 # Florian Detsch
-# 
-# @seealso
-# \code{\link[grid]{grid.text}}, \code{\link{text}}, 
-# \code{\link[plotrix]{thigmophobe}}
 # 
 # @examples
 # \dontrun{
@@ -54,8 +49,7 @@
 # }
 # }
 #               
-# @export calcOffsetGridText
-# @aliases calcOffsetGridText
+# @export
 calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL, 
                                xlim = NULL, ylim = NULL, ...) {
   
@@ -109,11 +103,11 @@ calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL,
 # 
 # @description
 # Convert integer position specifiers as supported by
-# \code{\link{text}} to character position specifiers as supported by
-# \strong{grid}-based text drawing functions (e.g. \code{\link{grid.text}}).
+# [graphics::text()] to character position specifiers as supported by
+# \strong{grid}-based text drawing functions (e.g. [grid::grid.text()]).
 # 
 # @param pos Integer. A position specifier for text annotations as used by
-# \code{\link{text}}.
+# [graphics::text()].
 # @param ... Currently not in use.
 # 
 # @return
@@ -124,7 +118,7 @@ calcOffsetGridText <- function(x, y = NULL, offset = 0.02, pos = NULL,
 # Florian Detsch
 # 
 # @seealso
-# \code{\link{text}}, \code{\link{grid.text}}
+# [graphics::text()], [grid::grid.text()]
 # 
 # @examples
 # set.seed(100)

@@ -17,24 +17,23 @@ dimC(x)
 \item{x}{A \code{data.frame}.}
 }
 \value{
-\code{dimC} returns an 'integer' vector of length 2 (number of rows 
-and columns); \code{nrowC} (or \code{ncolC}) returns the number of rows 
-(or columns) as a single 'integer'.
+\code{dimC()} returns an \code{integer} vector of length 2 (number of rows and
+columns); \code{nrowC()} (or \code{ncolC()}) returns the number of rows (or columns)
+as a single \code{integer}.
 }
 \description{
-Similar to base-R \code{\link{nrow}}, \code{\link{ncol}} and 
-\code{\link{dim}}, this set of functions let's you retrieve the number of 
-rows and columns of a \code{data.frame}.
+Similar to base-R \code{\link[=nrow]{nrow()}}, \code{\link[=ncol]{ncol()}} and \code{\link[=dim]{dim()}}, this set of functions
+let's you retrieve the number of rows and columns of a \code{data.frame}.
 }
 \section{Functions}{
 \itemize{
-\item \code{nrowC}: 
+\item \code{nrowC()}: 
 
-\item \code{ncolC}: 
+\item \code{ncolC()}: 
 
-\item \code{dimC}: 
+\item \code{dimC()}: 
+
 }}
-
 \examples{
 dat <- data.frame(a = 1:4, b = 2:5, c = 3:6)
 
@@ -42,9 +41,6 @@ nrowC(dat)
 
 
 
-}
-\seealso{
-\code{\link{nrow}}, \code{\link{ncol}}, \code{\link{dim}}.
 }
 \author{
 Florian Detsch

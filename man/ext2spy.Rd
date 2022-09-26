@@ -7,17 +7,16 @@
 ext2spy(x, crs = "+init=epsg:4326", as_sf = TRUE)
 }
 \arguments{
-\item{x}{An \code{Extent} object, or any object from which an \code{Extent} 
-can be extracted, e.g. \code{Raster*}.}
+\item{x}{An \code{Extent} object, or any object from which an \code{Extent} can be
+extracted, e.g. \verb{Raster*}.}
 
-\item{crs}{Coordinate reference system passed to \code{\link{proj4string}}.}
+\item{crs}{Coordinate reference system passed to \code{\link[sp:is.projected]{sp::proj4string()}}.}
 
-\item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is 
-of class \code{sf} rather than \code{Spatial*}.}
+\item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is of class
+\code{sf} rather than \verb{Spatial*}.}
 }
 \value{
-Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons} 
-object.
+Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons} object.
 }
 \description{
 Convert a spatial extent to polygons.
@@ -29,7 +28,7 @@ ext2spy(ext, as_sf = FALSE) # 'Spatial*'
 
 }
 \seealso{
-\code{\link{extent}}.
+\code{\link[raster:extent]{raster::extent()}}.
 }
 \author{
 Florian Detsch

@@ -2,28 +2,25 @@
 % Please edit documentation in R/loadPkgs.R
 \name{loadPkgs}
 \alias{loadPkgs}
-\title{Load multiple packages}
+\title{Load Multiple Packages}
 \usage{
 loadPkgs(pkgs, ...)
 }
 \arguments{
 \item{pkgs}{Packages to load as \code{character}.}
 
-\item{...}{Additional arguments passed to \code{\link{library}}, except for 
+\item{...}{Additional arguments passed to \code{\link[=library]{library()}}, except for
 'character.only' which is set to \code{TRUE}.}
 }
 \description{
 Load and attach multiple packages at once.
 }
 \note{
-Package startup messages are automatically disabled.
+Package start-up messages are automatically disabled.
 }
 \examples{
 loadPkgs(c("raster", "rgdal"))
 
-}
-\seealso{
-\code{\link{library}}.
 }
 \author{
 Florian Detsch

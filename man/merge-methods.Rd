@@ -9,26 +9,23 @@
 \S4method{merge}{list,missing}(x, by = 1L, all = TRUE, ...)
 }
 \arguments{
-\item{x}{A \code{list} of objects of the same type (e.g. \code{Raster*} or 
+\item{x}{A \code{list} of objects of the same type (e.g. \verb{Raster*} or
 \code{data.frame}).}
 
-\item{by, all}{See \code{\link{merge.data.frame}}. Ignored if data stored 
-in 'x' is not of class \code{data.frame}.}
+\item{by, all}{See \code{\link[=merge.data.frame]{merge.data.frame()}}. Ignored if data stored in 'x' is not
+of class \code{data.frame}.}
 
-\item{...}{Additional arguments passed to the underlying merge method (e.g. 
-arguments compatible with \code{\link[raster]{merge}} and 
-\code{\link[raster]{writeRaster}} for \code{Raster*} input). Ignored if data 
-stored in 'x' is of class \code{data.frame}.}
+\item{...}{Additional arguments passed to the underlying merge method (e.g.
+arguments compatible with \code{\link[raster:merge]{raster::merge()}} and \code{\link[raster:writeRaster]{raster::writeRaster()}} for
+\verb{Raster*} input). Ignored if data stored in 'x' is of class \code{data.frame}.}
 }
 \value{
-A merged object (e.g. a new \code{Raster*} object with a larger spatial 
-extent).
+A merged object (e.g. a new \verb{Raster*} object with a larger spatial extent).
 }
 \description{
-Complementing existing merge methods, e.g. \code{\link[raster]{merge}} for 
-\code{Raster*} objects, which typically work with one or two inputs only, 
-this function accepts a \code{list} of objects that are to be merged 
-together.
+Complementing existing merge methods, e.g. \code{\link[raster:merge]{raster::merge()}} for \verb{Raster*}
+objects, which typically work with one or two inputs only, this function
+accepts a \code{list} of objects that are to be merged together.
 }
 \examples{
 ## Raster* input
@@ -46,8 +43,7 @@ head(mrg)
 
 }
 \seealso{
-\code{\link{merge.data.frame}}, \code{\link{do.call}}, 
-\code{\link{Reduce}}.
+\code{\link[=do.call]{do.call()}}, \code{\link[=Reduce]{Reduce()}}.
 }
 \author{
 Florian Detsch

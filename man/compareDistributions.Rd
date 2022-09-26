@@ -2,39 +2,47 @@
 % Please edit documentation in R/compareDistributions.R
 \name{compareDistributions}
 \alias{compareDistributions}
-\title{Compare two density distributions side by side}
+\title{Compare Two Density Distributions Side by Side}
 \usage{
-compareDistributions(left, right, add.spread = TRUE,
-  print.stats = TRUE, xlim = NULL, ylim = NULL, clrs = c("purple",
-  "lightblue"), xlab = "density", ylab = "value", ...)
+compareDistributions(
+  left,
+  right,
+  add.spread = TRUE,
+  print.stats = TRUE,
+  xlim = NULL,
+  ylim = NULL,
+  clrs = c("purple", "lightblue"),
+  xlab = "density",
+  ylab = "value",
+  ...
+)
 }
 \arguments{
 \item{left}{\code{numeric} vector.}
 
 \item{right}{\code{numeric} vector.}
 
-\item{add.spread}{\code{logical}, whether to plot the spread (q25 to q75 and 
-the median).}
+\item{add.spread}{\code{logical}, whether to plot the spread (q25 to q75 and the
+median).}
 
-\item{print.stats}{\code{logical}, whether to print summary statistics for 
-each distribution.}
+\item{print.stats}{\code{logical}, whether to print summary statistics for each
+distribution.}
 
-\item{xlim, ylim}{\code{numeric} axis limits, see 
-\code{\link[lattice]{xyplot}}.}
+\item{xlim, ylim}{\code{numeric} axis limits, see \code{\link[lattice:xyplot]{lattice::xyplot()}}.}
 
-\item{clrs}{A \code{character} vector of length 2 specifying the colors 
-for the filled density regions.}
+\item{clrs}{A \code{character} vector of length 2 specifying the colors for the
+filled density regions.}
 
-\item{xlab, ylab}{\code{character} axis labels, see \code{\link{plot}}.}
+\item{xlab, ylab}{\code{character} axis labels, see \code{\link[graphics:plot.default]{graphics::plot()}}.}
 
-\item{...}{Additional arguments passed to \code{\link{density}}.}
+\item{...}{Additional arguments passed to \code{\link[stats:density]{stats::density()}}.}
 }
 \value{
 A \code{trellis} object.
 }
 \description{
-This function will produce a plot of two density functions displayed 
-side by side
+This function will produce a plot of two density functions displayed side by
+side.
 }
 \examples{
 compareDistributions(rnorm(1000, 2, 3), rnorm(1000, -5, 1))

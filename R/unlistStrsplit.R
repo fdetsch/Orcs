@@ -1,22 +1,17 @@
-#' Unlist the outcome of \code{strsplit}
+#' Unlist the Outcome of `strsplit()`
 #' 
 #' @description
-#' Per default, \code{\link{strsplit}} returns a \code{list}, with each entry 
-#' holding the vector of splits of the initial string(s). This function is a 
-#' simple wrapper that casts \code{\link{unlist}} upon the returned list to 
-#' produce a concatenated \code{character} vector consisting of the single split 
-#' elements. 
+#' Per default, [strsplit()] returns a `list`, with each entry holding the 
+#' vector of splits of the initial string(s). This function is a simple wrapper 
+#' that casts [unlist()] upon the returned list to produce a concatenated 
+#' `character` vector consisting of the single split elements. 
 #' 
-#' @param x A \code{character} vector with elements to be split. 
-#' @param split A \code{character} vector used for splitting, see 
-#' \code{\link{strsplit}}. 
-#' @param ... Additional arguments passed to \code{\link{strsplit}}.
+#' @param x A `character` vector with elements to be split. 
+#' @param split A `character` vector used for splitting, see [strsplit()]. 
+#' @param ... Additional arguments passed to [strsplit()].
 #' 
 #' @author 
 #' Florian Detsch
-#' 
-#' @seealso
-#' \code{\link{strsplit}}
 #' 
 #' @examples
 #' ## 1st example
@@ -27,8 +22,7 @@
 #' x2 <- "This is a 2nd test."
 #' unlistStrsplit(c(x, x2))
 #' 
-#' @export unlistStrsplit
-#' @name unlistStrsplit
+#' @export
 unlistStrsplit <- function(x, split, ...) {
   
   if (missing(split))

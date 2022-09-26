@@ -2,33 +2,32 @@
 % Please edit documentation in R/lineEnding.R
 \name{lineEnding}
 \alias{lineEnding}
-\title{Convert between DOS and UNIX line endings}
+\title{Convert Between DOS and UNIX Line Endings}
 \source{
-\href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}
+\href{https://waterlan.home.xs4all.nl/dos2unix.html}{Dos2Unix/Unix2Dos Text file format converters}.
 }
 \usage{
-lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos",
-  "unix"), ...)
+lineEnding(infile, pattern = NULL, outfile = NULL, to = c("dos", "unix"), ...)
 }
 \arguments{
 \item{infile}{Input filename(s).}
 
-\item{pattern}{See \code{\link{list.files}}. This will be ignored if 'infile' 
-is specified.}
+\item{pattern}{See \code{\link[=list.files]{list.files()}}. This will be ignored if 'infile' is
+specified.}
 
-\item{outfile}{Output filename. If not supplied, 'infile' will be 
+\item{outfile}{Output filename. If not supplied, 'infile' will be
 overwritten.}
 
-\item{to}{Either 'dos' or 'unix'.}
+\item{to}{Either \code{"dos"} or \code{"unix"}.}
 
-\item{...}{Additional arguments passed to \code{\link{list.files}}, only 
-applicable if 'infile' is not specified.}
+\item{...}{Additional arguments passed to \code{\link[=list.files]{list.files()}}, only applicable if
+'infile' is not specified.}
 }
 \description{
-This function converts between DOS and UNIX style line endings by envoking 
-\code{unix2dos} (or \code{dos2unix}) upon a text file (see also 
-\code{system("unix2dos --help")}). Note that 'unix2dos' must be installed on 
-your local system, see Source.
+This function converts between DOS and UNIX style line endings by invoking
+\code{unix2dos} (or \code{dos2unix}) upon a text file (see also
+\code{system("unix2dos --help")}). Note that 'unix2dos' must be installed on your
+local system, see Source.
 }
 \examples{
 ## input file
@@ -40,7 +39,7 @@ lineEnding(infile, outfile = ofl, to = "dos")
 
 }
 \seealso{
-\code{\link{list.files}}, \code{\link{system}}
+\code{\link[=list.files]{list.files()}}, \code{\link[=system]{system()}}.
 }
 \author{
 Florian Detsch
