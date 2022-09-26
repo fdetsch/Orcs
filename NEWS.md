@@ -1,4 +1,4 @@
-# Orcs 1.2.0.9001 (2022-09-23)
+# Orcs 1.2.1.9001 (2022-09-23)
 
 #### ✨ features and improvements
 
@@ -7,6 +7,8 @@
 #### 💬 documentation etc
 
 #### 🍬 miscellaneous
+
+  * Knocks package into shape (#7)
 
 
 ## Orcs 1.2.0

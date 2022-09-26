@@ -7,15 +7,14 @@ using namespace Rcpp;
 //' 
 //' @param x A `character` vector.
 //' @param pos The start point of the substring as `integer`. Position 
-//' indications start from \code{1}, which is the default in R.
+//'   indications start from `1L`, which is the default in R.
 //' @param len The length of the substring as `integer`.
 //' 
 //' @return
 //' A `character` vector of the same length as 'x'.
 //' 
 //' @seealso
-//' \url{https://cplusplus.com/reference/string/string/substr/},
-//' \code{\link{substr}}.
+//' <https://cplusplus.com/reference/string/string/substr/>, [substr()].
 //' 
 //' @examples
 //' substrC("Hello, world!", pos = 1, len = 5)

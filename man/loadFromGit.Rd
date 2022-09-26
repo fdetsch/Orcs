@@ -17,8 +17,8 @@ directly from GitHub.
 }
 \examples{
 \dontrun{
-## install 'Orcs' development version from GitHub
-loadFromGit("fdetsch/Orcs", ref = "develop")
+## install 'Orcs' from GitHub
+loadFromGit("fdetsch/Orcs")
 }
 
 }
