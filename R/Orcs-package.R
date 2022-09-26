@@ -7,9 +7,10 @@
 #' @aliases orcspackage
 #' @docType package
 #' @title Omnidirectional R Code Snippets.
-#' @author Florian Detsch \cr
+#' @author Florian Detsch, Tim Appelhans, Baptiste Auguie, 
+#' OpenStreetMap contributors \cr
 #' \cr
-#' \emph{Maintainer:} Florian Detsch \email{florian.detsch@@staff.uni-marburg.de}
+#' \emph{Maintainer:} Florian Detsch \email{fdetsch@web.de}
 #'
 #' @import methods grid raster rgdal knitr lattice latticeExtra
 #' @importFrom bookdown render_book
@@ -30,9 +31,9 @@ NULL
 #' @name KiLi
 #' @title Bing Aerial Image of Kilimanjaro
 #' @description Bing aerial image of Kilimanjaro downloaded from 
-#' \href{https://www.openstreetmap.org/}{OpenStreetMap}.
-#' @format A \code{"RasterStack-class"} with 3 bands (red, green, blue).
+#' [OpenStreetMap](https://www.openstreetmap.org/).
+#' @format A `"RasterStack-class"` with 3 bands (red, green, blue).
 #' @details Copyright: OpenStreetMap contributors, see 
-#' \url{https://www.openstreetmap.org/copyright}.
+#' <https://www.openstreetmap.org/copyright>.
 #' 
 NULL

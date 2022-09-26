@@ -1,9 +1,9 @@
 Package: Orcs
 Title: Omnidirectional R Code Snippets
-Version: 1.2.0.9001
+Version: 1.2.1.9001
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
-	person("Tim", "Appelhans", role = "ctb"),
+	person("Tim", "Appelhans", role = "aut", email = "tim.appelhans@gmail.com"),
 	person("Baptiste", "Auguie", role = "ctb"),
 	person("OpenStreetMap contributors", role = "cph"))
 Maintainer: Florian Detsch <fdetsch@web.de>
