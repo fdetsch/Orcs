@@ -12,7 +12,7 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{fdetsch@web.de}
 #'
-#' @import methods grid raster rgdal knitr lattice latticeExtra
+#' @import methods grid raster knitr lattice latticeExtra
 #' @importFrom bookdown render_book
 #' @importFrom grDevices rgb
 #' @importFrom plotrix thigmophobe

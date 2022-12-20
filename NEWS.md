@@ -8,6 +8,8 @@
 
 #### 🍬 miscellaneous
 
+  * Eliminates **rgdal** dependency (#9)
+
 
 # Orcs 1.2.2 (2022-09-26)
 
