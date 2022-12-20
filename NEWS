@@ -1,4 +1,4 @@
-Orcs 1.2.2.9000 (2022-12-20)
+Orcs 1.2.2.9001 (2022-12-20)
 
 features and improvements
 
@@ -7,6 +7,8 @@ bug fixes
 documentation etc
 
 miscellaneous
+
+  * Eliminates rgdal dependency (#9)
 
 
 Orcs 1.2.2 (2022-09-26)
