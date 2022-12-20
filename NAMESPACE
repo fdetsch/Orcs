@@ -52,5 +52,8 @@ importFrom(stats,complete.cases)
 importFrom(stats,median)
 importFrom(stats,na.exclude)
 importFrom(stats,sd)
+importFrom(terra,as.polygons)
+importFrom(terra,crs)
+importFrom(terra,ext)
 useDynLib(Orcs, .registration = TRUE)
 

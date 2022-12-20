@@ -34,7 +34,8 @@ Imports:
     remotes,
     sf,
     sp,
-    stats
+    stats,
+    terra
 LinkingTo: Rcpp
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
