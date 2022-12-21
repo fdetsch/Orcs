@@ -17,10 +17,10 @@
 #' @seealso
 #' [tools::file_path_sans_ext()].
 #' 
-#' @examples 
-#' fls <- system.file("external/rlogo.grd", package = "raster")
-#' pureBasename(fls)
-#' pureBasename(fls, slash = TRUE)
+#' @examples
+#' ifl = tempfile(fileext = ".tif")
+#' pureBasename(ifl)
+#' pureBasename(ifl, slash = TRUE)
 #' 
 #' @export
 pureBasename <- function(path, slash = FALSE) {
@@ -34,9 +34,9 @@ pureBasename <- function(path, slash = FALSE) {
   })
   
   ## optionally, add leading slash
-  if (slash)
-    ch_purebasename <- file.path("", ch_purebasename)
+  if (slash) {
+    ch_purebasename = file.path("", ch_purebasename)
+  }
   
   return(as.character(ch_purebasename))
 }
-

@@ -19,13 +19,13 @@ with color information that can be passed on to the 'sp.layout' argument from
 \code{\link[sp:spplot]{sp::spplot()}}.
 }
 \examples{
-library(raster)
+\dontrun{
 library(sp)
 
-b <- brick(system.file("external/rlogo.grd", package="raster"))
+b <- terra::rast(system.file("ex/logo.tif", package="terra"))
 
 ## using plotRGB
-plotRGB(b)
+terra::plotRGB(b)
 
 ## convert brick to list
 lout <- rgb2spLayout(b)
@@ -35,11 +35,12 @@ lout_alph <- rgb2spLayout(b, alpha = 0.5)
 df <- data.frame(dat = rnorm(100, 2, 1),
                  x = rnorm(100, 50, 20),
                  y = rnorm(100, 50, 25))
-coordinates(df) <- ~x+y
+df = sf::st_as_sf(df, coords = c("x", "y"))
 
 ## plot spatial points with rgb background
-spplot(df, sp.layout = lout)
-spplot(df, sp.layout = lout_alph)
+spplot(as(df, "Spatial"), sp.layout = lout)
+spplot(as(df, "Spatial"), sp.layout = lout_alph)
+}
 
 }
 \seealso{

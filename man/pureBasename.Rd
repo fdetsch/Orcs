@@ -20,9 +20,9 @@ As opposed to \code{\link[=basename]{basename()}}, this function returns the pur
 multiple file names, i.e. without extension.
 }
 \examples{
-fls <- system.file("external/rlogo.grd", package = "raster")
-pureBasename(fls)
-pureBasename(fls, slash = TRUE)
+ifl = tempfile(fileext = ".tif")
+pureBasename(ifl)
+pureBasename(ifl, slash = TRUE)
 
 }
 \seealso{
