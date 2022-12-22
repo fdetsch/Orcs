@@ -6,6 +6,10 @@
 
 #### 💬 documentation etc
 
+  * `KiLi` built-in data is no longer available as `SpatRaster` objects do not 
+    work with `save()` (see <https://github.com/rspatial/terra/issues/549>); use
+    `terra::rast(system.file("extdata/KiLi.tif", package = "Orcs"))` instead.
+
 #### 🍬 miscellaneous
 
   * Eliminates **rgdal** dependency (#9)
