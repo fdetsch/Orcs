@@ -23,7 +23,7 @@ object.
 Convert a spatial extent to polygons.
 }
 \examples{
-ext = extent(c(25, 70, -5, 30))
+ext = terra::ext(c(25, 70, -5, 30))
 ext2spy(ext) # 'sf' (default)
 ext2spy(ext, as_sf = FALSE) # 'Spatial*'
 

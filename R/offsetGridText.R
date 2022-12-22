@@ -29,37 +29,34 @@
 #' Florian Detsch
 #' 
 #' @examples
-#' stopifnot(
-#'   require(sf)
-#'   , require(latticeExtra)
-#'   , require(grid)
-#' )
+#' KiLi = terra::rast(system.file("extdata/KiLi.tif", package = "Orcs"))
 #' 
 #' # kilimanjaro peaks
 #' peaks = data.frame(Peak = c("Kibo", "Mawenzi", "Shira")
 #'                    , Lon = c(37.359031, 37.455061, 37.210408)
 #'                    , Lat = c(-3.065053, -3.095436, -3.038222))
 #' 
-#' coordinates(peaks) = ~ Lon + Lat
-#' proj4string(peaks) = "+init=epsg:4326"
+#' peaks = sf::st_as_sf(peaks, crs = 4326, coords = c("Lon", "Lat"))
 #' 
 #' # visualization
 #' xlim_kili <- c(37.15, 37.55)
 #' ylim_kili <- c(-3.25, -2.9)
 #' 
-#' p = spplot(KiLi[[1]], col.regions = "transparent", colorkey = FALSE, 
-#'            xlim = xlim_kili, ylim = ylim_kili,
-#'            scales = list(draw = TRUE, y = list(rot = 90)), 
-#'            sp.layout = rgb2spLayout(KiLi, quantiles = c(0, 1), alpha = .8)) + 
-#'   layer(sp.points(peaks, cex = 1.5, pch = 20, col = "black"))
+#' if (requireNamespace("raster", quietly = TRUE)) {
+#'    p = raster::spplot(KiLi[[1]], col.regions = "transparent", colorkey = FALSE, 
+#'               xlim = xlim_kili, ylim = ylim_kili,
+#'               scales = list(draw = TRUE, y = list(rot = 90)), 
+#'               sp.layout = rgb2spLayout(KiLi, quantiles = c(0, 1), alpha = .8)) + 
+#'      latticeExtra::layer(sp.points(as(peaks, "Spatial"), cex = 1.5, pch = 20, col = "black"))
+#'    
+#'    print(p)
+#'    
+#'    grid::downViewport(lattice::trellis.vpname(name = "figure"))
+#'    offsetGridText(x = sf::st_coordinates(peaks), labels = peaks$Peak,  
+#'                   xlim = xlim_kili, ylim = ylim_kili, stext = TRUE, offset = .02,
+#'                   gp = grid::gpar(fontsize = 16))
+#' }
 #' 
-#' print(p)
-#' 
-#' downViewport(trellis.vpname(name = "figure"))
-#' offsetGridText(x = coordinates(peaks), labels = peaks$Peak,  
-#'                xlim = xlim_kili, ylim = ylim_kili, stext = TRUE, offset = .02,
-#'                gp = gpar(fontsize = 16))
-#'                                
 #' @export
 offsetGridText <- function(x, y = NULL, labels, xlim = NULL, ylim = NULL, 
                            pos = NULL, stext = FALSE, offset = .02, ...) {

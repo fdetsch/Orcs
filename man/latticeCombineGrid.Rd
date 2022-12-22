@@ -42,23 +42,23 @@ p2 = xyplot(10:1 ~ 1:10)
   )
 )
 
-if (require(raster, quietly = TRUE)) {
+if (requireNamespace("raster", quietly = TRUE)) {
   # load data
   # Use a probability map assuming high potential for city expansion is just 
   # resulting from proximity to current urban area:
-  prd = raster(system.file("extdata/probability.rst", package = "Orcs"))
+  prd = raster::raster(system.file("extdata/probability.rst", package = "Orcs"))
   
   # observed city growth between 1990 and 2006
-  obs = raster(system.file("extdata/citygrowth.tif", package = "Orcs"))
+  obs = raster::raster(system.file("extdata/citygrowth.tif", package = "Orcs"))
   
   # masking current urban area since these pixels have no potential for change
-  msk = raster(system.file("extdata/citymask.tif", package = "Orcs"))
+  msk = raster::raster(system.file("extdata/citymask.tif", package = "Orcs"))
   
   # create data list
   dat <- list(prd, obs, msk)
   
   # create list of lattice plots
-  plist <- lapply(dat, spplot, scales = list(draw = TRUE))
+  plist <- lapply(dat, raster::spplot, scales = list(draw = TRUE))
   
   # # draw individually
   # plist[[1]]

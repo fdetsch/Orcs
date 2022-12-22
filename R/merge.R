@@ -24,13 +24,13 @@ if ( !isGeneric("merge") ) {
 #' @author Florian Detsch
 #' 
 #' @examples
-#' ## Raster* input
+#' ## `SpatRaster` input
 #' dms = list.files(system.file("extdata", package = "Orcs")
 #'                  , pattern = "ASTGTM2.*dem.tif$", full.names = TRUE)
 #' dms = lapply(dms, terra::rast)
 #' 
 #' dem = merge(dms[3:4])
-#' plot(dem)
+#' terra::plot(dem)
 #' 
 #' ## data.frame input
 #' mrg = merge(list(iris, iris, iris)

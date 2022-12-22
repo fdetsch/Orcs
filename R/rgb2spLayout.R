@@ -1,41 +1,42 @@
 #' Convert an RGB `Raster*` to Use with `spplot()`
 #'
 #' @description
-#' This function takes a red-green-blue `Raster*` object and produces a list 
-#' with color information that can be passed on to the 'sp.layout' argument from
-#' [sp::spplot()].
+#' This function takes a red-green-blue `SpatRaster` or `Raster*` object and 
+#' produces a list with color information that can be passed on as 'sp.layout' 
+#' to [sp::spplot()].
 #'
-#' @param x A 3-layered `Raster*` object.
+#' @param x A 3-layered `SpatRaster*` or `Raster*` object.
 #' @param quantiles Upper and lower quantiles used for color stretching.
 #' @param alpha Level of transparency.
 #'
-#' @seealso [raster::plotRGB()].
+#' @seealso [terra::plotRGB()].
 #'
 #' @author
 #' Tim Appelhans, Florian Detsch
 #'
 #' @examples
-#' \dontrun{
-#' library(sp)
-#'
-#' b <- terra::rast(system.file("ex/logo.tif", package="terra"))
+#' b = terra::rast(system.file("ex/logo.tif", package="terra"))
 #'
 #' ## using plotRGB
 #' terra::plotRGB(b)
 #'
-#' ## convert brick to list
-#' lout <- rgb2spLayout(b)
-#' lout_alph <- rgb2spLayout(b, alpha = 0.5)
+#' ## convert raster to list
+#' lout = rgb2spLayout(b)
+#' lout_alph = rgb2spLayout(b, alpha = 0.5)
 #'
 #' ## create random spatial points for plotting
-#' df <- data.frame(dat = rnorm(100, 2, 1),
-#'                  x = rnorm(100, 50, 20),
-#'                  y = rnorm(100, 50, 25))
+#' df = data.frame(
+#'   dat = rnorm(100, 2, 1)
+#'   , x = rnorm(100, 50, 20)
+#'   , y = rnorm(100, 50, 25)
+#' )
+#' 
 #' df = sf::st_as_sf(df, coords = c("x", "y"))
 #'
 #' ## plot spatial points with rgb background
-#' spplot(as(df, "Spatial"), sp.layout = lout)
-#' spplot(as(df, "Spatial"), sp.layout = lout_alph)
+#' if (require(sp, quietly = TRUE)) {
+#'   spplot(as(df, "Spatial"), sp.layout = lout)
+#'   spplot(as(df, "Spatial"), sp.layout = lout_alph)
 #' }
 #'
 #' @export

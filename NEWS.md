@@ -13,6 +13,7 @@
 #### 🍬 miscellaneous
 
   * Eliminates **rgdal** dependency (#9)
+  * Replaces **raster** related code and objects with **terra** analogs
 
 
 # Orcs 1.2.2 (2022-09-26)

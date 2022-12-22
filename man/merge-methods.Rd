@@ -27,13 +27,13 @@ objects, which typically work with one or two inputs only, this function
 accepts a \code{list} of objects that are to be merged together.
 }
 \examples{
-## Raster* input
+## `SpatRaster` input
 dms = list.files(system.file("extdata", package = "Orcs")
                  , pattern = "ASTGTM2.*dem.tif$", full.names = TRUE)
 dms = lapply(dms, terra::rast)
 
 dem = merge(dms[3:4])
-plot(dem)
+terra::plot(dem)
 
 ## data.frame input
 mrg = merge(list(iris, iris, iris)
