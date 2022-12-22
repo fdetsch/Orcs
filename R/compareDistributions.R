@@ -31,7 +31,7 @@
 #' compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
 #'                      print.stats = FALSE, add.spread = FALSE)
 #'                      
-#' ## pass additional parameters to density() 
+#' ## pass additional parameters to stats::density() 
 #' compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
 #'                      print.stats = FALSE, add.spread = FALSE, bw = 5)
 #' compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
@@ -57,10 +57,10 @@ compareDistributions <- function(left,
                                  ylab = "value",
                                  ...) {
   
-  left_x <- density(left, ...)$x
-  left_y <- -density(left, ...)$y
-  right_x <- density(right, ...)$x
-  right_y <- density(right, ...)$y
+  left_x <- stats::density(left, ...)$x
+  left_y <- -stats::density(left, ...)$y
+  right_x <- stats::density(right, ...)$x
+  right_y <- stats::density(right, ...)$y
   
   if (is.null(xlim)) {
     x_lim <- c(-sort(abs(c(range(left_y), range(right_y))), 
@@ -81,10 +81,10 @@ compareDistributions <- function(left,
   sd_right <- stats::sd(right, na.rm = TRUE)
   med_left <- stats::median(left, na.rm = TRUE)
   med_right <- stats::median(right, na.rm = TRUE)
-  q25_left <- quantile(left, 0.25)
-  q25_right <- quantile(right, 0.25)
-  q75_left <- quantile(left, 0.75)
-  q75_right <- quantile(right, 0.75)
+  q25_left <- stats::quantile(left, 0.25)
+  q25_right <- stats::quantile(right, 0.25)
+  q75_left <- stats::quantile(left, 0.75)
+  q75_right <- stats::quantile(right, 0.75)
   min_left <- min(left, na.rm = TRUE)
   min_right <- min(right, na.rm = TRUE)
   max_left <- max(left, na.rm = TRUE)

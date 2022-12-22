@@ -53,7 +53,7 @@ compareDistributions(rnorm(1000, 2, 3), rnorm(1000, -5, 1),
 compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
                      print.stats = FALSE, add.spread = FALSE)
                      
-## pass additional parameters to density() 
+## pass additional parameters to stats::density() 
 compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
                      print.stats = FALSE, add.spread = FALSE, bw = 5)
 compareDistributions(rnorm(1000, 2, 5), rnorm(1000, -5, 4), 
