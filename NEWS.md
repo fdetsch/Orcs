@@ -1,12 +1,8 @@
-# Orcs 1.2.2.9002 (2022-12-22)
-
-#### ✨ features and improvements
-
-#### 🐛 bug fixes
+# Orcs 1.2.3 (2023-01-04)
 
 #### 💬 documentation etc
 
-  * `KiLi` built-in data is no longer available as `SpatRaster` objects do not 
+  * `KiLi` built-in data is no longer available as `SpatRaster` objects do not
     work with `save()` (see <https://github.com/rspatial/terra/issues/549>); use
     `terra::rast(system.file("extdata/KiLi.tif", package = "Orcs"))` instead.
 
