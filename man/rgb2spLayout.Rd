@@ -7,43 +7,45 @@
 rgb2spLayout(x, quantiles = c(0.02, 0.98), alpha = 1)
 }
 \arguments{
-\item{x}{A 3-layered \verb{Raster*} object.}
+\item{x}{A 3-layered \verb{SpatRaster*} or \verb{Raster*} object.}
 
 \item{quantiles}{Upper and lower quantiles used for color stretching.}
 
 \item{alpha}{Level of transparency.}
 }
 \description{
-This function takes a red-green-blue \verb{Raster*} object and produces a list
-with color information that can be passed on to the 'sp.layout' argument from
-\code{\link[sp:spplot]{sp::spplot()}}.
+This function takes a red-green-blue \code{SpatRaster} or \verb{Raster*} object and
+produces a list with color information that can be passed on as 'sp.layout'
+to \code{\link[sp:spplot]{sp::spplot()}}.
 }
 \examples{
-library(raster)
-library(sp)
-
-b <- brick(system.file("external/rlogo.grd", package="raster"))
+b = terra::rast(system.file("ex/logo.tif", package="terra"))
 
 ## using plotRGB
-plotRGB(b)
+terra::plotRGB(b)
 
-## convert brick to list
-lout <- rgb2spLayout(b)
-lout_alph <- rgb2spLayout(b, alpha = 0.5)
+## convert raster to list
+lout = rgb2spLayout(b)
+lout_alph = rgb2spLayout(b, alpha = 0.5)
 
 ## create random spatial points for plotting
-df <- data.frame(dat = rnorm(100, 2, 1),
-                 x = rnorm(100, 50, 20),
-                 y = rnorm(100, 50, 25))
-coordinates(df) <- ~x+y
+df = data.frame(
+  dat = rnorm(100, 2, 1)
+  , x = rnorm(100, 50, 20)
+  , y = rnorm(100, 50, 25)
+)
+
+df = sf::st_as_sf(df, coords = c("x", "y"))
 
 ## plot spatial points with rgb background
-spplot(df, sp.layout = lout)
-spplot(df, sp.layout = lout_alph)
+if (require(sp, quietly = TRUE)) {
+  spplot(as(df, "Spatial"), sp.layout = lout)
+  spplot(as(df, "Spatial"), sp.layout = lout_alph)
+}
 
 }
 \seealso{
-\code{\link[raster:plotRGB]{raster::plotRGB()}}.
+\code{\link[terra:plotRGB]{terra::plotRGB()}}.
 }
 \author{
 Tim Appelhans, Florian Detsch

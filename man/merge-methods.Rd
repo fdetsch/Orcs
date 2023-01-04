@@ -9,32 +9,31 @@
 \S4method{merge}{list,missing}(x, by = 1L, all = TRUE, ...)
 }
 \arguments{
-\item{x}{A \code{list} of objects of the same type (e.g. \verb{Raster*} or
-\code{data.frame}).}
+\item{x}{A \code{list} of objects of the same type (e.g. \verb{Spat*} or \code{data.frame}).}
 
 \item{by, all}{See \code{\link[=merge.data.frame]{merge.data.frame()}}. Ignored if data stored in 'x' is not
 of class \code{data.frame}.}
 
 \item{...}{Additional arguments passed to the underlying merge method (e.g.
-arguments compatible with \code{\link[raster:merge]{raster::merge()}} and \code{\link[raster:writeRaster]{raster::writeRaster()}} for
-\verb{Raster*} input). Ignored if data stored in 'x' is of class \code{data.frame}.}
+arguments compatible with \code{\link[terra:merge]{terra::merge()}} and \code{\link[terra:writeRaster]{terra::writeRaster()}} for
+\verb{Spat*} input). Ignored if data stored in 'x' is of class \code{data.frame}.}
 }
 \value{
-A merged object (e.g. a new \verb{Raster*} object with a larger spatial extent).
+A merged object (e.g. a new \verb{Spat*} object with a larger spatial extent).
 }
 \description{
-Complementing existing merge methods, e.g. \code{\link[raster:merge]{raster::merge()}} for \verb{Raster*}
+Complementing existing merge methods, e.g. \code{\link[terra:merge]{terra::merge()}} for \verb{Spat*}
 objects, which typically work with one or two inputs only, this function
 accepts a \code{list} of objects that are to be merged together.
 }
 \examples{
-## Raster* input
+## `SpatRaster` input
 dms = list.files(system.file("extdata", package = "Orcs")
                  , pattern = "ASTGTM2.*dem.tif$", full.names = TRUE)
-dms = lapply(dms, raster)
+dms = lapply(dms, terra::rast)
 
-dem = merge(dms, tolerance = 1e4)                  
-plot(dem)
+dem = merge(dms[3:4])
+terra::plot(dem)
 
 ## data.frame input
 mrg = merge(list(iris, iris, iris)

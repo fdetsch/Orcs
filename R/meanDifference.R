@@ -8,11 +8,11 @@ if ( !isGeneric("meanDifference") ) {
 #' Calculate the mean difference between two datasets as suggested by Wang 
 #' *et al.* (2012). 
 #'
-#' @param x,y Objects of class `RasterLayer` or `numeric`. 
+#' @param x,y Pairwise objects of class `SpatRaster`, `RasterLayer` or 
+#'   `numeric`. 
 #'
 #' @return
-#' The mean difference between the two inputs either as `RasterLayer` or 
-#' `numeric`.
+#' The mean difference between the two inputs as `numeric`.
 #'  
 #' @source 
 #' Wang *et al.* (2012) Impact of sensor degradation on the MODIS NDVI time 
@@ -33,42 +33,69 @@ if ( !isGeneric("meanDifference") ) {
 #' @name meanDifference
 
 ################################################################################
-### function using 'RasterLayer' objects ---------------------------------------
-#' @aliases meanDifference,RasterLayer-method
+### function using 'SpatRaster' objects ---------------------------------------
+#' @aliases meanDifference,SpatRaster-method
 #' @rdname meanDifference
-setMethod("meanDifference",
-          signature(x = 'RasterLayer'),
-          function(x, y) {
-  
-  ## merge values
-  num_x <- x[]
-  num_y <- y[]
-  
-  if (length(num_x) != length(num_y))
-    cat("Warning: elements 'x' and 'y' have unequal number of cells.\n")
-  
-  num_xy <- cbind(num_x, num_y)
-  num_xy <- num_xy[stats::complete.cases(num_xy), ]
-  
-  ## calculate mean difference
-  mean(num_xy[, 1] - num_xy[, 2])
-})
+setMethod(
+  "meanDifference"
+  , signature(x = 'SpatRaster')
+  , function(x, y) {
+    
+    ## early exit: multi-layered inputs
+    if (terra::nlyr(x) > 1L || terra::nlyr(y) > 1L) {
+      stop(
+        "Cannot calculate the mean difference for multi-layered rasters."
+        , call. = FALSE
+      )
+    }
+    
+    ## merge values
+    num_x <- terra::values(x, mat = FALSE)
+    num_y <- terra::values(y, mat = FALSE)
+    
+    # TODO: 
+    # * support for multi-layered inputs
+    # * unify with `numeric` method
+    if (length(num_x) != length(num_y)) {
+      warning(
+        "Elements 'x' and 'y' have unequal number of cells."
+        , call. = FALSE
+      )
+    }
+    
+    num_xy <- cbind(num_x, num_y)
+    num_xy <- num_xy[stats::complete.cases(num_xy), ]
+    
+    ## calculate mean difference
+    mean(num_xy[, 1] - num_xy[, 2])
+  }
+)
+
 
 ################################################################################
 ### function using 'numeric' vectors -------------------------------------------
 #' @aliases meanDifference,numeric-method
 #' @rdname meanDifference
-setMethod("meanDifference",
-          signature(x = "numeric"),
-          function(x, y) {
-
-  if (length(x) != length(y))
-    cat("Warning: elements 'x' and 'y' are of unequal length.\n")
-  
-  ## merge values
-  num_xy <- cbind(x, y)
-  num_xy <- num_xy[stats::complete.cases(num_xy), ]
-  
-  ## calculate mean difference
-  mean(num_xy[, 1] - num_xy[, 2])
-})
+setMethod(
+  "meanDifference"
+  , signature(x = "numeric")
+  , function(x, y) {
+    
+    # TODO: 
+    # * also raises warning during `cbind()`
+    #   <-> forbid inputs with unequal lengths altogether?
+    if (length(x) != length(y)) {
+      warning(
+        "Elements 'x' and 'y' are of unequal length."
+        , call. = FALSE
+      )
+    }
+    
+    ## merge values
+    num_xy <- cbind(x, y)
+    num_xy <- num_xy[stats::complete.cases(num_xy), ]
+    
+    ## calculate mean difference
+    mean(num_xy[, 1] - num_xy[, 2])
+  }
+)

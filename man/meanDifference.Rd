@@ -2,7 +2,7 @@
 % Please edit documentation in R/meanDifference.R
 \name{meanDifference}
 \alias{meanDifference}
-\alias{meanDifference,RasterLayer-method}
+\alias{meanDifference,SpatRaster-method}
 \alias{meanDifference,numeric-method}
 \title{Calculate Mean Difference Between Two Datasets}
 \source{
@@ -16,16 +16,16 @@ Calibration, and Significance. Remote Sensing 8(2), 159,
 \doi{10.3390/rs8020159}.
 }
 \usage{
-\S4method{meanDifference}{RasterLayer}(x, y)
+\S4method{meanDifference}{SpatRaster}(x, y)
 
 \S4method{meanDifference}{numeric}(x, y)
 }
 \arguments{
-\item{x, y}{Objects of class \code{RasterLayer} or \code{numeric}.}
+\item{x, y}{Pairwise objects of class \code{SpatRaster}, \code{RasterLayer} or
+\code{numeric}.}
 }
 \value{
-The mean difference between the two inputs either as \code{RasterLayer} or
-\code{numeric}.
+The mean difference between the two inputs as \code{numeric}.
 }
 \description{
 Calculate the mean difference between two datasets as suggested by Wang

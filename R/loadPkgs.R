@@ -14,10 +14,10 @@
 #' Package start-up messages are automatically disabled.
 #' 
 #' @examples
-#' loadPkgs(c("raster", "rgdal"))
+#' loadPkgs(c("terra", "lattice"))
 #' 
 #' @export
-loadPkgs <- function(pkgs, ...) {
+loadPkgs = function(pkgs, ...) {
   
   ## if 'character.only' has been specified, remove it from '...'
   dots = list(...)

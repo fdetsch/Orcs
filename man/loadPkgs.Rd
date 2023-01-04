@@ -19,7 +19,7 @@ Load and attach multiple packages at once.
 Package start-up messages are automatically disabled.
 }
 \examples{
-loadPkgs(c("raster", "rgdal"))
+loadPkgs(c("terra", "lattice"))
 
 }
 \author{

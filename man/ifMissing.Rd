@@ -4,19 +4,19 @@
 \alias{ifMissing}
 \title{Take Measures in Case of Nonexisting Target Files}
 \usage{
-ifMissing(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, arg1, ...)
+ifMissing(ofl, fun0 = terra::rast, fun1 = terra::writeRaster, arg1, ...)
 }
 \arguments{
 \item{ofl}{Target file name as \code{character}.}
 
 \item{fun0}{If 'ofl' exists, \code{function} to be applied to it. Defaults to
-\code{\link[raster:brick]{raster::brick()}}).}
+\code{\link[terra:rast]{terra::rast()}}).}
 
 \item{fun1}{If 'ofl' does not exist, \code{function} used to create it. Defaults
-to \code{\link[raster:writeRaster]{raster::writeRaster()}}).}
+to \code{\link[terra:writeRaster]{terra::writeRaster()}}).}
 
 \item{arg1}{Argument in 'fun1' (as \code{character}) that corresponds to 'ofl',
-e.g. 'filename' in \code{\link[raster:writeRaster]{raster::writeRaster()}} or 'file' in
+e.g. 'filename' in \code{\link[terra:writeRaster]{terra::writeRaster()}} or 'file' in
 \code{\link[utils:write.table]{utils::write.table()}}. If missing (default), the target file name passed
 to 'fun1' needs to be explicitly included via '...'.}
 
@@ -34,7 +34,7 @@ calls to \code{\link[=file.exists]{file.exists()}} unnecessary.
 }
 \examples{
 # simply import existing file
-logo <- system.file("external/rlogo.grd", package = "raster")
+logo <- system.file("ex/logo.tif", package = "terra")
 s <- ifMissing(logo) 
 
 # create nonexisting file and import it afterwards

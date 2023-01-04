@@ -8,11 +8,11 @@
 #' 
 #' @param ofl Target file name as `character`.
 #' @param fun0 If 'ofl' exists, `function` to be applied to it. Defaults to 
-#'   [raster::brick()]). 
+#'   [terra::rast()]). 
 #' @param fun1 If 'ofl' does not exist, `function` used to create it. Defaults 
-#'   to [raster::writeRaster()]).
+#'   to [terra::writeRaster()]).
 #' @param arg1 Argument in 'fun1' (as `character`) that corresponds to 'ofl', 
-#'   e.g. 'filename' in [raster::writeRaster()] or 'file' in 
+#'   e.g. 'filename' in [terra::writeRaster()] or 'file' in 
 #'   [utils::write.table()]. If missing (default), the target file name passed 
 #'   to 'fun1' needs to be explicitly included via '...'.
 #' @param ... Additional arguments passed to 'fun0' and 'fun1'.
@@ -27,7 +27,7 @@
 #' 
 #' @examples
 #' # simply import existing file
-#' logo <- system.file("external/rlogo.grd", package = "raster")
+#' logo <- system.file("ex/logo.tif", package = "terra")
 #' s <- ifMissing(logo) 
 #' 
 #' # create nonexisting file and import it afterwards
@@ -45,8 +45,13 @@
 #' iris2 <- ifMissing(ofl, fun1 = fun, x = iris, file = ofl, quote = FALSE, row.names = FALSE)
 #' 
 #' @export
-ifMissing = function(ofl, fun0 = raster::brick, fun1 = raster::writeRaster, 
-                     arg1, ...) {
+ifMissing = function(
+    ofl
+    , fun0 = terra::rast
+    , fun1 = terra::writeRaster
+    , arg1
+    , ...
+) {
   
   if (file.exists(ofl)) {
     do.call(fun0, args = list(ofl))

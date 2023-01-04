@@ -1,6 +1,6 @@
 Package: Orcs
 Title: Omnidirectional R Code Snippets
-Version: 1.2.2
+Version: 1.2.2.9002
 Authors@R: c(
 	person("Florian", "Detsch", role = c("cre", "aut"), email = "fdetsch@web.de"),
 	person("Tim", "Appelhans", role = "aut", email = "tim.appelhans@gmail.com"),
@@ -21,7 +21,7 @@ BugReports: https://github.com/fdetsch/Orcs/issues
 LazyData: TRUE
 Depends: 
     methods,
-    raster
+    R (>= 2.10)
 Imports: 
     bookdown, 
     grDevices,
@@ -32,16 +32,18 @@ Imports:
     plotrix,
     Rcpp (>= 0.11.3),
     remotes,
-    rgdal,
     sf,
     sp,
-    stats
-LinkingTo: Rcpp
-RoxygenNote: 7.2.1
-Roxygen: list(markdown = TRUE)
-SystemRequirements: GNU make, 7zip, unix2dos
+    stats,
+    terra
 Suggests:
+    checkmate,
+    raster,
     rmarkdown, 
     tinytest
+LinkingTo: Rcpp
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+SystemRequirements: GNU make, 7zip, unix2dos
 VignetteBuilder: knitr
 Encoding: UTF-8

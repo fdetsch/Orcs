@@ -12,7 +12,7 @@
 #' \cr
 #' \emph{Maintainer:} Florian Detsch \email{fdetsch@web.de}
 #'
-#' @import methods grid raster rgdal knitr lattice latticeExtra
+#' @import methods grid knitr lattice latticeExtra stats
 #' @importFrom bookdown render_book
 #' @importFrom grDevices rgb
 #' @importFrom plotrix thigmophobe
@@ -20,20 +20,8 @@
 #' @importFrom remotes install_github
 #' @importFrom sf st_as_sf
 #' @importFrom sp proj4string
-#' @importFrom stats coef complete.cases  median na.exclude sd
 #' @rawNamespace useDynLib(Orcs, .registration = TRUE)
 #' 
 #' @keywords package
 #'
-NULL
-#'
-#' @docType data
-#' @name KiLi
-#' @title Bing Aerial Image of Kilimanjaro
-#' @description Bing aerial image of Kilimanjaro downloaded from 
-#' [OpenStreetMap](https://www.openstreetmap.org/).
-#' @format A `"RasterStack-class"` with 3 bands (red, green, blue).
-#' @details Copyright: OpenStreetMap contributors, see 
-#' <https://www.openstreetmap.org/copyright>.
-#' 
 NULL

@@ -4,31 +4,32 @@
 \alias{ext2spy}
 \title{Convert Spatial Extent to Polygon}
 \usage{
-ext2spy(x, crs = "+init=epsg:4326", as_sf = TRUE)
+ext2spy(x, crs = "EPSG:4326", as_sf = TRUE)
 }
 \arguments{
-\item{x}{An \code{Extent} object, or any object from which an \code{Extent} can be
-extracted, e.g. \verb{Raster*}.}
+\item{x}{A \code{SpatExtent} object, or any object from which such an object can
+be extracted, e.g. \code{SpatRaster}.}
 
-\item{crs}{Coordinate reference system passed to \code{\link[sp:is.projected]{sp::proj4string()}}.}
+\item{crs}{Coordinate reference system set via \code{\link[terra:crs]{terra::crs()}}.}
 
 \item{as_sf}{\code{logical}. If \code{TRUE} (default), the returned object is of class
 \code{sf} rather than \verb{Spatial*}.}
 }
 \value{
-Depending on 'as_sf', either a \code{sf} or \code{SpatialPolygons} object.
+Depending on 'as_sf', either a \code{c(sf, data.frame)} or \code{SpatVector}
+object.
 }
 \description{
 Convert a spatial extent to polygons.
 }
 \examples{
-ext = extent(c(25, 70, -5, 30))
+ext = terra::ext(c(25, 70, -5, 30))
 ext2spy(ext) # 'sf' (default)
 ext2spy(ext, as_sf = FALSE) # 'Spatial*'
 
 }
 \seealso{
-\code{\link[raster:extent]{raster::extent()}}.
+\code{\link[terra:ext]{terra::ext()}}.
 }
 \author{
 Florian Detsch

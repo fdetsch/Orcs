@@ -5,33 +5,32 @@ if ( !isGeneric("merge") ) {
 #' Merge Objects Stored in a List
 #' 
 #' @description 
-#' Complementing existing merge methods, e.g. [raster::merge()] for `Raster*` 
+#' Complementing existing merge methods, e.g. [terra::merge()] for `Spat*` 
 #' objects, which typically work with one or two inputs only, this function 
 #' accepts a `list` of objects that are to be merged together.
 #' 
-#' @param x A `list` of objects of the same type (e.g. `Raster*` or 
-#'   `data.frame`).
+#' @param x A `list` of objects of the same type (e.g. `Spat*` or `data.frame`).
 #' @param by,all See [merge.data.frame()]. Ignored if data stored in 'x' is not 
 #'   of class `data.frame`.
 #' @param ... Additional arguments passed to the underlying merge method (e.g. 
-#'   arguments compatible with [raster::merge()] and [raster::writeRaster()] for
-#'   `Raster*` input). Ignored if data stored in 'x' is of class `data.frame`.
+#'   arguments compatible with [terra::merge()] and [terra::writeRaster()] for
+#'   `Spat*` input). Ignored if data stored in 'x' is of class `data.frame`.
 #' 
 #' @return 
-#' A merged object (e.g. a new `Raster*` object with a larger spatial extent).
+#' A merged object (e.g. a new `Spat*` object with a larger spatial extent).
 #' 
 #' @seealso [do.call()], [Reduce()].
 #' 
 #' @author Florian Detsch
 #' 
 #' @examples
-#' ## Raster* input
+#' ## `SpatRaster` input
 #' dms = list.files(system.file("extdata", package = "Orcs")
 #'                  , pattern = "ASTGTM2.*dem.tif$", full.names = TRUE)
-#' dms = lapply(dms, raster)
+#' dms = lapply(dms, terra::rast)
 #' 
-#' dem = merge(dms, tolerance = 1e4)                  
-#' plot(dem)
+#' dem = merge(dms[3:4])
+#' terra::plot(dem)
 #' 
 #' ## data.frame input
 #' mrg = merge(list(iris, iris, iris)
